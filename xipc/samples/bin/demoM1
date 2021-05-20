@@ -1,0 +1,17 @@
+if [ $# -eq 0 ]
+then
+	CONFIG=$XIPC
+else
+	CONFIG=$1	
+fi
+##
+# $1 is either config file full path or network name preceeded by @ sign
+##
+demwatch MemSeg r  20 l $CONFIG &
+demwatch MemSeg l  30 l $CONFIG &
+demwatch MemSeg d  40 l $CONFIG &
+demwatch MemSeg u  50 l $CONFIG &
+demwatch MemSeg r  60 l $CONFIG &
+demwatch MemSeg l  70 l $CONFIG &
+demwatch MemSeg d  80 l $CONFIG &
+demwatch MemSeg u  90 l $CONFIG &

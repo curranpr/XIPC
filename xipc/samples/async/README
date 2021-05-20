@@ -1,0 +1,26 @@
+How to change XIPC async notification (default: signal SIGUSR1)
+--------------------------------------------------------------
+
+DESCRIPTION:
+------------
+	1. Set the environment variable XIPCASYNCIO. This has to be set
+       BEFORE XipcLogin. This requirement might go away in the future.
+
+	2. AFTER a successful XipcLogin, call the function XipcAsyncIoDescriptor.
+	   The function XipcAsyncIoDescriptor returns less than 0 on failure.
+
+	   NOTE: Xt users should call XtAppAddInput or XtAddInput and pass 
+	   the source returned by XipcAsyncIoDescriptor(). The condition 
+	   argument passed to XtAppAddInput or XtAddInput should be XtInputReadMask.
+	   
+	3. Whenever input is ready for READING on this file descriptor
+	   call XipcAsyncEventHandler to handle the xipc event. 
+
+	   NOTE: Xt users should call XipcAsyncEventHandler in the callback routine
+	   that was passed to XtAppAddInput or XtAddinput.
+
+SEE ALSO: 
+---------
+		The Technical Notes: "Using I/O Descriptors for Asynchronous Operations"
+		And, file: demo_aio.c
+

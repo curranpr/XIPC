@@ -1,0 +1,220 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+
+<head>
+<title>Queue and Message Select Codes</title>
+</head>
+
+<body>
+<h2>Using Message Select Codes and Queue Select Codes</h2>
+
+<p>QueSys provides the systems developer with great flexibility in sending and receiving messages. It is this
+feature that most sets QueSys apart from existing message queueing facilities. The key to successful 
+utilization of QueSys is a good understanding of when and how to use the various message and queue select codes. 
+This section offers a brief tutorial that describes these 'whens and hows'. 
+
+<p>All QueSys operations that dispatch or retrieve messages to and from QueSys queues require a <i>QueSelectCode</i> 
+and a <i>QidList</i> argument. It is the combination of these two arguments that determines the destination queue 
+of dispatched messages, as well as the identity of retrieved messages. It is therefore essential to understand the 
+function of these two arguments and how they interact. 
+
+<p>This document uses a shorthand notation for writing <i>QueSelectCode</i> and <i>QidList</i> argument specifications.
+Using this shorthand it is possible to examine and explore the open-ended possibilities afforded to the systems 
+developer. Instead of formally describing the shorthand notation, the document makes extensive use of examples. 
+
+<h3>Dispatching Messages Onto QusSys Queues</h3>
+
+<p>The topic of dispatching messages via QueSend is examined first, since it is less complex than the retrieval of 
+messages. 
+
+<p>Dispatching messages onto QueSys message queues can be viewed as occurring in two steps: 
+<ul>
+	<li>First, a list of one or more queues is defined.</li>
+	<li>Then, the message is placed onto one of the queues in the list, depending on some criteria.</li>
+</ul>
+
+<p>As an example, consider a programmer who wishes to send a message onto the shortest queue of the list of 
+queues a, b, and c (perhaps to guarantee balanced queue loads). First, the programmer would define the queue 
+list {a, b, c}, and then specify the 'Shortest Queue' criteria together with the queue list when dispatching 
+the message using the QueSend or QuePut function calls. Using a shorthand notation, this can be easily 
+expressed as: 
+	<pre>QUE_Q_SHQ{a, b, c}</pre> 
+Similarly, the expression for sending a message onto the longest queue in the list would be: 
+	<pre>QUE_Q_LNQ{a, b, c}</pre> 
+
+<p>The syntax for such dispatch expressions is thus of the form: 
+	
+	<p><tt>QueSelectCode{</tt><i><tt>QidList</tt></i><tt>}</tt> 
+
+<p>The different possible <i>QueSelectCode</i>s that may be used to dispatch a message using QueSend are: 
+<ul>
+	<li>Xipc.QUE_Q_SHQ - The shortest queue.</li>
+	<li>Xipc.QUE_Q_LNQ - The longest queue.</li>
+	<li>Xipc.QUE_Q_HPQ - The queue having the highest priority message.</li>
+	<li>Xipc.QUE_Q_LPQ - The queue having the lowest priority message.</li>
+	<li>Xipc.QUE_Q_EAQ - The queue having the earliest arrived (oldest) message.</li>
+	<li>Xipc.QUE_Q_LAQ - The queue with the latest arrived (most recent) message.</li>
+	<li>Xipc.QUE_Q_ANY - The first queue in the list that has room (not full).</li>
+</ul>
+
+<p>Examples of their usage include: 
+<ul>
+	<li>QUE_Q_LPQ{x, y, z} - Place the outgoing message on one of the queues x, y or z, having the 
+		lowest priority message.</li>
+	<li>QUE_Q_EAQ{q, r, s} - Place the outgoing message on one of the queues q, r or s, having the 
+		earliest arrived (oldest) message. This selects queues in a 'least recently accessed' manner.</li>
+	<li>QUE_Q_LAQ{m, n} - Place the outgoing message on one of the queues m or n, having the latest 
+		arrived (most recent) message.</li>
+	<li>QUE_Q_SHQ{j, k, m} - Place the outgoing message on the shortest of the three queues j, k or m. 
+		This achieves queue balancing.</li>
+	<li>QUE_Q_ANY{a, b, c} - Place the message on the first of the queue a, b or c that has room for 
+		another message. The queues are examined in the order of specification.</li>
+</ul>
+
+<h3>Retrieving Messages from QueSys Queues</h3>
+
+<p>Retrieving messages in the QueSys system can similarly be viewed as occurring in two steps, but with 
+a minor variation: 
+<ul>
+	<li>First a list of message queues is defined by the program. As part of this definition, one message 
+		is designated as the 'candidate message' for each of the listed queues, using a <i>MsgSelectCode</i>. 
+		For example, the specification 
+			<pre>{QUE_M_HP(a), QUE_M_EA(b), QUE_M_LA(c)}</pre> 
+		defines a list of three queues <b>a</b>, <b>b</b>, and <b>c</b>, where the candidate messages are: 
+		<ul>
+			<li>QUE_M_HP(a), the highest priority message on queue a.</li>
+			<li>QUE_M_EA(b), the earliest arrived message on queue b.</li>
+			<li>QUE_M_LA(c), the latest arrived message on queue c. </li>
+		</ul>
+		<p>Using the Java API, this list could be built as follows (assuming <b>a</b>, <b>b</b>, and <b>c</b> 
+		are <tt>int</tt> queue ids):
+		<pre>
+QidList ql = Xipc.QueListBuild(Xipc.QUE_M_HP(a));
+Xipc.QueListAdd(ql, Xipc.QUE_M_EA(b));
+Xipc.QueListAdd(ql, Xipc.QUE_M_LA(c));
+		</pre>
+		Or, in a more object oriented fashion:
+		<pre>
+QidList ql = new QidList().QueListAdd(Xipc.QUE_M_HP(a)).QueListAdd(Xipc.QUE_M_EA(b)).QueListAdd(Xipc.QUE_M_LA(c));
+		</pre>
+		</li>
+	<li>A message then gets selected from the list of candidate messages using a <i>QueSelectCode</i>. The 
+		selected message is retrieved and returned to the calling function. Thus, for example, the specification 
+			<pre>QUE_Q_HP{QUE_M_EA(a), QUE_M_EA(b)}</pre> 
+		compares the oldest (earliest arrived) messages on queue <b>a</b> and queue <b>b</b> and returns the one 
+		with the higher priority. Similarly, the specification 
+			<pre>QUE_Q_EA{QUE_M_HP(x), QUE_M_HP(y), QUE_M_HP(z)}</pre> 
+		returns the oldest of the highest priority messages from queues <b>x</b>, <b>y</b> and <b>z</b>.</li>
+</ul>	 
+<p>Now consider another retrieval example having a slightly different twist: 
+	<pre>QUE_Q_LNQ{QUE_M_HP(a), QUE_M_HP(b), QUE_M_HP(c)}</pre>
+The interpretation of this expression is as follows: First, the highest priority message on the three respective 
+queues <b>a</b>, <b>b</b> and <b>c</b> are designated as candidate messages. The returned message is that 
+candidate message which resides on the longest queue.
+ 
+<p>Note that the 'QUE_Q_LNQ' QueSelectCode when used in a candidate message selection capacity chooses the candidate 
+message that resides on the longest queue of <b>a</b>, <b>b</b>, and <b>c</b>. This is a departure from the 
+message retrieval examples demonstrated until now where the candidate message selection processes were based on 
+a 'QueSelectCodes' that compared the designated candidate messages from each queue directly, one with the other. 
+Here, by contrast, the message selection is performed based on characteristics of the underlying queues. 
+
+<p>The possible <i>MsgSelectCode</i>s are listed below. 
+<ul>
+	<li>Xipc.QUE_M_EA(<i>Q</i>) - The earliest arrived (oldest) message on the queue <i>Q</i>.</li>
+	<li>Xipc.QUE_M_LA(<i>Q</i>) - The latest arrived (most recent) message on the queue <i>Q</i>.</li>
+	<li>Xipc.QUE_M_HP(<i>Q</i>) - The highest priority message on the queue <i>Q</i>.</li> 
+	<li>Xipc.QUE_M_LP(<i>Q</i>) - The lowest priority message on the queue <i>Q</i>.</li> 
+	<li>Xipc.QUE_M_PREQ(<i>Q, n</i>) - The first message on queue <i>Q</i> having a priority of <i>n</i>.</li> 
+	<li>Xipc.QUE_M_PRNE(<i>Q, n</i>) - The first message on queue <i>Q</i> <i>not</i> having a priority of <i>n</i>.</li> 
+	<li>Xipc.QUE_M_PRGT(<i>Q, n</i>) - The first message on queue <i>Q</i> with a priority greater than <i>n</i>.</li> 
+	<li>Xipc.QUE_M_PRGE(<i>Q, n</i>) - The first message on queue <i>Q</i> with a priority &gt;= <i>n</i>.</li> 
+	<li>Xipc.QUE_M_PRLT(<i>Q, n</i>) - The first message on queue <i>Q</i> having a priority less than <i>n</i>.</li> 
+	<li>Xipc.QUE_M_PRLE(<i>Q, n</i>) - The first message on queue <i>Q</i> with a priority &lt;= <i>n</i>.</li> 
+	<li>Xipc.QUE_M_PRRNG(<i>Q,n,m</i>) - The first message on queue <i>Q</i> with a priority in [<i>n,m</i>] range.</li> 
+</ul>
+
+<p>The possible <i>QueSelectCode</i>s that can be used for selecting a candidate message from one of the listed 
+queues during retrieval operations are those listed below. Beware of some of their differing interpretations 
+as compared to their usage within message dispatch operations. 
+<ul>
+	<li>Xipc.QUE_Q_EA - The earliest arrived (oldest) candidate message.</li> 
+	<li>Xipc.QUE_Q_LA - The latest arrived (most recent) candidate message.</li> 
+	<li>Xipc.QUE_Q_HP - The highest priority candidate message.</li> 
+	<li>Xipc.QUE_Q_LP - The lowest priority candidate message.</li> 
+	<li>Xipc.QUE_Q_LNQ - The candidate message from the longest queue in the list.</li> 
+	<li>Xipc.QUE_Q_SHQ - The candidate message from the shortest queue in the list.</li> 
+	<li>Xipc.QUE_Q_HPQ - The candidate message from the queue with the highest priority message.</li> 
+	<li>Xipc.QUE_Q_LPQ - The candidate message from the queue with the lowest priority message.</li> 
+	<li>Xipc.QUE_Q_EAQ - The candidate message from the queue with the earliest arrived message.</li> 
+	<li>Xipc.QUE_Q_LAQ - The candidate message from the queue with the latest arrived message.</li> 
+	<li>Xipc.QUE_Q_ANY - The first candidate message.</li> 
+</ul>
+
+<h3>Expression Simplification</h3>
+
+<p>Expression simplification can be employed in certain cases. Simplification is straight-forward, involving simple 
+defaults. 
+
+<p>Whenever a message retrieval <i>QidList</i> has an entry in which a MsgSelectCode is not provided for a given queue 
+(i.e., only the Qid is given), then the retrieval operation's QueSelectCode is employed as the message select 
+criteria for that given queue. 
+
+<p>The following examples demonstrate this concept. The following two message retrieval expressions are equivalent: 
+	<pre>QUE_Q_HP{QUE_M_HP(x), QUE_M_EA(y), QUE_M_HP(z)}</pre>
+	<pre>QUE_Q_HP{x, QUE_M_EA(y), z}</pre> 
+
+<p>They both consider three candidate messages: 
+<ul>
+	<li>The highest priority message on queue <b>x</b>.</li>
+	<li>The earliest arrived message on queue <b>y</b>.</li>	
+	<li>The highest priority message on queue <b>z</b>.</li> 
+</ul>
+
+<p>The candidate message having the highest priority is the one retrieved. 
+
+<p>Note that the first and third Qids of the simplified expression lack a <i>MsgSelectCode</i>. As a result they 
+inherit the criteria of the expression's <i>QueSelectCode</i> (Highest Priority). 
+
+<p>Similarly: 
+	<pre>QUE_Q_HP{QUE_M_HP(q), QUE_M_HP(r), QUE_M_HP(s)}</pre>
+	<pre>QUE_Q_HP{q, r, s}</pre> 
+Both of these retrieval expressions return the overall highest priority message found on the three queues <b>q</b>, 
+<b>r</b> and <b>s</b>. 
+
+<p>Another case deserving review is how the expression <i>QUE_Q_HP{q, r, s}</i> returns the highest priority message 
+of all three queues <b>q</b>, <b>r</b> and <b>s</b>. This is accomplished as follows, considering the un-simplified 
+form of the expression: 
+	<pre>QUE_Q_HP{QUE_M_HP(q), QUE_M_HP(r), QUE_M_HP(s)}</pre> 
+First, the candidate messages from the three queues <b>q</b>, <b>r</b> and <b>s</b> are designated. They are the 
+highest priority message of their respective queues. These three candidate messages are then compared and the 
+highest priority message of the three candidates is chosen. 
+
+<p>Note, therefore, that a <i>QidList</i> of the form <i>{q, r, s}</i> can be used interchangeably within 
+message dispatch and retrieval functions. 
+
+<h3>Priority Specification During Retrieval</h3>
+
+<p>A number of the <i>MsgSelectCode</i>s deal with priorities. A variety of priority values or ranges can be specified. 
+
+<p>Thus, for example, 
+	<pre>QUE_Q_EA{QUE_M_PREQ(a, 100), QUE_M_PRLT(b, 50)}</pre> 
+designates the first message on queue <b>a</b> having a priority of 100 as the candidate message of queue 
+<b>a</b>, and the first message on queue <b>b</b> having a priority less than 50 as the candidate message 
+of queue <b>b</b>. It then returns the earliest arrived (oldest) of these two candidate messages. 
+
+<p>Similarly, 
+	<pre>QUE_Q_LNQ{QUE_M_PRRNG(a, 100, 200), QUE_M_PRRNG(b, 100, 200)}</pre> 
+considers the first message on queue <b>a</b> having a priority in the range [100,200] and it does the same 
+for queue <b>b</b>. It then returns the candidate message from the longer of the two queues. 
+
+<h3>Conclusion</h3>
+
+<p>This tutorial has outlined a few guidelines and examples of how to dispatch and 
+retrieve messages to and from queues within the <i>XIPC</i> QueSys subsystem. The possible combinations 
+are almost endless, well beyond what can fit in this documentation. These examples and the shorthand used 
+to express them should provide a good starting point for using the system correctly and to its full potential. 
+
+</body>
+
+</html>

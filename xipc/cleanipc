@@ -1,0 +1,28 @@
+if [ $# -lt 1 ] # no args specified
+then
+	echo "USAGE: cleanipc LOGNAME"
+	exit 1
+fi
+
+USER_ID=$1
+
+sem=`ipcs -s | grep $USER_ID |awk '{print $2}'`
+shm=`ipcs -m | grep $USER_ID |awk '{print $2}'`
+que=`ipcs -q | grep $USER_ID |awk '{print $2}'`
+
+set -x
+
+for i in $sem
+do
+	ipcrm sem $i
+done
+
+for i in $shm
+do
+	ipcrm shm $i
+done
+
+for i in $que
+do
+	ipcrm msg $i
+done

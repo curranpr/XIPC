@@ -1,0 +1,1510 @@
+*********  System message reported on 11/11/2020  11:33:20 *********
+Started instance "Stand-Alone"; Cfg File = "/home/curranprasad/xipc/_xipc"
+
+*********  System message reported on 11/11/2020  11:33:20 *********
+XIPC Network Server [build 5014] started
+
+*********  System message reported on 11/11/2020  11:33:20 *********
+XipcLad Server [build 5014] Started
+
+*********  System message reported on 11/11/2020  11:33:20 *********
+XIPC Async server [build 5014] started
+
+*********  System message reported on 11/11/2020  11:33:20 *********
+XipcIdld Server [build 5014] Started
+
+*********  System message reported on 11/11/2020  11:33:20 *********
+XIPC Platform Environment Initialized
+LINUX RED HAT 7.X - Envoy XIPC 4.1.0ba [Build 5014] BETA RELEASE
+
+*********  System message reported on 11/11/2020  11:33:24 *********
+Started instance "Stand-Alone"; Cfg File = "/home/curranprasad/xipc/samples/bin/_test"
+
+*********  System message reported on 11/11/2020  11:33:30 *********
+Started instance "Stand-Alone"; Cfg File = "/home/curranprasad/xipc/samples/bin/test"
+
+*********  System message reported on 11/11/2020  11:33:41 *********
+Stopped instance "*NoName*"; Cfg File = "/home/curranprasad/xipc/samples/bin/_test"
+
+*********  System message reported on 11/11/2020  11:33:41 *********
+Stopped instance "*NoName*"; Cfg File = "/home/curranprasad/xipc/samples/bin/test"
+
+*********  System message reported on 11/11/2020  11:34:53 *********
+Started instance "Stand-Alone"; Cfg File = "/home/curranprasad/xipc/samples/bin/test"
+
+*********  System message reported on 11/11/2020  11:34:58 *********
+Stopped instance "*NoName*"; Cfg File = "/home/curranprasad/xipc/samples/bin/test"
+
+*********  System message reported on 11/11/2020  11:35:46 *********
+Started instance "Stand-Alone"; Cfg File = "/home/curranprasad/xipc/samples/bin/test"
+
+*********  System message reported on 11/11/2020  11:35:50 *********
+Stopped instance "*NoName*"; Cfg File = "/home/curranprasad/xipc/samples/bin/test"
+
+*********  System message reported on 12/28/2020  10:51:14 *********
+Started instance "Stand-Alone"; Cfg File = "/home/curranprasad/xipc/_xipc"
+
+*********  System message reported on 12/28/2020  10:51:15 *********
+XIPC Network Server [build 5014] started
+
+*********  System message reported on 12/28/2020  10:51:15 *********
+XIPC Async server [build 5014] started
+
+*********  System message reported on 12/28/2020  10:51:15 *********
+XipcLad Server [build 5014] Started
+
+*********  System message reported on 12/28/2020  10:51:15 *********
+XipcIdld Server [build 5014] Started
+
+*********  System message reported on 12/28/2020  10:51:15 *********
+XIPC Platform Environment Initialized
+LINUX RED HAT 7.X - Envoy XIPC 4.1.0ba [Build 5014] BETA RELEASE
+
+*********  System message reported on 12/28/2020  10:53:17 *********
+Started instance "Stand-Alone"; Cfg File = "/home/curranprasad/xipc/samples/bin/test"
+
+*********  System message reported on 12/28/2020  10:57:08 *********
+Stopped instance "*NoName*"; Cfg File = "/home/curranprasad/xipc/samples/bin/test"
+
+*********  System message reported on 12/28/2020  10:57:19 *********
+Started instance "NetDemo"; Cfg File = "/home/curranprasad/xipc/samples/bin/test"
+
+*********  System message reported on 12/28/2020  10:58:25 *********
+Stopped instance "NetDemo"; Cfg File = "/home/curranprasad/xipc/samples/bin/test"
+
+*********  System message reported on 12/28/2020  10:59:00 *********
+XipcIdld Server Stopped
+
+*********  System message reported on 12/28/2020  10:59:01 *********
+Stopped instance "*NoName*"; Cfg File = "/home/curranprasad/xipc/_xipc"
+
+*********  System message reported on 12/28/2020  10:59:03 *********
+XIPC Platform Environment Terminated
+
+*********  System message reported on 12/28/2020  10:59:07 *********
+Started instance "Stand-Alone"; Cfg File = "/home/curranprasad/xipc/_xipc"
+
+*********  System message reported on 12/28/2020  10:59:07 *********
+XIPC Network Server [build 5014] started
+
+*********  System message reported on 12/28/2020  10:59:07 *********
+XIPC Async server [build 5014] started
+
+*********  System message reported on 12/28/2020  10:59:07 *********
+XipcLad Server [build 5014] Started
+
+*********  System message reported on 12/28/2020  10:59:07 *********
+XipcIdld Server [build 5014] Started
+
+*********  System message reported on 12/28/2020  10:59:07 *********
+XIPC Platform Environment Initialized
+LINUX RED HAT 7.X - Envoy XIPC 4.1.0ba [Build 5014] BETA RELEASE
+
+*********  System message reported on 12/28/2020  10:59:12 *********
+Started instance "hello"; Cfg File = "/home/curranprasad/xipc/samples/bin/test"
+
+*********  System message reported on 12/28/2020  10:59:22 *********
+Stopped instance "hello"; Cfg File = "/home/curranprasad/xipc/samples/bin/test"
+
+*********  System message reported on 12/28/2020  11:00:03 *********
+Started instance "Stand-Alone"; Cfg File = "/home/curranprasad/xipc/samples/bin/test"
+
+*********  System message reported on 12/28/2020  11:01:35 *********
+Stopped instance "*NoName*"; Cfg File = "/home/curranprasad/xipc/samples/bin/test"
+
+*********  System message reported on 12/28/2020  11:02:41 *********
+Started instance "JavaXipc"; Cfg File = "/home/curranprasad/xipc/samples/bin/test"
+
+*********  System message reported on 12/31/2020  11:00:59 *********
+Started instance "Stand-Alone"; Cfg File = "/home/curranprasad/xipc/_xipc"
+
+*********  System message reported on 12/31/2020  11:00:59 *********
+XIPC Network Server [build 5014] started
+
+*********  System message reported on 12/31/2020  11:00:59 *********
+XIPC Async server [build 5014] started
+
+*********  System message reported on 12/31/2020  11:00:59 *********
+XipcLad Server [build 5014] Started
+
+*********  System message reported on 12/31/2020  11:00:59 *********
+XipcIdld Server [build 5014] Started
+
+*********  System message reported on 12/31/2020  11:00:59 *********
+XIPC Platform Environment Initialized
+LINUX RED HAT 7.X - Envoy XIPC 4.1.0ba [Build 5014] BETA RELEASE
+
+*********  System message reported on 12/31/2020  11:01:06 *********
+Started instance "java"; Cfg File = "/home/curranprasad/xipc/samples/bin/test"
+
+*********  System message reported on 01/11/2021  11:46:19 *********
+Started instance "Stand-Alone"; Cfg File = "/home/curranprasad/xipc/_xipc"
+
+*********  System message reported on 01/11/2021  11:46:19 *********
+XIPC Network Server [build 5014] started
+
+*********  System message reported on 01/11/2021  11:46:19 *********
+XIPC Async server [build 5014] started
+
+*********  System message reported on 01/11/2021  11:46:19 *********
+XipcLad Server [build 5014] Started
+
+*********  System message reported on 01/11/2021  11:46:19 *********
+XipcIdld Server [build 5014] Started
+
+*********  System message reported on 01/11/2021  11:46:19 *********
+XIPC Platform Environment Initialized
+LINUX RED HAT 7.X - Envoy XIPC 4.1.0ba [Build 5014] BETA RELEASE
+
+*********  System message reported on 01/11/2021  11:46:27 *********
+Started instance "Java"; Cfg File = "/home/curranprasad/xipc/samples/bin/test"
+
+*********  System message reported on 01/11/2021  12:49:15 *********
+Stopped instance "Java"; Cfg File = "/home/curranprasad/xipc/samples/bin/test"
+
+*********  System message reported on 01/11/2021  12:49:19 *********
+Started instance "Java"; Cfg File = "/home/curranprasad/xipc/samples/bin/test"
+
+*********  System message reported on 01/11/2021  15:08:59 *********
+Started instance "java"; Cfg File = "/home/curranprasad/xipc/samples/bin/test"
+
+*********  System message reported on 01/11/2021  15:28:34 *********
+Started instance "Stand-Alone"; Cfg File = "/home/curranprasad/xipc/_xipc"
+
+*********  System message reported on 01/11/2021  15:28:34 *********
+XIPC Network Server [build 5014] started
+
+*********  System message reported on 01/11/2021  15:28:34 *********
+XIPC Async server [build 5014] started
+
+*********  System message reported on 01/11/2021  15:28:34 *********
+XipcLad Server [build 5014] Started
+
+*********  System message reported on 01/11/2021  15:28:34 *********
+XipcIdld Server [build 5014] Started
+
+*********  System message reported on 01/11/2021  15:28:34 *********
+XIPC Platform Environment Initialized
+LINUX RED HAT 7.X - Envoy XIPC 4.1.0ba [Build 5014] BETA RELEASE
+
+*********  System message reported on 01/11/2021  15:28:51 *********
+Stopped instance "*NoName*"; Cfg File = "/home/curranprasad/xipc/samples/bin/test"
+
+*********  System message reported on 01/11/2021  15:28:54 *********
+Internal platform instance already active
+
+*********  System message reported on 01/11/2021  15:29:01 *********
+Started instance "java"; Cfg File = "/home/curranprasad/xipc/samples/bin/test"
+
+*********  System message reported on 01/11/2021  15:32:13 *********
+Stopped instance "java"; Cfg File = "/home/curranprasad/xipc/samples/bin/test"
+
+*********  System message reported on 01/11/2021  15:39:15 *********
+Started instance "Stand-Alone"; Cfg File = "/home/curranprasad/xipc/samples/bin/test"
+
+*********  System message reported on 01/11/2021  15:39:19 *********
+Stopped instance "*NoName*"; Cfg File = "/home/curranprasad/xipc/samples/bin/test"
+
+*********  System message reported on 01/11/2021  15:39:39 *********
+Started instance "java"; Cfg File = "/home/curranprasad/xipc/samples/bin/test"
+
+*********  System message reported on 01/12/2021  14:51:49 *********
+Internal platform instance already active
+
+*********  System message reported on 01/12/2021  14:52:40 *********
+Stopped instance "java"; Cfg File = "/home/curranprasad/xipc/samples/bin/test"
+
+*********  System message reported on 01/12/2021  14:52:42 *********
+Internal platform instance already active
+
+*********  System message reported on 01/12/2021  14:52:48 *********
+Started instance "Java"; Cfg File = "/home/curranprasad/xipc/samples/bin/test"
+
+*********  System message reported on 01/12/2021  18:52:54 *********
+Stopped instance "Java"; Cfg File = "/home/curranprasad/xipc/samples/bin/test"
+
+*********  System message reported on 01/13/2021  10:59:44 *********
+Cannot start instance list retrieval, RetCode = -1089
+
+*********  System message reported on 01/13/2021  10:59:44 *********
+Internal platform instance not active
+
+*********  System message reported on 01/13/2021  10:59:48 *********
+Started instance "Stand-Alone"; Cfg File = "/home/curranprasad/xipc/_xipc"
+
+*********  System message reported on 01/13/2021  10:59:48 *********
+XIPC Network Server [build 5014] started
+
+*********  System message reported on 01/13/2021  10:59:48 *********
+XIPC Async server [build 5014] started
+
+*********  System message reported on 01/13/2021  10:59:48 *********
+XipcLad Server [build 5014] Started
+
+*********  System message reported on 01/13/2021  10:59:48 *********
+XipcIdld Server [build 5014] Started
+
+*********  System message reported on 01/13/2021  10:59:48 *********
+XIPC Platform Environment Initialized
+LINUX RED HAT 7.X - Envoy XIPC 4.1.0ba [Build 5014] BETA RELEASE
+
+*********  System message reported on 01/13/2021  10:59:51 *********
+Started instance "Java"; Cfg File = "/home/curranprasad/xipc/samples/bin/test"
+
+*********  System message reported on 01/14/2021  10:58:11 *********
+Internal platform instance already active
+
+*********  System message reported on 01/14/2021  10:58:24 *********
+Stopped instance "Java"; Cfg File = "/home/curranprasad/xipc/samples/bin/test"
+
+*********  System message reported on 01/14/2021  10:58:29 *********
+Started instance "Java"; Cfg File = "/home/curranprasad/xipc/samples/bin/test"
+
+*********  System message reported on 01/15/2021  11:24:44 *********
+Stopped instance "Java"; Cfg File = "/home/curranprasad/xipc/samples/bin/test"
+
+*********  System message reported on 01/15/2021  15:05:25 *********
+Internal platform instance already active
+
+*********  System message reported on 01/15/2021  15:05:33 *********
+Started instance "Java"; Cfg File = "/home/curranprasad/xipc/samples/bin/test"
+
+*********  System message reported on 01/26/2021  11:21:02 *********
+Stopped instance "Java"; Cfg File = "/home/curranprasad/xipc/samples/bin/test"
+
+*********  System message reported on 01/26/2021  11:21:13 *********
+Started instance "java"; Cfg File = "/home/curranprasad/xipc/samples/bin/test"
+
+*********  System message reported on 01/26/2021  13:52:50 *********
+Stopped instance "java"; Cfg File = "/home/curranprasad/xipc/samples/bin/test"
+
+*********  System message reported on 01/26/2021  13:53:03 *********
+Started instance "new"; Cfg File = "/home/curranprasad/xipc/samples/bin/test"
+
+*********  System message reported on 03/05/2021  11:12:21 *********
+Started instance "Stand-Alone"; Cfg File = "/home/curranprasad/xipc/_xipc"
+
+*********  System message reported on 03/05/2021  11:12:21 *********
+XIPC Network Server [build 5014] started
+
+*********  System message reported on 03/05/2021  11:12:21 *********
+XIPC Async server [build 5014] started
+
+*********  System message reported on 03/05/2021  11:12:21 *********
+XipcLad Server [build 5014] Started
+
+*********  System message reported on 03/05/2021  11:12:21 *********
+XipcIdld Server [build 5014] Started
+
+*********  System message reported on 03/05/2021  11:12:21 *********
+XIPC Platform Environment Initialized
+LINUX RED HAT 7.X - Envoy XIPC 4.1.0ba [Build 5014] BETA RELEASE
+
+*********  System message reported on 03/05/2021  11:12:34 *********
+Started instance "Demo"; Cfg File = "/home/curranprasad/xipc/samples/bin/test"
+
+*********  System message reported on 03/05/2021  11:34:27 *********
+Stopped instance "Demo"; Cfg File = "/home/curranprasad/xipc/samples/bin/test"
+
+*********  System message reported on 03/25/2021  15:25:21 *********
+Internal platform instance already active
+
+*********  System message reported on 03/25/2021  15:25:34 *********
+Internal platform instance already active
+
+*********  System message reported on 03/25/2021  15:25:41 *********
+Started instance "demo"; Cfg File = "/home/curranprasad/xipc/samples/bin/test"
+
+                                                                                                                                                     *********  System message reported on 03/26/2021  11:08:23 *********
+Started instance "Stand-Alone"; Cfg File = "/home/curranprasad/xipc/_xipc"
+
+*********  System message reported on 03/26/2021  11:08:23 *********
+XIPC Network Server [build 5014] started
+
+*********  System message reported on 03/26/2021  11:08:23 *********
+XIPC Async server [build 5014] started
+
+*********  System message reported on 03/26/2021  11:08:23 *********
+XipcLad Server [build 5014] Started
+
+*********  System message reported on 03/26/2021  11:08:23 *********
+XipcIdld Server [build 5014] Started
+
+*********  System message reported on 03/26/2021  11:08:23 *********
+XIPC Platform Environment Initialized
+LINUX RED HAT 7.X - Envoy XIPC 4.1.0ba [Build 5014] BETA RELEASE
+
+*********  System message reported on 03/26/2021  11:08:30 *********
+Started instance "demo"; Cfg File = "/home/curranprasad/xipc/samples/bin/test"
+
+*********  System message reported on 03/29/2021  11:48:26 *********
+Started instance "Stand-Alone"; Cfg File = "/home/curranprasad/xipc/_xipc"
+
+*********  System message reported on 03/29/2021  11:48:26 *********
+XIPC Network Server [build 5014] started
+
+*********  System message reported on 03/29/2021  11:48:26 *********
+XIPC Async server [build 5014] started
+
+*********  System message reported on 03/29/2021  11:48:26 *********
+XipcLad Server [build 5014] Started
+
+*********  System message reported on 03/29/2021  11:48:26 *********
+XipcIdld Server [build 5014] Started
+
+*********  System message reported on 03/29/2021  11:48:26 *********
+XIPC Platform Environment Initialized
+LINUX RED HAT 7.X - Envoy XIPC 4.1.0ba [Build 5014] BETA RELEASE
+
+*********  System message reported on 03/29/2021  11:48:35 *********
+Started instance "demo"; Cfg File = "/home/curranprasad/xipc/samples/bin/test"
+
+*********  System message reported on 03/30/2021  13:23:27 *********
+Stopped instance "demo"; Cfg File = "/home/curranprasad/xipc/samples/bin/test"
+
+*********  System message reported on 04/02/2021  10:47:32 *********
+Started instance "Stand-Alone"; Cfg File = "/home/curranprasad/xipc/_xipc"
+
+*********  System message reported on 04/02/2021  10:47:32 *********
+XIPC Network Server [build 5014] started
+
+*********  System message reported on 04/02/2021  10:47:32 *********
+XIPC Async server [build 5014] started
+
+*********  System message reported on 04/02/2021  10:47:32 *********
+XipcLad Server [build 5014] Started
+
+*********  System message reported on 04/02/2021  10:47:32 *********
+XipcIdld Server [build 5014] Started
+
+*********  System message reported on 04/02/2021  10:47:32 *********
+XIPC Platform Environment Initialized
+LINUX RED HAT 7.X - Envoy XIPC 4.1.0ba [Build 5014] BETA RELEASE
+
+*********  System message reported on 04/02/2021  10:47:41 *********
+Started instance "demo"; Cfg File = "/home/curranprasad/xipc/samples/bin/test"
+
+*********  System message reported on 04/02/2021  13:14:25 *********
+Stopped instance "demo"; Cfg File = "/home/curranprasad/xipc/samples/bin/test"
+
+*********  System message reported on 04/02/2021  13:14:29 *********
+Started instance "demo"; Cfg File = "/home/curranprasad/xipc/samples/bin/test"
+
+*********  System message reported on 04/05/2021  11:55:05 *********
+Internal platform instance already active
+
+*********  System message reported on 04/05/2021  11:55:19 *********
+Stopped instance "demo"; Cfg File = "/home/curranprasad/xipc/samples/bin/test"
+
+*********  System message reported on 04/05/2021  11:55:23 *********
+Internal platform instance already active
+
+*********  System message reported on 04/05/2021  11:55:26 *********
+Started instance "demo"; Cfg File = "/home/curranprasad/xipc/samples/bin/test"
+
+*********  System message reported on 04/06/2021  11:06:01 *********
+Stopped instance "demo"; Cfg File = "/home/curranprasad/xipc/samples/bin/test"
+
+*********  System message reported on 04/06/2021  11:06:04 *********
+Started instance "demo"; Cfg File = "/home/curranprasad/xipc/samples/bin/test"
+
+*********  System message reported on 04/06/2021  13:46:34 *********
+Stopped instance "demo"; Cfg File = "/home/curranprasad/xipc/samples/bin/test"
+
+*********  System message reported on 04/06/2021  13:46:47 *********
+Started instance "demo"; Cfg File = "/home/curranprasad/xipc/samples/bin/test"
+
+*********  System message reported on 04/07/2021  10:38:50 *********
+Stopped instance "demo"; Cfg File = "/home/curranprasad/xipc/samples/bin/test"
+
+*********  System message reported on 04/07/2021  10:38:51 *********
+Started instance "demo"; Cfg File = "/home/curranprasad/xipc/samples/bin/test"
+
+*********  System message reported on 04/08/2021  11:06:00 *********
+Stopped instance "demo"; Cfg File = "/home/curranprasad/xipc/samples/bin/test"
+
+*********  System message reported on 04/08/2021  11:06:06 *********
+Started instance "demo"; Cfg File = "/home/curranprasad/xipc/samples/bin/test"
+
+*********  System message reported on 04/08/2021  14:59:26 *********
+Started instance "Stand-Alone"; Cfg File = "/home/curranprasad/xipc/_xipc"
+
+*********  System message reported on 04/08/2021  14:59:26 *********
+XIPC Network Server [build 5014] started
+
+*********  System message reported on 04/08/2021  14:59:26 *********
+XIPC Async server [build 5014] started
+
+*********  System message reported on 04/08/2021  14:59:26 *********
+XipcLad Server [build 5014] Started
+
+*********  System message reported on 04/08/2021  14:59:26 *********
+XipcIdld Server [build 5014] Started
+
+*********  System message reported on 04/08/2021  14:59:26 *********
+XIPC Platform Environment Initialized
+LINUX RED HAT 7.X - Envoy XIPC 4.1.0ba [Build 5014] BETA RELEASE
+
+*********  System message reported on 04/08/2021  14:59:38 *********
+Started instance "demo"; Cfg File = "/home/curranprasad/xipc/samples/bin/test"
+
+*********  System message reported on 04/08/2021  15:27:25 *********
+Stopped instance "demo"; Cfg File = "/home/curranprasad/xipc/samples/bin/test"
+
+*********  System message reported on 04/08/2021  15:27:27 *********
+Internal platform instance already active
+
+*********  System message reported on 04/08/2021  15:27:42 *********
+Started instance "javaXipc"; Cfg File = "/home/curranprasad/xipc/samples/bin/test"
+
+*********  System message reported on 04/08/2021  15:34:31 *********
+Internal platform instance already active
+
+*********  System message reported on 04/08/2021  15:34:35 *********
+Stopped instance "javaXipc"; Cfg File = "/home/curranprasad/xipc/samples/bin/test"
+
+*********  System message reported on 04/08/2021  15:34:44 *********
+Started instance "demo"; Cfg File = "/home/curranprasad/xipc/samples/bin/test"
+
+*********  System message reported on 04/08/2021  15:43:11 *********
+Stopped instance "demo"; Cfg File = "/home/curranprasad/xipc/samples/bin/test"
+
+*********  System message reported on 04/08/2021  15:43:16 *********
+Started instance "demo"; Cfg File = "/home/curranprasad/xipc/samples/bin/test"
+
+*********  System message reported on 04/12/2021  10:52:50 *********
+Started instance "Stand-Alone"; Cfg File = "/home/curranprasad/xipc/_xipc"
+
+*********  System message reported on 04/12/2021  10:52:50 *********
+XIPC Network Server [build 5014] started
+
+*********  System message reported on 04/12/2021  10:52:50 *********
+XIPC Async server [build 5014] started
+
+*********  System message reported on 04/12/2021  10:52:50 *********
+XipcLad Server [build 5014] Started
+
+*********  System message reported on 04/12/2021  10:52:50 *********
+XipcIdld Server [build 5014] Started
+
+*********  System message reported on 04/12/2021  10:52:50 *********
+XIPC Platform Environment Initialized
+LINUX RED HAT 7.X - Envoy XIPC 4.1.0ba [Build 5014] BETA RELEASE
+
+*********  System message reported on 04/12/2021  10:52:54 *********
+Started instance "demo"; Cfg File = "/home/curranprasad/xipc/samples/bin/test"
+
+*********  System message reported on 04/12/2021  14:06:12 *********
+Stopped instance "demo"; Cfg File = "/home/curranprasad/xipc/samples/bin/test"
+
+*********  System message reported on 04/12/2021  14:06:17 *********
+Started instance "demo"; Cfg File = "/home/curranprasad/xipc/samples/bin/test"
+
+*********  System message reported on 04/13/2021  09:57:03 *********
+Stopped instance "demo"; Cfg File = "/home/curranprasad/xipc/samples/bin/test"
+
+*********  System message reported on 04/14/2021  16:05:25 *********
+Internal platform instance already active
+
+*********  System message reported on 04/14/2021  16:05:55 *********
+XipcIdld Server Stopped
+
+*********  System message reported on 04/14/2021  16:06:00 *********
+Stopped instance "*NoName*"; Cfg File = "/home/curranprasad/xipc/_xipc"
+
+*********  System message reported on 04/14/2021  16:06:01 *********
+XIPC Network Server stopped
+
+*********  System message reported on 04/14/2021  16:06:02 *********
+XIPC Platform Environment Terminated
+
+*********  System message reported on 04/27/2021  15:01:56 *********
+Started instance "Stand-Alone"; Cfg File = "/home/curran/Documents/curranprasad/xipc/_xipc"
+
+*********  System message reported on 04/27/2021  15:01:56 *********
+XIPC Network Server [build 5014] started
+
+*********  System message reported on 04/27/2021  15:01:56 *********
+XIPC Async server [build 5014] started
+
+*********  System message reported on 04/27/2021  15:01:56 *********
+XipcLad Server [build 5014] Started
+
+*********  System message reported on 04/27/2021  15:01:56 *********
+XipcIdld Server [build 5014] Started
+
+*********  System message reported on 04/27/2021  15:01:56 *********
+XIPC Platform Environment Initialized
+LINUX RED HAT 7.X - Envoy XIPC 4.1.0ba [Build 5014] BETA RELEASE
+
+*********  System message reported on 04/27/2021  15:02:04 *********
+Started instance "heloo"; Cfg File = "/home/curran/Documents/curranprasad/xipc/samples/bin/test"
+
+*********  System message reported on 04/27/2021  15:07:13 *********
+Stopped instance "heloo"; Cfg File = "/home/curran/Documents/curranprasad/xipc/samples/bin/test"
+
+*********  System message reported on 04/27/2021  15:07:15 *********
+XipcIdld Server Stopped
+
+*********  System message reported on 04/27/2021  15:07:19 *********
+Stopped instance "*NoName*"; Cfg File = "/home/curran/Documents/curranprasad/xipc/_xipc"
+
+*********  System message reported on 04/27/2021  15:07:20 *********
+XIPC Network Server stopped
+
+*********  System message reported on 04/27/2021  15:07:21 *********
+XIPC Platform Environment Terminated
+
+*********  System message reported on 04/27/2021  15:20:00 *********
+Started instance "Stand-Alone"; Cfg File = "/home/curran/Documents/curranprasad/xipc/_xipc"
+
+*********  System message reported on 04/27/2021  15:20:00 *********
+XIPC Network Server [build 5014] started
+
+*********  System message reported on 04/27/2021  15:20:00 *********
+XIPC Async server [build 5014] started
+
+*********  System message reported on 04/27/2021  15:20:00 *********
+XipcLad Server [build 5014] Started
+
+*********  System message reported on 04/27/2021  15:20:00 *********
+XipcIdld Server [build 5014] Started
+
+*********  System message reported on 04/27/2021  15:20:00 *********
+XIPC Platform Environment Initialized
+LINUX RED HAT 7.X - Envoy XIPC 4.1.0ba [Build 5014] BETA RELEASE
+
+*********  System message reported on 04/27/2021  15:20:03 *********
+Started instance "demo"; Cfg File = "/home/curran/Documents/curranprasad/xipc/samples/bin/test"
+
+*********  System message reported on 04/27/2021  15:33:29 *********
+Stopped instance "demo"; Cfg File = "/home/curran/Documents/curranprasad/xipc/samples/bin/test"
+
+*********  System message reported on 04/27/2021  15:33:36 *********
+Started instance "demo"; Cfg File = "/home/curran/Documents/curranprasad/xipc/samples/bin/test"
+
+*********  System message reported on 04/27/2021  20:39:09 *********
+Started instance "Stand-Alone"; Cfg File = "/home/curran/Documents/curranprasad/xipc/_xipc"
+
+*********  System message reported on 04/27/2021  20:39:13 *********
+Internal platform instance already active
+
+*********  System message reported on 04/27/2021  20:39:17 *********
+Started instance "demo"; Cfg File = "/home/curran/Documents/curranprasad/xipc/samples/bin/test"
+
+*********  System message reported on 04/27/2021  20:39:22 *********
+Stopped instance "demo"; Cfg File = "/home/curran/Documents/curranprasad/xipc/samples/bin/test"
+
+*********  System message reported on 04/27/2021  20:41:38 *********
+Internal platform instance already active
+
+*********  System message reported on 04/27/2021  20:41:41 *********
+XifIdldStopService failed. RetCode = -1127
+
+*********  System message reported on 04/27/2021  20:41:42 *********
+Stopped instance "*NoName*"; Cfg File = "/home/curran/Documents/curranprasad/xipc/_xipc"
+
+*********  System message reported on 04/27/2021  20:41:44 *********
+XIPC Platform Environment Terminated
+
+*********  System message reported on 04/27/2021  20:42:16 *********
+Started instance "Stand-Alone"; Cfg File = "/home/curran/Documents/curranprasad/xipc/_xipc"
+
+*********  System message reported on 04/27/2021  20:42:16 *********
+XIPC Network Server [build 5014] started
+
+*********  System message reported on 04/27/2021  20:42:16 *********
+XIPC Async server [build 5014] started
+
+*********  System message reported on 04/27/2021  20:42:16 *********
+XipcLad Server [build 5014] Started
+
+*********  System message reported on 04/27/2021  20:42:16 *********
+XipcIdld Server [build 5014] Started
+
+*********  System message reported on 04/27/2021  20:42:16 *********
+XIPC Platform Environment Initialized
+LINUX RED HAT 7.X - Envoy XIPC 4.1.0ba [Build 5014] BETA RELEASE
+
+*********  System message reported on 04/27/2021  20:42:18 *********
+XipcIdld Server Stopped
+
+*********  System message reported on 04/27/2021  20:42:23 *********
+Stopped instance "*NoName*"; Cfg File = "/home/curran/Documents/curranprasad/xipc/_xipc"
+
+*********  System message reported on 04/27/2021  20:42:24 *********
+XIPC Network Server stopped
+
+*********  System message reported on 04/27/2021  20:42:25 *********
+XIPC Platform Environment Terminated
+
+*********  System message reported on 04/27/2021  20:42:27 *********
+Started instance "Stand-Alone"; Cfg File = "/home/curran/Documents/curranprasad/xipc/_xipc"
+
+*********  System message reported on 04/27/2021  20:42:27 *********
+XIPC Network Server [build 5014] started
+
+*********  System message reported on 04/27/2021  20:42:27 *********
+XIPC Async server [build 5014] started
+
+*********  System message reported on 04/27/2021  20:42:27 *********
+XipcLad Server [build 5014] Started
+
+*********  System message reported on 04/27/2021  20:42:27 *********
+XipcIdld Server [build 5014] Started
+
+*********  System message reported on 04/27/2021  20:42:27 *********
+XIPC Platform Environment Initialized
+LINUX RED HAT 7.X - Envoy XIPC 4.1.0ba [Build 5014] BETA RELEASE
+
+*********  System message reported on 04/27/2021  20:42:30 *********
+XipcIdld Server Stopped
+
+*********  System message reported on 04/27/2021  20:42:35 *********
+Stopped instance "*NoName*"; Cfg File = "/home/curran/Documents/curranprasad/xipc/_xipc"
+
+*********  System message reported on 04/27/2021  20:42:36 *********
+XIPC Network Server stopped
+
+*********  System message reported on 04/27/2021  20:42:37 *********
+XIPC Platform Environment Terminated
+
+*********  System message reported on 04/27/2021  20:42:42 *********
+Started instance "Stand-Alone"; Cfg File = "/home/curran/Documents/curranprasad/xipc/_xipc"
+
+*********  System message reported on 04/27/2021  20:42:42 *********
+XIPC Network Server [build 5014] started
+
+*********  System message reported on 04/27/2021  20:42:42 *********
+XIPC Async server [build 5014] started
+
+*********  System message reported on 04/27/2021  20:42:42 *********
+XipcLad Server [build 5014] Started
+
+*********  System message reported on 04/27/2021  20:42:42 *********
+XipcIdld Server [build 5014] Started
+
+*********  System message reported on 04/27/2021  20:42:42 *********
+XIPC Platform Environment Initialized
+LINUX RED HAT 7.X - Envoy XIPC 4.1.0ba [Build 5014] BETA RELEASE
+
+*********  System message reported on 04/27/2021  20:42:46 *********
+XipcIdld Server Stopped
+
+*********  System message reported on 04/27/2021  20:42:50 *********
+Stopped instance "*NoName*"; Cfg File = "/home/curran/Documents/curranprasad/xipc/_xipc"
+
+*********  System message reported on 04/27/2021  20:42:51 *********
+XIPC Network Server stopped
+
+*********  System message reported on 04/27/2021  20:42:52 *********
+XIPC Platform Environment Terminated
+
+*********  System message reported on 04/28/2021  11:10:10 *********
+Started instance "Stand-Alone"; Cfg File = "/home/curran/Documents/curranprasad/xipc/_xipc"
+
+*********  System message reported on 04/28/2021  11:10:10 *********
+XIPC Network Server [build 5014] started
+
+*********  System message reported on 04/28/2021  11:10:10 *********
+XIPC Async server [build 5014] started
+
+*********  System message reported on 04/28/2021  11:10:10 *********
+XipcLad Server [build 5014] Started
+
+*********  System message reported on 04/28/2021  11:10:10 *********
+XipcIdld Server [build 5014] Started
+
+*********  System message reported on 04/28/2021  11:10:10 *********
+XIPC Platform Environment Initialized
+LINUX RED HAT 7.X - Envoy XIPC 4.1.0ba [Build 5014] BETA RELEASE
+
+*********  System message reported on 04/28/2021  11:10:15 *********
+Started instance "demo"; Cfg File = "/home/curran/Documents/curranprasad/xipc/samples/bin/test"
+
+*********  System message reported on 04/28/2021  15:24:25 *********
+Stopped instance "demo"; Cfg File = "/home/curran/Documents/curranprasad/xipc/samples/bin/test"
+
+*********  System message reported on 04/28/2021  15:24:27 *********
+XipcIdld Server Stopped
+
+*********  System message reported on 04/28/2021  15:24:31 *********
+Stopped instance "*NoName*"; Cfg File = "/home/curran/Documents/curranprasad/xipc/_xipc"
+
+*********  System message reported on 04/28/2021  15:24:32 *********
+XIPC Network Server stopped
+
+*********  System message reported on 04/28/2021  15:24:33 *********
+XIPC Platform Environment Terminated
+
+*********  System message reported on 04/29/2021  10:16:59 *********
+Started instance "Stand-Alone"; Cfg File = "/home/curran/Documents/curranprasad/xipc/_xipc"
+
+*********  System message reported on 04/29/2021  10:16:59 *********
+XIPC Network Server [build 5014] started
+
+*********  System message reported on 04/29/2021  10:16:59 *********
+XIPC Async server [build 5014] started
+
+*********  System message reported on 04/29/2021  10:16:59 *********
+XipcLad Server [build 5014] Started
+
+*********  System message reported on 04/29/2021  10:16:59 *********
+XipcIdld Server [build 5014] Started
+
+*********  System message reported on 04/29/2021  10:16:59 *********
+XIPC Platform Environment Initialized
+LINUX RED HAT 7.X - Envoy XIPC 4.1.0ba [Build 5014] BETA RELEASE
+
+*********  System message reported on 04/29/2021  10:17:05 *********
+Started instance "demo"; Cfg File = "/home/curran/Documents/curranprasad/xipc/samples/bin/test"
+
+*********  System message reported on 04/29/2021  11:04:16 *********
+Stopped instance "demo"; Cfg File = "/home/curran/Documents/curranprasad/xipc/samples/bin/test"
+
+*********  System message reported on 04/29/2021  11:04:17 *********
+XipcIdld Server Stopped
+
+*********  System message reported on 04/29/2021  11:04:22 *********
+Stopped instance "*NoName*"; Cfg File = "/home/curran/Documents/curranprasad/xipc/_xipc"
+
+*********  System message reported on 04/29/2021  11:04:23 *********
+XIPC Network Server stopped
+
+*********  System message reported on 04/29/2021  11:04:24 *********
+XIPC Platform Environment Terminated
+
+*********  System message reported on 04/30/2021  11:17:47 *********
+Started instance "Stand-Alone"; Cfg File = "/home/curran/Documents/curranprasad/xipc/_xipc"
+
+*********  System message reported on 04/30/2021  11:17:47 *********
+XIPC Network Server [build 5014] started
+
+*********  System message reported on 04/30/2021  11:17:47 *********
+XIPC Async server [build 5014] started
+
+*********  System message reported on 04/30/2021  11:17:47 *********
+XipcLad Server [build 5014] Started
+
+*********  System message reported on 04/30/2021  11:17:47 *********
+XipcIdld Server [build 5014] Started
+
+*********  System message reported on 04/30/2021  11:17:47 *********
+XIPC Platform Environment Initialized
+LINUX RED HAT 7.X - Envoy XIPC 4.1.0ba [Build 5014] BETA RELEASE
+
+*********  System message reported on 04/30/2021  11:17:52 *********
+Started instance "demo"; Cfg File = "/home/curran/Documents/curranprasad/xipc/samples/bin/test"
+
+*********  System message reported on 04/30/2021  15:23:36 *********
+Stopped instance "demo"; Cfg File = "/home/curran/Documents/curranprasad/xipc/samples/bin/test"
+
+*********  System message reported on 04/30/2021  15:23:40 *********
+XipcIdld Server Stopped
+
+*********  System message reported on 04/30/2021  15:23:45 *********
+Stopped instance "*NoName*"; Cfg File = "/home/curran/Documents/curranprasad/xipc/_xipc"
+
+*********  System message reported on 04/30/2021  15:23:46 *********
+XIPC Network Server stopped
+
+*********  System message reported on 04/30/2021  15:23:47 *********
+XIPC Platform Environment Terminated
+
+*********  System message reported on 05/03/2021  16:51:39 *********
+Started instance "Stand-Alone"; Cfg File = "/home/curran/xipc/_xipc"
+
+*********  System message reported on 05/03/2021  16:51:39 *********
+XIPC Network Server [build 5014] started
+
+*********  System message reported on 05/03/2021  16:51:39 *********
+XIPC Async server [build 5014] started
+
+*********  System message reported on 05/03/2021  16:51:39 *********
+XipcLad Server [build 5014] Started
+
+*********  System message reported on 05/03/2021  16:51:39 *********
+XipcIdld Server [build 5014] Started
+
+*********  System message reported on 05/03/2021  16:51:39 *********
+XIPC Platform Environment Initialized
+LINUX RED HAT 7.X - Envoy XIPC 4.1.0ba [Build 5014] BETA RELEASE
+
+*********  System message reported on 05/03/2021  16:51:45 *********
+Started instance "demo"; Cfg File = "/home/curran/xipc/samples/bin/test"
+
+*********  System message reported on 05/03/2021  16:51:55 *********
+Internal platform instance already active
+
+*********  System message reported on 05/03/2021  16:52:39 *********
+Stopped instance "demo"; Cfg File = "/home/curran/xipc/samples/bin/test"
+
+*********  System message reported on 05/03/2021  17:00:41 *********
+Started instance "Stand-Alone"; Cfg File = "/home/curran/xipc/samples/bin/demo"
+
+*********  System message reported on 05/03/2021  17:00:58 *********
+Started instance "Stand-Alone"; Cfg File = "/home/curran/xipc/samples/bin/demo1"
+
+*********  System message reported on 05/03/2021  17:01:13 *********
+Stopped instance "*NoName*"; Cfg File = "/home/curran/xipc/samples/bin/demo1"
+
+*********  System message reported on 05/03/2021  17:01:21 *********
+Stopped instance "*NoName*"; Cfg File = "/home/curran/xipc/samples/bin/demo"
+
+*********  System message reported on 05/03/2021  17:03:31 *********
+Started instance "Stand-Alone"; Cfg File = "/home/curran/xipc/samples/bin/demo"
+
+*********  System message reported on 05/03/2021  17:03:46 *********
+Started instance "Stand-Alone"; Cfg File = "/home/curran/xipc/samples/bin/demo1"
+
+*********  System message reported on 05/03/2021  17:16:29 *********
+Stopped instance "*NoName*"; Cfg File = "/home/curran/xipc/samples/bin/demo1"
+
+*********  System message reported on 05/03/2021  17:16:33 *********
+Stopped instance "*NoName*"; Cfg File = "/home/curran/xipc/samples/bin/demo"
+
+*********  System message reported on 05/03/2021  17:16:41 *********
+Started instance "Stand-Alone"; Cfg File = "/home/curran/xipc/samples/bin/test"
+
+*********  System message reported on 05/03/2021  17:16:53 *********
+Stopped instance "*NoName*"; Cfg File = "/home/curran/xipc/samples/bin/test"
+
+*********  System message reported on 05/04/2021  12:58:02 *********
+Started instance "Stand-Alone"; Cfg File = "/home/curran/xipc/_xipc"
+
+*********  System message reported on 05/04/2021  12:58:02 *********
+XIPC Network Server [build 5014] started
+
+*********  System message reported on 05/04/2021  12:58:02 *********
+XIPC Async server [build 5014] started
+
+*********  System message reported on 05/04/2021  12:58:02 *********
+XipcLad Server [build 5014] Started
+
+*********  System message reported on 05/04/2021  12:58:02 *********
+XipcIdld Server [build 5014] Started
+
+*********  System message reported on 05/04/2021  12:58:02 *********
+XIPC Platform Environment Initialized
+LINUX RED HAT 7.X - Envoy XIPC 4.1.0ba [Build 5014] BETA RELEASE
+
+*********  System message reported on 05/04/2021  12:58:07 *********
+Started instance "demo"; Cfg File = "/home/curran/xipc/samples/bin/demo"
+
+*********  System message reported on 05/04/2021  12:58:19 *********
+Internal platform instance already active
+
+*********  System message reported on 05/04/2021  12:58:24 *********
+Started instance "demo1"; Cfg File = "/home/curran/xipc/samples/bin/demo1"
+
+*********  System message reported on 05/05/2021  13:55:13 *********
+Fatal Error: QifLogin: -1102, Error = 0
+
+
+*********  System message reported on 05/05/2021  13:55:37 *********
+Fatal Error: QifLogin: -1102, Error = 0
+
+
+*********  System message reported on 05/05/2021  13:55:44 *********
+Fatal Error: QifLogin: -1102, Error = 0
+
+
+*********  System message reported on 05/05/2021  13:55:46 *********
+Fatal Error: QifLogin: -1102, Error = 0
+
+
+*********  System message reported on 05/05/2021  13:56:03 *********
+Fatal Error: QifLogin: -1102, Error = 0
+
+
+*********  System message reported on 05/05/2021  13:56:13 *********
+Fatal Error: QifLogin: -1102, Error = 0
+
+
+*********  System message reported on 05/05/2021  13:56:19 *********
+Fatal Error: QifLogin: -1102, Error = 0
+
+
+*********  System message reported on 05/05/2021  13:56:29 *********
+Fatal Error: QifLogin: -1102, Error = 0
+
+
+*********  System message reported on 05/05/2021  13:57:01 *********
+Fatal Error: QifLogin: -1102, Error = 0
+
+
+*********  System message reported on 05/05/2021  13:59:34 *********
+Fatal Error: QifLogin: -1102, Error = 0
+
+
+*********  System message reported on 05/05/2021  13:59:55 *********
+Fatal Error: QifLogin: -1102, Error = 0
+
+
+*********  System message reported on 05/05/2021  14:00:03 *********
+Fatal Error: QifLogin: -1102, Error = 0
+
+
+*********  System message reported on 05/05/2021  14:01:38 *********
+Fatal Error: QifLogin: -1102, Error = 0
+
+
+*********  System message reported on 05/05/2021  14:02:36 *********
+Fatal Error: QifLogin: -1102, Error = 0
+
+
+*********  System message reported on 05/05/2021  14:02:46 *********
+Fatal Error: QifLogin: -1102, Error = 0
+
+
+*********  System message reported on 05/05/2021  14:03:14 *********
+Fatal Error: QifLogin: -1102, Error = 0
+
+
+*********  System message reported on 05/06/2021  10:39:15 *********
+Fatal Error: QifLogin: -1102, Error = 0
+
+
+*********  System message reported on 05/06/2021  10:41:54 *********
+Fatal Error: QifLogin: -1102, Error = 0
+
+
+*********  System message reported on 05/06/2021  11:25:28 *********
+Fatal Error: QifLogin: -1102, Error = 0
+
+
+*********  System message reported on 05/06/2021  12:08:17 *********
+Fatal Error: QifLogin: -1102, Error = 0
+
+
+*********  System message reported on 05/06/2021  12:17:22 *********
+Fatal Error: QifLogin: -1102, Error = 0
+
+
+*********  System message reported on 05/06/2021  12:17:50 *********
+Started instance "Stand-Alone"; Cfg File = "/home/curran/xipc/_xipc"
+
+*********  System message reported on 05/06/2021  12:17:50 *********
+XIPC Network Server [build 5014] started
+
+*********  System message reported on 05/06/2021  12:17:50 *********
+XIPC Async server [build 5014] started
+
+*********  System message reported on 05/06/2021  12:17:50 *********
+XipcLad Server [build 5014] Started
+
+*********  System message reported on 05/06/2021  12:17:50 *********
+XipcIdld Server [build 5014] Started
+
+*********  System message reported on 05/06/2021  12:17:50 *********
+XIPC Platform Environment Initialized
+LINUX RED HAT 7.X - Envoy XIPC 4.1.0ba [Build 5014] BETA RELEASE
+
+*********  System message reported on 05/06/2021  12:17:53 *********
+XipcIdld Server Stopped
+
+*********  System message reported on 05/06/2021  12:17:58 *********
+Stopped instance "*NoName*"; Cfg File = "/home/curran/xipc/_xipc"
+
+*********  System message reported on 05/06/2021  12:17:59 *********
+XIPC Network Server stopped
+
+*********  System message reported on 05/06/2021  12:18:00 *********
+XIPC Platform Environment Terminated
+
+*********  System message reported on 05/06/2021  12:19:11 *********
+Started instance "Stand-Alone"; Cfg File = "/home/curran/xipc/_xipc"
+
+*********  System message reported on 05/06/2021  12:19:11 *********
+XIPC Network Server [build 5014] started
+
+*********  System message reported on 05/06/2021  12:19:11 *********
+XIPC Async server [build 5014] started
+
+*********  System message reported on 05/06/2021  12:19:11 *********
+XipcLad Server [build 5014] Started
+
+*********  System message reported on 05/06/2021  12:19:11 *********
+XipcIdld Server [build 5014] Started
+
+*********  System message reported on 05/06/2021  12:19:11 *********
+XIPC Platform Environment Initialized
+LINUX RED HAT 7.X - Envoy XIPC 4.1.0ba [Build 5014] BETA RELEASE
+
+*********  System message reported on 05/06/2021  12:19:14 *********
+Started instance "demo"; Cfg File = "/home/curran/xipc/samples/bin/demo"
+
+*********  System message reported on 05/06/2021  12:19:26 *********
+Fatal Error: QifLogin: -1102, Error = 0
+
+
+*********  System message reported on 05/06/2021  12:20:17 *********
+Stopped instance "demo"; Cfg File = "/home/curran/xipc/samples/bin/demo"
+
+*********  System message reported on 05/06/2021  12:20:17 *********
+XipcIdld Server Stopped
+
+*********  System message reported on 05/06/2021  12:20:21 *********
+Stopped instance "*NoName*"; Cfg File = "/home/curran/xipc/_xipc"
+
+*********  System message reported on 05/06/2021  12:20:22 *********
+XIPC Network Server stopped
+
+*********  System message reported on 05/06/2021  12:20:23 *********
+XIPC Platform Environment Terminated
+
+*********  System message reported on 05/06/2021  12:20:42 *********
+Started instance "Stand-Alone"; Cfg File = "/home/curran/xipc/_xipc"
+
+*********  System message reported on 05/06/2021  12:20:42 *********
+XIPC Network Server [build 5014] started
+
+*********  System message reported on 05/06/2021  12:20:42 *********
+XIPC Async server [build 5014] started
+
+*********  System message reported on 05/06/2021  12:20:42 *********
+XipcLad Server [build 5014] Started
+
+*********  System message reported on 05/06/2021  12:20:42 *********
+XipcIdld Server [build 5014] Started
+
+*********  System message reported on 05/06/2021  12:20:42 *********
+XIPC Platform Environment Initialized
+LINUX RED HAT 7.X - Envoy XIPC 4.1.0ba [Build 5014] BETA RELEASE
+
+*********  System message reported on 05/06/2021  12:20:55 *********
+Internal platform instance already active
+
+*********  System message reported on 05/06/2021  12:20:59 *********
+Started instance "demo"; Cfg File = "/home/curran/xipc/samples/bin/demo"
+
+*********  System message reported on 05/06/2021  12:21:08 *********
+Started instance "demo1"; Cfg File = "/home/curran/xipc/samples/bin/demo1"
+
+*********  System message reported on 05/07/2021  14:47:57 *********
+Stopped instance "demo"; Cfg File = "/home/curran/xipc/samples/bin/demo"
+
+*********  System message reported on 05/07/2021  14:47:58 *********
+Stopped instance "demo1"; Cfg File = "/home/curran/xipc/samples/bin/demo1"
+
+*********  System message reported on 05/07/2021  14:47:58 *********
+XipcIdld Server Stopped
+
+*********  System message reported on 05/07/2021  14:48:03 *********
+Stopped instance "*NoName*"; Cfg File = "/home/curran/xipc/_xipc"
+
+*********  System message reported on 05/07/2021  14:48:04 *********
+XIPC Network Server stopped
+
+*********  System message reported on 05/07/2021  14:48:05 *********
+XIPC Platform Environment Terminated
+
+*********  System message reported on 05/10/2021  10:35:36 *********
+Started instance "Stand-Alone"; Cfg File = "/home/curran/xipc/_xipc"
+
+*********  System message reported on 05/10/2021  10:35:36 *********
+XIPC Network Server [build 5014] started
+
+*********  System message reported on 05/10/2021  10:35:36 *********
+XIPC Async server [build 5014] started
+
+*********  System message reported on 05/10/2021  10:35:36 *********
+XipcLad Server [build 5014] Started
+
+*********  System message reported on 05/10/2021  10:35:36 *********
+XipcIdld Server [build 5014] Started
+
+*********  System message reported on 05/10/2021  10:35:36 *********
+XIPC Platform Environment Initialized
+LINUX RED HAT 7.X - Envoy XIPC 4.1.0ba [Build 5014] BETA RELEASE
+
+*********  System message reported on 05/10/2021  10:35:40 *********
+Started instance "demo"; Cfg File = "/home/curran/xipc/samples/bin/demo"
+
+*********  System message reported on 05/10/2021  10:35:52 *********
+Started instance "demo1"; Cfg File = "/home/curran/xipc/samples/bin/demo1"
+
+*********  System message reported on 05/10/2021  12:30:53 *********
+Stopped instance "demo"; Cfg File = "/home/curran/xipc/samples/bin/demo"
+
+*********  System message reported on 05/10/2021  12:30:55 *********
+Stopped instance "demo1"; Cfg File = "/home/curran/xipc/samples/bin/demo1"
+
+*********  System message reported on 05/10/2021  12:30:55 *********
+XipcIdld Server Stopped
+
+*********  System message reported on 05/10/2021  12:30:59 *********
+Stopped instance "*NoName*"; Cfg File = "/home/curran/xipc/_xipc"
+
+*********  System message reported on 05/10/2021  12:31:00 *********
+XIPC Network Server stopped
+
+*********  System message reported on 05/10/2021  12:31:01 *********
+XIPC Platform Environment Terminated
+
+*********  System message reported on 05/11/2021  10:30:53 *********
+Started instance "Stand-Alone"; Cfg File = "/home/curran/xipc/_xipc"
+
+*********  System message reported on 05/11/2021  10:30:53 *********
+XIPC Network Server [build 5014] started
+
+*********  System message reported on 05/11/2021  10:30:53 *********
+XIPC Async server [build 5014] started
+
+*********  System message reported on 05/11/2021  10:30:53 *********
+XipcLad Server [build 5014] Started
+
+*********  System message reported on 05/11/2021  10:30:53 *********
+XipcIdld Server [build 5014] Started
+
+*********  System message reported on 05/11/2021  10:30:53 *********
+XIPC Platform Environment Initialized
+LINUX RED HAT 7.X - Envoy XIPC 4.1.0ba [Build 5014] BETA RELEASE
+
+*********  System message reported on 05/11/2021  10:30:56 *********
+Started instance "demo"; Cfg File = "/home/curran/xipc/samples/bin/demo"
+
+*********  System message reported on 05/11/2021  10:31:22 *********
+Started instance "demo1"; Cfg File = "/home/curran/xipc/samples/bin/demo1"
+
+*********  System message reported on 05/11/2021  11:34:50 *********
+Stopped instance "demo"; Cfg File = "/home/curran/xipc/samples/bin/demo"
+
+*********  System message reported on 05/11/2021  11:34:56 *********
+Started instance "demo"; Cfg File = "/home/curran/xipc/samples/bin/demo"
+
+*********  System message reported on 05/11/2021  13:23:26 *********
+Stopped instance "demo"; Cfg File = "/home/curran/xipc/samples/bin/demo"
+
+*********  System message reported on 05/11/2021  13:23:28 *********
+Stopped instance "demo1"; Cfg File = "/home/curran/xipc/samples/bin/demo1"
+
+*********  System message reported on 05/11/2021  13:23:28 *********
+XipcIdld Server Stopped
+
+*********  System message reported on 05/11/2021  13:23:32 *********
+Stopped instance "*NoName*"; Cfg File = "/home/curran/xipc/_xipc"
+
+*********  System message reported on 05/11/2021  13:23:33 *********
+XIPC Network Server stopped
+
+*********  System message reported on 05/11/2021  13:23:34 *********
+XIPC Platform Environment Terminated
+
+*********  System message reported on 05/11/2021  13:23:51 *********
+Started instance "Stand-Alone"; Cfg File = "/home/curran/xipc/_xipc"
+
+*********  System message reported on 05/11/2021  13:23:51 *********
+XIPC Network Server [build 5014] started
+
+*********  System message reported on 05/11/2021  13:23:51 *********
+XIPC Async server [build 5014] started
+
+*********  System message reported on 05/11/2021  13:23:51 *********
+XipcLad Server [build 5014] Started
+
+*********  System message reported on 05/11/2021  13:23:51 *********
+XipcIdld Server [build 5014] Started
+
+*********  System message reported on 05/11/2021  13:23:51 *********
+XIPC Platform Environment Initialized
+LINUX RED HAT 7.X - Envoy XIPC 4.1.0ba [Build 5014] BETA RELEASE
+
+*********  System message reported on 05/11/2021  13:23:59 *********
+Started instance "demo"; Cfg File = "/home/curran/xipc/samples/bin/demo"
+
+*********  System message reported on 05/11/2021  13:24:12 *********
+Started instance "demo1"; Cfg File = "/home/curran/xipc/samples/bin/demo1"
+
+*********  System message reported on 05/11/2021  14:56:52 *********
+Stopped instance "demo"; Cfg File = "/home/curran/xipc/samples/bin/demo"
+
+*********  System message reported on 05/11/2021  14:56:53 *********
+Stopped instance "demo1"; Cfg File = "/home/curran/xipc/samples/bin/demo1"
+
+*********  System message reported on 05/11/2021  14:56:53 *********
+XipcIdld Server Stopped
+
+*********  System message reported on 05/11/2021  14:56:58 *********
+Stopped instance "*NoName*"; Cfg File = "/home/curran/xipc/_xipc"
+
+*********  System message reported on 05/11/2021  14:56:59 *********
+XIPC Network Server stopped
+
+*********  System message reported on 05/11/2021  14:57:00 *********
+XIPC Platform Environment Terminated
+
+*********  System message reported on 05/11/2021  14:57:04 *********
+Started instance "demo"; Cfg File = "/home/curran/xipc/samples/bin/demo"
+
+*********  System message reported on 05/11/2021  14:57:15 *********
+Cannot start instance list retrieval, RetCode = -1089
+
+*********  System message reported on 05/11/2021  14:57:15 *********
+Internal platform instance not active
+
+*********  System message reported on 05/11/2021  14:57:30 *********
+Stopped instance "*NoName*"; Cfg File = "/home/curran/xipc/samples/bin/demo"
+
+*********  System message reported on 05/11/2021  14:57:42 *********
+Cannot start instance list retrieval, RetCode = -1089
+
+*********  System message reported on 05/11/2021  14:57:42 *********
+Internal platform instance not active
+
+*********  System message reported on 05/11/2021  14:57:44 *********
+Started instance "Stand-Alone"; Cfg File = "/home/curran/xipc/_xipc"
+
+*********  System message reported on 05/11/2021  14:57:44 *********
+XIPC Network Server [build 5014] started
+
+*********  System message reported on 05/11/2021  14:57:44 *********
+XIPC Async server [build 5014] started
+
+*********  System message reported on 05/11/2021  14:57:44 *********
+XipcLad Server [build 5014] Started
+
+*********  System message reported on 05/11/2021  14:57:44 *********
+XipcIdld Server [build 5014] Started
+
+*********  System message reported on 05/11/2021  14:57:44 *********
+XIPC Platform Environment Initialized
+LINUX RED HAT 7.X - Envoy XIPC 4.1.0ba [Build 5014] BETA RELEASE
+
+*********  System message reported on 05/11/2021  14:57:56 *********
+Started instance "demo"; Cfg File = "/home/curran/xipc/samples/bin/demo"
+
+*********  System message reported on 05/11/2021  16:13:09 *********
+Stopped instance "demo"; Cfg File = "/home/curran/xipc/samples/bin/demo"
+
+*********  System message reported on 05/11/2021  16:13:09 *********
+XipcIdld Server Stopped
+
+*********  System message reported on 05/11/2021  16:13:13 *********
+Stopped instance "*NoName*"; Cfg File = "/home/curran/xipc/_xipc"
+
+*********  System message reported on 05/11/2021  16:13:14 *********
+XIPC Network Server stopped
+
+*********  System message reported on 05/11/2021  16:13:15 *********
+XIPC Platform Environment Terminated
+
+*********  System message reported on 05/12/2021  10:29:37 *********
+Started instance "Stand-Alone"; Cfg File = "/home/curran/xipc/_xipc"
+
+*********  System message reported on 05/12/2021  10:29:37 *********
+XIPC Network Server [build 5014] started
+
+*********  System message reported on 05/12/2021  10:29:37 *********
+XIPC Async server [build 5014] started
+
+*********  System message reported on 05/12/2021  10:29:37 *********
+XipcLad Server [build 5014] Started
+
+*********  System message reported on 05/12/2021  10:29:37 *********
+XipcIdld Server [build 5014] Started
+
+*********  System message reported on 05/12/2021  10:29:37 *********
+XIPC Platform Environment Initialized
+LINUX RED HAT 7.X - Envoy XIPC 4.1.0ba [Build 5014] BETA RELEASE
+
+*********  System message reported on 05/12/2021  10:29:41 *********
+Started instance "demo"; Cfg File = "/home/curran/xipc/samples/bin/demo"
+
+*********  System message reported on 05/12/2021  16:05:11 *********
+Internal platform instance already active
+
+*********  System message reported on 05/12/2021  16:05:20 *********
+Stopped instance "demo"; Cfg File = "/home/curran/xipc/samples/bin/demo"
+
+*********  System message reported on 05/12/2021  16:05:20 *********
+XipcIdld Server Stopped
+
+*********  System message reported on 05/12/2021  16:05:25 *********
+Stopped instance "*NoName*"; Cfg File = "/home/curran/xipc/_xipc"
+
+*********  System message reported on 05/12/2021  16:05:26 *********
+XIPC Network Server stopped
+
+*********  System message reported on 05/12/2021  16:05:27 *********
+XIPC Platform Environment Terminated
+
+*********  System message reported on 05/12/2021  16:35:02 *********
+Started instance "Stand-Alone"; Cfg File = "/home/curran/xipc/_xipc"
+
+*********  System message reported on 05/12/2021  16:35:02 *********
+XIPC Network Server [build 5014] started
+
+*********  System message reported on 05/12/2021  16:35:02 *********
+XIPC Async server [build 5014] started
+
+*********  System message reported on 05/12/2021  16:35:02 *********
+XipcLad Server [build 5014] Started
+
+*********  System message reported on 05/12/2021  16:35:02 *********
+XipcIdld Server [build 5014] Started
+
+*********  System message reported on 05/12/2021  16:35:02 *********
+XIPC Platform Environment Initialized
+LINUX RED HAT 7.X - Envoy XIPC 4.1.0ba [Build 5014] BETA RELEASE
+
+*********  System message reported on 05/12/2021  16:35:05 *********
+Started instance "demo"; Cfg File = "/home/curran/xipc/samples/bin/demo"
+
+*********  System message reported on 05/12/2021  16:40:12 *********
+Stopped instance "demo"; Cfg File = "/home/curran/xipc/samples/bin/demo"
+
+*********  System message reported on 05/12/2021  16:40:12 *********
+XipcIdld Server Stopped
+
+*********  System message reported on 05/12/2021  16:40:16 *********
+Stopped instance "*NoName*"; Cfg File = "/home/curran/xipc/_xipc"
+
+*********  System message reported on 05/12/2021  16:40:17 *********
+XIPC Network Server stopped
+
+*********  System message reported on 05/12/2021  16:40:18 *********
+XIPC Platform Environment Terminated
+
+*********  System message reported on 05/13/2021  10:37:42 *********
+Started instance "Stand-Alone"; Cfg File = "/home/curran/xipc/_xipc"
+
+*********  System message reported on 05/13/2021  10:37:42 *********
+XIPC Network Server [build 5014] started
+
+*********  System message reported on 05/13/2021  10:37:42 *********
+XIPC Async server [build 5014] started
+
+*********  System message reported on 05/13/2021  10:37:42 *********
+XipcLad Server [build 5014] Started
+
+*********  System message reported on 05/13/2021  10:37:42 *********
+XipcIdld Server [build 5014] Started
+
+*********  System message reported on 05/13/2021  10:37:42 *********
+XIPC Platform Environment Initialized
+LINUX RED HAT 7.X - Envoy XIPC 4.1.0ba [Build 5014] BETA RELEASE
+
+*********  System message reported on 05/13/2021  10:37:48 *********
+Started instance "demo"; Cfg File = "/home/curran/xipc/samples/bin/demo"
+
+*********  System message reported on 05/13/2021  14:33:57 *********
+Stopped instance "demo"; Cfg File = "/home/curran/xipc/samples/bin/demo"
+
+*********  System message reported on 05/13/2021  14:33:57 *********
+XipcIdld Server Stopped
+
+*********  System message reported on 05/13/2021  14:34:01 *********
+Stopped instance "*NoName*"; Cfg File = "/home/curran/xipc/_xipc"
+
+*********  System message reported on 05/13/2021  14:34:02 *********
+XIPC Network Server stopped
+
+*********  System message reported on 05/13/2021  14:34:03 *********
+XIPC Platform Environment Terminated
+
+*********  System message reported on 05/13/2021  14:34:07 *********
+Started instance "Stand-Alone"; Cfg File = "/home/curran/xipc/_xipc"
+
+*********  System message reported on 05/13/2021  14:34:07 *********
+XIPC Network Server [build 5014] started
+
+*********  System message reported on 05/13/2021  14:34:07 *********
+XIPC Async server [build 5014] started
+
+*********  System message reported on 05/13/2021  14:34:07 *********
+XipcLad Server [build 5014] Started
+
+*********  System message reported on 05/13/2021  14:34:07 *********
+XipcIdld Server [build 5014] Started
+
+*********  System message reported on 05/13/2021  14:34:07 *********
+XIPC Platform Environment Initialized
+LINUX RED HAT 7.X - Envoy XIPC 4.1.0ba [Build 5014] BETA RELEASE
+
+*********  System message reported on 05/13/2021  14:34:10 *********
+Started instance "demo"; Cfg File = "/home/curran/xipc/samples/bin/demo"
+
+*********  System message reported on 05/13/2021  15:03:06 *********
+Stopped instance "demo"; Cfg File = "/home/curran/xipc/samples/bin/demo"
+
+*********  System message reported on 05/13/2021  15:03:06 *********
+XipcIdld Server Stopped
+
+*********  System message reported on 05/13/2021  15:03:10 *********
+Stopped instance "*NoName*"; Cfg File = "/home/curran/xipc/_xipc"
+
+*********  System message reported on 05/13/2021  15:03:11 *********
+XIPC Network Server stopped
+
+*********  System message reported on 05/13/2021  15:03:12 *********
+XIPC Platform Environment Terminated
+
+*********  System message reported on 05/13/2021  15:03:16 *********
+Started instance "Stand-Alone"; Cfg File = "/home/curran/xipc/_xipc"
+
+*********  System message reported on 05/13/2021  15:03:16 *********
+XIPC Network Server [build 5014] started
+
+*********  System message reported on 05/13/2021  15:03:16 *********
+XIPC Async server [build 5014] started
+
+*********  System message reported on 05/13/2021  15:03:16 *********
+XipcLad Server [build 5014] Started
+
+*********  System message reported on 05/13/2021  15:03:16 *********
+XipcIdld Server [build 5014] Started
+
+*********  System message reported on 05/13/2021  15:03:16 *********
+XIPC Platform Environment Initialized
+LINUX RED HAT 7.X - Envoy XIPC 4.1.0ba [Build 5014] BETA RELEASE
+
+*********  System message reported on 05/13/2021  15:03:18 *********
+XipcIdld Server Stopped
+
+*********  System message reported on 05/13/2021  15:03:23 *********
+Stopped instance "*NoName*"; Cfg File = "/home/curran/xipc/_xipc"
+
+*********  System message reported on 05/13/2021  15:03:24 *********
+XIPC Network Server stopped
+
+*********  System message reported on 05/13/2021  15:03:25 *********
+XIPC Platform Environment Terminated
+
+*********  System message reported on 05/13/2021  15:03:39 *********
+Started instance "Stand-Alone"; Cfg File = "/home/curran/xipc/_xipc"
+
+*********  System message reported on 05/13/2021  15:03:39 *********
+XIPC Network Server [build 5014] started
+
+*********  System message reported on 05/13/2021  15:03:39 *********
+XIPC Async server [build 5014] started
+
+*********  System message reported on 05/13/2021  15:03:39 *********
+XipcLad Server [build 5014] Started
+
+*********  System message reported on 05/13/2021  15:03:39 *********
+XipcIdld Server [build 5014] Started
+
+*********  System message reported on 05/13/2021  15:03:39 *********
+XIPC Platform Environment Initialized
+LINUX RED HAT 7.X - Envoy XIPC 4.1.0ba [Build 5014] BETA RELEASE
+
+*********  System message reported on 05/13/2021  15:03:42 *********
+Started instance "demo"; Cfg File = "/home/curran/xipc/samples/bin/demo"
+
+*********  System message reported on 05/14/2021  15:19:02 *********
+Stopped instance "demo"; Cfg File = "/home/curran/xipc/samples/bin/demo"
+
+*********  System message reported on 05/14/2021  15:19:02 *********
+XipcIdld Server Stopped
+
+*********  System message reported on 05/14/2021  15:19:07 *********
+Stopped instance "*NoName*"; Cfg File = "/home/curran/xipc/_xipc"
+
+*********  System message reported on 05/14/2021  15:19:08 *********
+XIPC Network Server stopped
+
+*********  System message reported on 05/14/2021  15:19:09 *********
+XIPC Platform Environment Terminated
+

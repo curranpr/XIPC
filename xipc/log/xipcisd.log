@@ -1,0 +1,744 @@
+*********  Error reported by process: 0x00000A91  *********
+12/28/2020  10:51:15  Module: xnserver   Function: main
+XifNetDeclareServer failed.
+	Network error reported by 
+	Operating System: UNIX,  FailingService: getservbyname
+	Status1: 0,  Status2: 0
+	Message: Success
+	XIPC Call Stack:
+		XifNetGetServByName
+		XifNetDeclareServer
+
+
+*********  Error reported by process: 0x00000AF5  *********
+12/28/2020  10:59:02  Module: xnsstop   Function: XnsServerStop
+Cannot communicate with server.  RetCode = -1101
+
+*********  Error reported by process: 0x00000AF5  *********
+12/28/2020  10:59:02  Module: xnserver   Function: main
+Stop failed.  RetCode = -1101
+	Network error reported by 
+	Operating System: UNIX,  FailingService: connect
+	Status1: 111,  Status2: 0
+	Message: Connection refused
+	XIPC Call Stack:
+		XifNetSessionStart
+		XnsServerStop
+
+
+*********  Error reported by process: 0x00003D30  *********
+12/31/2020  11:06:37  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x00005403  *********
+01/11/2021  13:16:18  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x000054AE  *********
+01/11/2021  13:19:58  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x00005628  *********
+01/11/2021  13:36:02  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x00005635  *********
+01/11/2021  13:36:14  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x0000135D  *********
+01/11/2021  15:30:00  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x0000136C  *********
+01/11/2021  15:30:11  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x0000137A  *********
+01/11/2021  15:30:20  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x00001398  *********
+01/11/2021  15:31:23  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x0000134F  *********
+01/11/2021  15:32:12  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x000014AA  *********
+01/11/2021  15:40:45  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x0000149D  *********
+01/11/2021  15:40:45  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x000015E7  *********
+01/11/2021  15:46:32  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x000015F4  *********
+01/12/2021  14:52:38  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x00005999  *********
+01/12/2021  14:53:33  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x000059B4  *********
+01/12/2021  14:53:49  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x00005A8A  *********
+01/12/2021  18:25:03  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x00005AC7  *********
+01/12/2021  18:27:07  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x00005B1F  *********
+01/12/2021  18:34:02  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x00005B6A  *********
+01/12/2021  18:38:05  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x00005C28  *********
+01/12/2021  18:50:11  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x00005C8D  *********
+01/12/2021  18:52:11  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x000059A6  *********
+01/12/2021  18:52:52  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x00005C80  *********
+01/12/2021  18:52:52  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x00005AA0  *********
+01/12/2021  18:52:52  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x00000A49  *********
+01/13/2021  11:01:25  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x00000A9C  *********
+01/13/2021  11:05:20  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x00000C20  *********
+01/13/2021  11:24:30  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x00000C63  *********
+01/13/2021  11:25:43  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x00000C79  *********
+01/13/2021  11:25:46  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x00000D15  *********
+01/13/2021  11:27:57  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x00000CFD  *********
+01/13/2021  11:27:57  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x000024DB  *********
+01/14/2021  16:27:07  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x000024F6  *********
+01/14/2021  16:27:24  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x00007BAB  *********
+01/19/2021  10:07:16  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x00007CCC  *********
+01/19/2021  10:16:39  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x000080FC  *********
+01/19/2021  10:42:16  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x00008341  *********
+01/19/2021  11:27:12  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x000084D5  *********
+01/19/2021  11:41:38  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x00008505  *********
+01/19/2021  11:49:25  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x00008564  *********
+01/19/2021  11:50:51  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x00008619  *********
+01/19/2021  11:53:05  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x000086B7  *********
+01/19/2021  12:30:30  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x00008707  *********
+01/19/2021  12:31:27  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x00008799  *********
+01/19/2021  12:32:42  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x000087DA  *********
+01/19/2021  12:33:23  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x00009165  *********
+01/19/2021  13:15:03  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x000091DD  *********
+01/19/2021  13:16:30  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x0000923D  *********
+01/19/2021  13:25:15  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x00009259  *********
+01/19/2021  13:26:16  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x000092F0  *********
+01/19/2021  13:29:50  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x00009362  *********
+01/19/2021  13:31:21  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x00009482  *********
+01/19/2021  13:35:52  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x000095CF  *********
+01/19/2021  13:52:26  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x00009687  *********
+01/19/2021  14:02:22  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x000096FE  *********
+01/19/2021  14:04:35  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x000097FB  *********
+01/19/2021  14:11:25  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x00009884  *********
+01/19/2021  14:15:40  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x0000992A  *********
+01/19/2021  15:50:49  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x00009A05  *********
+01/19/2021  16:57:37  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x00009F91  *********
+01/21/2021  14:42:15  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x0000A668  *********
+01/22/2021  12:40:04  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x0000AD17  *********
+01/26/2021  10:51:35  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x0000AE60  *********
+01/26/2021  10:53:40  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x0000B094  *********
+01/26/2021  11:18:23  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x000062F1  *********
+01/26/2021  11:21:01  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x0000B137  *********
+01/26/2021  11:22:31  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x0000B4D8  *********
+01/26/2021  11:34:02  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x0000B595  *********
+01/26/2021  11:36:20  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x0000BA13  *********
+01/26/2021  12:02:11  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x0000BAF5  *********
+01/26/2021  13:04:26  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x0000BC4E  *********
+01/26/2021  13:39:25  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x0000BCE6  *********
+01/26/2021  13:46:23  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x0000BD7C  *********
+01/26/2021  13:54:26  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x0000BE63  *********
+01/26/2021  14:03:08  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x0000BEF5  *********
+01/26/2021  14:07:39  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x0001769F  *********
+03/25/2021  15:50:20  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x00017709  *********
+03/25/2021  15:51:35  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x00017724  *********
+03/25/2021  15:54:56  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x000014E3  *********
+03/26/2021  11:16:53  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x0000328A  *********
+03/26/2021  11:34:13  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x0000346A  *********
+03/26/2021  11:43:56  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x0000352F  *********
+03/26/2021  11:52:06  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x00002322  *********
+03/29/2021  12:35:06  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x00004B9B  *********
+03/30/2021  10:38:19  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x00004CBF  *********
+03/30/2021  10:43:52  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x00004D12  *********
+03/30/2021  10:45:11  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x00004D4B  *********
+03/30/2021  10:45:35  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x00004D85  *********
+03/30/2021  10:45:57  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x00004DE4  *********
+03/30/2021  10:46:47  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x00005829  *********
+03/30/2021  11:31:41  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x000059C0  *********
+03/30/2021  12:59:26  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x00005A6B  *********
+03/30/2021  13:14:43  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x00001EB6  *********
+04/02/2021  12:27:39  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x00002193  *********
+04/02/2021  12:42:35  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x000023FE  *********
+04/02/2021  12:50:52  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x00002511  *********
+04/02/2021  12:53:33  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x00002587  *********
+04/02/2021  12:59:55  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x0000262F  *********
+04/02/2021  13:02:18  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x00002652  *********
+04/02/2021  13:02:58  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x00002692  *********
+04/02/2021  13:03:26  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x000028CB  *********
+04/02/2021  13:16:08  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x00002986  *********
+04/02/2021  13:21:05  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x00002E0B  *********
+04/02/2021  13:51:22  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x00002F29  *********
+04/02/2021  15:57:07  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x00003A51  *********
+04/06/2021  11:03:15  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x00003A58  *********
+04/06/2021  11:03:15  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x00003B7C  *********
+04/06/2021  11:04:26  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x00003BC7  *********
+04/06/2021  11:06:11  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x00003BF4  *********
+04/06/2021  11:08:35  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x00003CC7  *********
+04/06/2021  11:09:08  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x00003D0A  *********
+04/06/2021  13:47:14  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x00004C7A  *********
+04/07/2021  10:11:31  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x00004DD2  *********
+04/07/2021  10:18:56  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x00004EA8  *********
+04/07/2021  10:27:02  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x00004F3B  *********
+04/07/2021  10:39:05  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x0000558C  *********
+04/08/2021  10:34:54  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x000056BE  *********
+04/08/2021  10:39:23  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x000056E7  *********
+04/08/2021  10:40:09  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x000057CB  *********
+04/08/2021  10:58:18  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x0000580D  *********
+04/08/2021  11:02:48  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x0000582B  *********
+04/08/2021  11:03:43  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x0000585F  *********
+04/08/2021  11:06:27  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x000058E9  *********
+04/08/2021  13:15:58  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x00005925  *********
+04/08/2021  13:36:48  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x000011E5  *********
+04/08/2021  16:04:50  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x00001239  *********
+04/08/2021  16:05:49  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x00001285  *********
+04/08/2021  16:07:15  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x00000F36  *********
+04/09/2021  10:39:44  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x00001479  *********
+04/12/2021  10:58:52  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x00002188  *********
+04/12/2021  13:44:50  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x00002383  *********
+04/12/2021  14:12:31  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x0000254C  *********
+04/12/2021  14:41:44  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x000037DD  *********
+04/27/2021  15:20:11  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x00003D7E  *********
+04/27/2021  15:47:12  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x0000169D  *********
+04/27/2021  20:41:43  Module: xnsstop   Function: XnsServerStop
+Cannot communicate with server.  RetCode = -1101
+
+*********  Error reported by process: 0x0000169D  *********
+04/27/2021  20:41:43  Module: xnserver   Function: main
+Stop failed.  RetCode = -1101
+	Network error reported by 
+	Operating System: UNIX,  FailingService: connect
+	Status1: 111,  Status2: 0
+	Message: Connection refused
+	XIPC Call Stack:
+		XifNetSessionStart
+		XnsServerStop
+
+
+*********  Error reported by process: 0x000035A7  *********
+04/28/2021  11:10:20  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x0000506B  *********
+04/28/2021  12:52:18  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x00005127  *********
+04/28/2021  12:58:41  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x00006F2C  *********
+04/28/2021  14:06:33  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x00006FBF  *********
+04/28/2021  14:20:49  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x000108AF  *********
+04/29/2021  10:19:24  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x00010C19  *********
+04/29/2021  10:24:58  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x00010CD3  *********
+04/29/2021  10:29:53  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x00010D35  *********
+04/29/2021  10:31:31  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x00010E5F  *********
+04/29/2021  10:34:47  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x00010F93  *********
+04/29/2021  10:45:44  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x0009F904  *********
+05/04/2021  12:58:48  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x000A0A0C  *********
+05/04/2021  13:03:19  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x000A0C91  *********
+05/04/2021  13:04:03  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x000A3C80  *********
+05/04/2021  13:20:00  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x000A3D21  *********
+05/04/2021  13:20:13  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x000A612D  *********
+05/04/2021  13:32:51  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x000BC5F4  *********
+05/04/2021  15:44:08  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x000BDE12  *********
+05/04/2021  15:52:08  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x000BE212  *********
+05/04/2021  15:53:25  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x000BE612  *********
+05/04/2021  15:54:48  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x000BE9F9  *********
+05/04/2021  15:56:02  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x000C0510  *********
+05/04/2021  16:04:48  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x0002817A  *********
+05/11/2021  15:09:50  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x00028AC6  *********
+05/11/2021  15:49:18  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x00028C05  *********
+05/11/2021  15:50:44  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x0002DCA3  *********
+05/12/2021  10:42:21  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x0002E0C8  *********
+05/12/2021  11:08:00  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x0002F4B4  *********
+05/12/2021  16:37:31  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x000322FA  *********
+05/13/2021  10:39:26  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x000323C7  *********
+05/13/2021  10:42:58  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x000323F2  *********
+05/13/2021  10:50:15  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x000324BE  *********
+05/13/2021  10:52:17  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x000325AF  *********
+05/13/2021  11:04:51  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x000325EC  *********
+05/13/2021  11:06:35  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x00033DDE  *********
+05/13/2021  11:20:32  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x00033E4E  *********
+05/13/2021  11:26:54  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x00038EFA  *********
+05/13/2021  14:01:00  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x0003933B  *********
+05/13/2021  14:59:20  Module: xnagent   Function: XifAgent
+Lost peer connection
+
+*********  Error reported by process: 0x0003946C  *********
+05/13/2021  15:06:00  Module: xnagent   Function: XifAgent
+Lost peer connection
+

@@ -1,0 +1,642 @@
+<HTML>
+<BODY>
+
+<H1 ALIGN=CENTER>Java Xipc Tutorial</H1>
+
+<P>
+<HR WIDTH="100%"></P>
+
+<H3>Table of Contents</H3>
+
+<UL>
+	<LI><A HREF="#Introduction">Introduction</A>
+	<LI><A HREF="#A Simple Client/Server Example">A Simple
+	Client/Server Example</A>
+	<UL>
+		<LI><A HREF="#The Server Program">The Server Program</A>
+		<LI><A HREF="#The Client Program">The Client Program</A>
+		<LI><A HREF="#Compiling the Client/Server Programs">Compiling
+		the Client/Server Programs</A>
+		<LI><A HREF="#Running the Client/Server Programs">Running
+		the Client/Server Programs</A>
+	</UL>
+	<LI><A HREF="#Comparison of C and Java Programming">Comparison
+	of C and Java Programming</A>
+	<LI><A HREF="#Applet Programming Considerations">Applet Programming
+	Considerations</A>
+	<LI><A HREF="#Data Marshalling">Data Marshalling</A>
+</UL>
+
+<P>
+<HR WIDTH="100%"></P>
+
+<H3><A NAME="Introduction">Introduction</A></H3>
+
+<BLOCKQUOTE>
+
+<P>This tutorial describes how to develop a Java applet/application
+incorporating the XIPC Java network client package
+<A HREF="../API/index.html">xipc30</A>.
+It starts with a
+simple console based Java client/server application and compares it
+to a C application. It discusses the differences between a Java applet
+and a Java application as it pertains to the Java Xipc. Finally,
+it gives some suggestions on how to handle data marshalling.</P>
+
+<P>Before proceeding with the tutorial, it is necessary to have the
+proper environment for developing and testing the software. This
+consists of three separate software packages:</P>
+
+<UL>
+	<LI><A HREF="http://www.envoytech.com/products/downloads.html">
+	Version 3.0 of the Xipc software.</A></LI>
+	<LI>Java Xipc package, com.envoytech.xipc30.</LI>
+	<LI>JDK 1.1.8 or higher from <A HREF="http://java.sun.com/">java.sun.com</A>.
+	</LI>
+</UL>
+
+<P>It is assumed that the user already has JDK installed
+on their system.</P>
+
+<P>Throughout this tutorial the word <i>instance</i> is used quite frequently.
+The word is mainly used in two contexts. In the first context, instance
+refers to the Xipc instance that is running on a particular machine. In
+the second context, instance refers to the instance of an object as used
+in OOP. When reading this tutorial, it is important to distinguish the
+contexts in which the word is used.</P>
+
+</BLOCKQUOTE>
+
+<P>
+<HR WIDTH="100%"></P>
+
+<H3><A NAME="A Simple Client/Server Example">A Simple Client/Server
+Example</A></H3>
+
+<BLOCKQUOTE>
+
+<P>The Java application is a simple console based client/server
+echo program where the client sends a message to the server
+and the server echoes the message back to the client. The server
+also displays the message on its console. This sample program
+utilizes message queues to exchange messages between the client and
+the server. It demonstrates the QueSys portion of the Xipc software
+package but the general concept can also be applied to memory
+segments (MemSys portion of Xipc) and semaphores (SemSys portion of
+Xipc).</P>
+
+<P>The role of the server program is to log into an Xipc instance,
+create two message queues (que1 and que2), and wait for a message
+from the client on que1. When a message is received on que1, the
+server displays the message on the console and sends it back to the
+client on que2. This cycle repeats until the client sends a
+&quot;quit&quot; message at which time the server destroys the queues,
+logs itself out of the Xipc instance, and exits the program.</P>
+
+<P>The role of the client program is to log into the same Xipc instance
+that the server is logged in to, get the queue IDs of the two queues
+that were created by the server, and wait for a user message. When the
+user types in a message, the message is sent on que1 and waits for the
+echoed message on que2. When the message is received on que2, the
+client displays the echoed message on the console and waits for
+another message from the user. This cycle repeats until the user
+types the &quot;quit&quot; message at which time the client sends
+this message to the server, logs itself out of the Xipc instance, and
+exits the program.</P>
+
+</BLOCKQUOTE>
+
+<P>
+<HR WIDTH="100%"></P>
+
+<H3><A NAME="The Server Program">The Server Program</A></H3>
+
+<BLOCKQUOTE>
+
+<P>The server program is called
+<A HREF="../samples/server.java">server.java</A>.
+The program performs the following operations
+pertaining to XIPC:</P>
+
+<OL>
+	<LI>Create an Xipc object.</LI>
+	<LI>Log into an Xipc network instance.</LI>
+	<LI>Create two message queues (que1 and que2).</LI>
+	<LI>Build two separate que ID lists (qlist1 and qlist2).</LI>
+	<LI>Wait for a message from the client using qlist1.</LI>
+	<LI>Display the message on the console.</LI>
+	<LI>If message is &quot;quit&quot; then</LI>
+	<OL>
+		<LI>Destroy the two queues.</LI>
+		<LI>Log out of the Xipc instance.</LI>
+		<LI>Exit program.</LI>
+	</OL>
+	<LI>Send the message back to the client using qlist2.</LI>
+	<LI>Repeat steps 5 to 8.</LI>
+</OL>
+
+<P>The server constructs an Xipc object. Xipc is the class
+which contains all the methods and constants that are defined for
+Java Xipc.</P>
+
+<UL>
+<PRE><B>Xipc x = new Xipc();</B></PRE>
+</UL>
+
+<P>The server logs into the Xipc instance with the user name of
+&quot;server&quot; by calling </P>
+
+<UL>
+<PRE><B>x.XipcLogin(args[0], "server");</B></PRE>
+</UL>
+
+<P>The instance name is passed as a command line argument when the
+server program is invoked. The instance name is of the form</P>
+
+<UL>
+	<P><B>@&lt;Host Name&gt;:&lt;Instance Name&gt;</B></P>
+</UL>
+
+<P>where &lt;Host Name&gt; is the name of the machine that the
+Xipc instance is running on and the &lt;Instance Name&gt; is the
+name of the Xipc instance that was specified when the Xipc instance
+was started.</P>
+
+<P>The server creates two queues (que1 and que2) by calling</P>
+
+<UL>
+<PRE><B>int qid1 = x.QueCreate("que1", 1, 128);
+int qid2 = x.QueCreate("que2", 1, 128);</B></PRE>
+</UL>
+
+<P>The queues are defined to hold a maximum of one message or a
+maximum of 128 bytes. The server uses que1 to receive and que2 to
+send messages.</P>
+
+<P>The queue IDs are needed to build the queue ID lists. A queue ID list
+defines a list of queues that the QueSend and QueReceive operations are
+to act upon. Since QueSend and QueReceive act on different queues, two
+separate queue ID lists are needed (qlist1 and qlist2). Queue ID lists
+are built using</P>
+
+<UL>
+<PRE><B>QidList qlist1 = Xipc.QueListBuild(qid1);
+QidList qlist2 = Xipc.QueListBuild(qid2);</B></PRE>
+</UL>
+
+<P>The QueListBuild returns a QidList object with one
+element in the list. If additional elements are to be added to the
+list, then QueListAdd can be used.
+Once the queue ID lists are built, it is possible
+to invoke QueSend and QueReceive operations.</P>
+
+<P>The server waits for a message from the client by calling </P>
+
+<UL>
+<PRE><B>int length = x.QueReceive(Xipc.QUE_Q_EA, qlist1, buf,
+				  80, retprio, retqid,
+				  Xipc.QUE_WAIT);</B></PRE>
+</UL>
+
+<P>It waits for the earliest arrived message on qlist1 by specifying a
+queue select code of Xipc.QUE_Q_EA. The wait is accomplished by
+specifying an option of Xipc.QUE_WAIT. When a message is
+received, QueReceive stores the message in a byte array and returns
+the length of the message that was received. The byte array is
+converted to a Java String object and is displayed on the console. </P>
+
+<P>If the message received is not &quot;quit&quot;, then the server
+echoes the message back to the client by calling </P>
+
+<UL>
+<PRE><B>x.QueSend(Xipc.QUE_Q_ANY, qlist2, buf, length,
+		 1000, retqid, Xipc.QUE_NOWAIT);</B></PRE>
+</UL>
+
+<P>This time the queue select code is set to Xipc.QUE_Q_ANY and the
+option is set to Xipc.QUE_NOWAIT.</P>
+
+<P>If the message received is &quot;quit&quot;, then the server
+destroys the two queues that it created by calling</P>
+
+<UL>
+<PRE><B>x.QueDestroy(qid1);
+x.QueDestroy(qid2);</B></PRE>
+</UL>
+
+<P>It then logs itself out of the Xipc instance by calling</P>
+
+<UL>
+<PRE><B>x.XipcLogout();</B></PRE>
+</UL>
+
+<P>and exits the program.</P>
+
+<P>Here is the entire source code for the server program,
+<A HREF="../samples/server.java">server.java</A>.</P>
+
+</BLOCKQUOTE>
+
+<P>
+<HR WIDTH="100%"></P>
+
+<H3><A NAME="The Client Program">The Client Program</A></H3>
+
+<BLOCKQUOTE>
+
+<P>The client program is called
+<A HREF="../samples/client.java">client.java</A>
+and the major steps pertaining to Xipc are as follows:</P>
+
+<OL>
+	<LI>Create an Xipc object.</LI>
+	<LI>Log into an Xipc network instance.</LI>
+	<LI>Obtain the queue IDs of the two message queues that were
+	created by the server (qid1 and qid2).</LI>
+	<LI>Build two separate que ID lists (qlist1 and qlist2).</LI>
+	<LI>Wait for a message from the user. If the message length is
+	greater than 0, then send it to the server using qlist1.</LI>
+	<LI>If the message is &quot;quit&quot; then</LI>
+	<OL>
+		<LI>Log out of the Xipc instance.</LI>
+		<LI>Exit program.</LI>
+	</OL>
+	<LI>Wait for the echoed message from the server using qlist2.</LI>
+	<LI>Display the message on the console.</LI>
+	<LI>Repeat steps 5 to 8.</LI>
+</OL>
+
+<P>Like the server program, the client constructs an Xipc object</P>
+
+<UL>
+<PRE><B>Xipc x = new Xipc();</B></PRE>
+</UL>
+
+<P>and logs into the same Xipc network instance that the server is logged into
+by calling </P>
+
+<UL>
+<PRE><B>x.XipcLogin(args[0], "client");</B></PRE>
+</UL>
+
+<P>The instance name is passed as a command line argument when the
+client program is invoked.</P>
+
+<P>The client gets the queue IDs of the two queues (que1 and que2) that
+were created by the server by calling</P>
+
+<UL>
+<PRE><B>int qid1 = x.QueAccess("que1");
+int qid2 = x.QueAccess("que2");</B></PRE>
+</UL>
+
+<P>The client uses que1 to send and que2 to receive messages.</P>
+
+<P>Again, the queue IDs are needed to build the queue ID lists. A queue
+ID list defines a list of queues that the QueSend and QueReceive
+operations are to act upon. Since QueSend and QueReceive act on
+different queues, two separate queue ID lists are needed (qlist1
+and qlist2). Queue ID lists are built using</P>
+
+<UL>
+<PRE><B>QidList qlist1 = Xipc.QueListBuild(qid1);
+QidList qlist2 = Xipc.QueListBuild(qid2);</B></PRE>
+</UL>
+
+<P>The QueListBuild returns a QidList object with one
+element in the list. If additional elements are to be added to the
+list, then QueListAdd can be used.
+Once the queue ID lists are built, it is possible
+to invoke QueSend and QueReceive operations.</P>
+
+<P>When the user types in a message, the client converts the text
+message, which is a String object, to an array of bytes.</P>
+
+<UL>
+<PRE><B>userInput.getBytes(0, userInput.length(), outbuffer, 0);</B></PRE>
+</UL>
+
+<P>If the message length is greater than 0, the client sends the
+message to the server using </P>
+
+<UL>
+<PRE><B>x.QueSend(Xipc.QUE_Q_ANY, qlist1, outbuffer, length,
+		 1000, retqid, Xipc.QUE_NOWAIT);</B></PRE>
+</UL>
+
+<P>QueSend operates on qlist1 with a queue select code of
+Xipc.QUE_Q_ANY.  This implies any queue in qlist1 which in this
+case is que1 since that is the only queue in the list. Priority
+is set to 1000 and a XintRef object is passed for return
+queue ID. An option of Xipc.QUE_NOWAIT is used so that the
+method returns immediately if there is no space in the queue.</P>
+
+<P>If the message that the user typed is not &quot;quit&quot;,
+the client waits for the return echo by invoking </P>
+
+<UL>
+<PRE><B>length = x.QueReceive(Xipc.QUE_Q_EA, qlist2, inbuffer,
+			 80, retprio, retqid,
+			 Xipc.QUE_WAIT);</B></PRE>
+</UL>
+
+<P>QueReceive operates on qlist2. It uses a queue select code of
+Xipc.QUE_Q_EA, which implies the earliest arrived message.
+XintRef objects are passed for both the return priority and the
+return queue ID. An option of Xipc.QUE_WAIT implies that the method
+must wait until it receives a message from the server.</P>
+
+<P>If the message that the user typed is &quot;quit&quot;, the
+client logs out of the Xipc instance by calling</P>
+
+<UL>
+<PRE><B>x.XipcLogout();</B></PRE>
+</UL>
+
+<P>and exits the program.</P>
+
+<P>Here is the entire source code for the client program,
+<A HREF="..\samples\client.java">client.java</A>.</P>
+
+</BLOCKQUOTE>
+
+<P>
+<HR WIDTH="100%"></P>
+
+<H3><A NAME="Compiling the Client/Server Programs">Compiling the
+Client/Server Programs</A></H3>
+
+<BLOCKQUOTE>
+
+<P>Before compiling the sample program, be sure to include the javaxipc30
+jar file in the CLASSPATH environment variable.</P>
+
+<P>Compile the server.java and client.java using the javac compiler.
+Assuming that the working directory is myXipc:</P>
+
+<UL>
+<P>On NT</P>
+<PRE><B>C:\myXipc&gt; javac server.java
+C:\myXipc&gt; javac client.java</B></PRE>
+<P>On Solaris</P>
+<PRE><B>$ javac server.java
+$ javac client.java</B></PRE>
+</UL>
+
+</BLOCKQUOTE>
+
+<P>
+<HR WIDTH="100%"></P>
+
+<H3><A NAME="Running the Client/Server Programs">Running the
+Client/Server Programs</A></H3>
+
+<BLOCKQUOTE>
+
+<P>Before running the sample program be sure to
+set up an XIPC network instance on a
+machine that is connected to the network.</P>
+
+<P>Open up three DOS windows on NT or three terminals on Solaris.</P>
+
+<P>On the first screen, run queview. This will show the two users,
+&quot;server&quot; and &quot;client&quot;, when they log in, and
+the queues that are created.</P>
+
+<UL>
+<P>On NT</P>
+<PRE><B>C:\xipc\bin&gt; queview 1000 /xipc/samples/bin/test</B></PRE>
+<P>On Solaris</P>
+<PRE><B>$ queview 1000 /xipc/samples/bin/test</B></PRE>
+</UL>
+
+<P>On the second screen, run the server program.</P>
+
+<UL>
+<P>On NT</P>
+<PRE><B>C:\myXipc&gt; java server @&lt;hostname&gt;:&lt;instance name&gt;</B></PRE>
+<P>On Solaris</P>
+<PRE><B>$ java server @&lt;hostname&gt;:&lt;instance name&gt;</B></PRE>
+</UL>
+
+<P> Wait until the message</P>
+
+<UL>
+<PRE><B>server: running.</B></PRE>
+</UL>
+
+<P>appears on the screen before running the client program.  It is
+important to run the server program before the client program because
+the server program creates the queues that are needed by both
+client/server pair.</P>
+
+<P>On the third screen, run the client program.</P>
+
+<UL>
+<P>On NT</P>
+<PRE><B>C:\myXipc&gt; java client @&lt;hostname&gt;:&lt;instance name&gt;</B></PRE>
+<P>On Solaris</P>
+<PRE><B>$ java client @&lt;hostname&gt;:&lt;instance name&gt;</B></PRE>
+</UL>
+
+<P>Type any messages on the client console and the messages will appear
+on the server console and echo back on the client console. Type
+&quot;quit&quot; on the client console to quit both the client and
+the server programs.  The &quot;quit&quot; message must be sent to
+the server in order to destroy the queues before exiting the
+programs.</P>
+
+</BLOCKQUOTE>
+
+<P>
+<HR WIDTH="100%"></P>
+
+<H3><A NAME="Comparison of C and Java Programming">Comparison of C
+and Java Programming</A></H3>
+
+<BLOCKQUOTE>
+
+<P>The Xipc Java API is very similar to the Xipc C API in terms of
+constant definitions and argument layout. The major change was in
+converting pointer data types in C to classes in Java. Also, a couple of
+new classes are defined in Java to facilitate the method
+invocations.</P>
+
+<P>The table below shows how the C data types were converted to Java
+classes and two additional classes that are created for Java API.</P>
+
+<CENTER><TABLE BORDER=1 >
+<TR>
+<TD><CENTER><P><B>C API</B></P></CENTER></TD>
+<TD><CENTER><P><B>Java API</B></P></CENTER></TD>
+</TR>
+
+<TR>
+<TD>MIDLIST</TD>
+<TD>MidList</TD>
+</TR>
+
+<TR>
+<TD>QIDLIST</TD>
+<TD>QidList</TD>
+</TR>
+
+<TR>
+<TD>SIDLIST</TD>
+<TD>SidList</TD>
+</TR>
+
+<TR>
+<TD>XINT</TD>
+<TD>XintRef</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>Section</TD>
+</TR>
+
+<TR>
+<TD></TD>
+<TD>MsgSelectQid</TD>
+</TR>
+
+</TABLE></CENTER>
+
+<P>Three classes (<I>MidList</I>, <I>QidList</I>, and <I>SidList</I>)
+are defined in Java for constructing the ID lists of MemSys,
+QueSys, and SemSys. These lists construct the data in a format
+that is required by Xipc. The maximum number of items that can
+be put into <I>MidList</I>, <I>QidList</I>, and <I>SidList</I>
+are 8, 8, and 32 respectively.</P>
+
+<P>Two addtional classes, <I>Section</I> and <I>MsgSelectQid</I>,
+are defined to facilitate the construction of <I>MidList</I> and
+<I>QidList</I> respectively. <I>Section</I> is used by MemSys
+operations to create memory section objects which divide a
+memory segment area into various sections. <I>MsgSelectQid</I>
+is used by QueSys operations to select a particular message
+among various queues.</P>
+
+<P>An <I>XintRef</I> class is defined in Java API to
+represent (XINT *) in C API. A (XINT *) is used in C to return
+XINT values. Likewise <I>XintRef</I> object is used in Java to
+return integer values. <I>XintRef</I> defines two methods</P>
+
+<UL>
+<PRE><B>setValue(int x);
+getValue();</B></PRE>
+</UL>
+
+<P>which set and get the value of the XintRef object.</P>
+
+<P>The methods that have changed most significantly from their
+C counterparts are the ID ListBuild and ID ListAdd operations.
+Unlike the C API operations where the elements of the list can
+all be passed in a single function call, the Java API operations
+accept only one element at a time. Furthermore, the ListBuild
+methods must be called first to build the list object with the
+first element in the list and the ListAdd methods must be called
+subsequently in order to add any other elements to the list.</P>
+
+<P>The ListBuild operations return the list objects
+so it is not necessary to specify a list object as one of the
+parameters to the ListBuild operations. However, the ListAdd
+operations operate on an existing list object so the ID list
+object must be passed as one of the parameters.</P>
+
+<P>Here are the C source codes for the
+<A HREF="../samples/client.c">client</A> /
+<A HREF="../samples/server.c">server</A> example
+that was presented earlier. A comparison between the C code
+and the Java code shows the similarity in how the Xipc methods
+are used.</P>
+
+<P>In order to create an executable program, the C source codes
+must be compiled and linked with the nxipc.lib and nxipctcp.lib
+library files.<P>
+
+</BLOCKQUOTE>
+
+<P>
+<HR WIDTH="100%"></P>
+
+<H3><A NAME="Applet Programming Considerations">Applet Programming
+Considerations</A></H3>
+
+<BLOCKQUOTE>
+
+<P>The Java Xipc API connects to Xipc instances via Java sockets.
+This implies that the Xipc instance must be a network instance.
+Java applets/applications will not work with standalone Xipc
+instances.</P>
+
+<P>Furthermore, due to the restrictions placed on the applet, an
+applet can only log into an Xipc instance that is running on the
+same machine as the one where the applet was downloaded from.
+Attempting to log into an Xipc instance that is running on another
+machine will generate a Security Exception from the Java virtual
+machine. A Java application, of course, does not have this
+restriction.</P>
+
+</BLOCKQUOTE>
+
+
+<P>
+<HR WIDTH="100%"></P>
+
+<H3><A NAME="Data Marshalling">Data Marshalling</A></H3>
+
+<BLOCKQUOTE>
+
+<P>In Xipc, all the data transmissions happen at the
+byte level. Therefore, every data must be converted to a byte
+stream before they can be sent or received via Xipc. In
+<I>QueSend</I>, <I>QueReceive</I>, <I>MemWrite</I> and
+<I>MemRead</I> methods, the buffers that the methods
+operate upon are byte arrays.</P>
+
+<P>The programmer must flatten out objects and convert the
+various data types to a byte array before invoking <I>QueSend</I>
+or <I>MemWrite</I>. Likewise, the programmer must reconstruct
+the various data types and objects from a byte array after
+invoking <I>QueReceive</I> or <I>MemRead</I>.</P>
+
+<P>In the example, the client program converts the userInput
+String object to a byte array as follows
+
+<UL>
+<PRE><B>userInput = is.readLine();
+userInput.getBytes(0, userInput.length(), outbuffer, 0);
+length = userInput.length();</B></PRE>
+</UL>
+
+<P>before invoking <I>QueSend</I>.</P>
+
+<P>Conversely, the server program converts the byte array
+to a String object as follows
+
+<UL>
+<PRE><B>String msg = new String(buf, 0, 0, length);</B></PRE>
+</UL>
+
+<P>after invoking <I>QueReceive</I>.</P>
+
+</BLOCKQUOTE>
+
+<P>
+<HR WIDTH="100%"></P>
+
+<CENTER><ADDRESS>Envoy Technologies, Inc.<BR>
+120 Wood Avenue South<BR>
+Iselin, New Jersey 08830<BR>
+Tel: 732-549-6500<BR>
+Fax: 732-549-3165</ADDRESS></CENTER>
+
+<CENTER><P>Technical Support: <A HREF="mailto:support@envoytech.com">support@envoytech.com<BR>
+<BR>
+</A>Copyright &copy; 2001 Envoy Technologies, Inc.<BR>
+<A HREF="http://www.envoytech.com">www.envoytech.com</A> </P></CENTER>
+
+</BODY>
+</HTML>

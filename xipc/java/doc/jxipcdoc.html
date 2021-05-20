@@ -1,0 +1,647 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+
+<head>
+<title>jxipc documentation</title>
+<meta name="GENERATOR" content="Microsoft FrontPage 1.1">
+</head>
+
+<body>
+<h2>jxipc - XIPC Interactive Command Processor</h2>
+<p><b>Name</b> </p>
+<p><b>jxipc</b> - <i>XIPC</i> Interactive Command Processor (a Java application) </p>
+<p><b>Description</b> </p>
+<p><tt>jxipc</tt> is a command interpreter that provides the user with interactive access to <i>XIPC</i>'s Java API. </p>
+<p>Most of the interpreter's commands correspond to <i>XIPC</i> API's, and their arguments are the same, except for necessary adjustments to the interactive
+environment. To find a full description of a command and its arguments, refer to the description of the corresponding API.</p>
+<h3>The xipc Interactive Language</h3>
+<h4>Syntax</h4>
+<p>Each command starts with a command verb, usually an <i>XIPC</i> API name. The command name is followed by the command arguments separated by one
+or more spaces. </p>
+<p>Arguments that consist of a list of values, such as <i>SidList</i>, use a comma as a separator between the values. </p>
+<p>Text arguments are entered either as a contiguous string of non-blank characters delimited by spaces or as a string delimited by double quotes. </p>
+<h4>Conventions Used In This Section</h4>
+<p>The following conventions are used in the description of <tt>jxipc</tt> command syntax: </p>
+<p>o Text in <b>bold</b> is to be entered as specified; </p>
+<p>o Items in <i>italics</i> represents values to be provided by the user; </p>
+<p>o Items between brackets '[ ]' imply an optional choice. </p>
+<p>&nbsp;</h3>
+<hr>
+<h3>General Interactive Commands</h3>
+<hr>
+<h4><u>help</u> - Display List Of Arguments</h4>
+<p><b>Syntax</b> </p>
+<blockquote>
+<p><b>help </b><i><tt>Command</tt></i><b><br>
+? </b><i><tt>Command</tt></i> </p>
+</blockquote>
+<p><b>Arguments</b> </p>
+<blockquote>
+<p><i>Command</i><b> </b>Name of <tt>xipc</tt> command. </p>
+</blockquote>
+<p><b>Examples</b> </p>
+<blockquote>
+<p><tt>jxipc&gt;</tt><b><tt> help xipclogin<br>
+</tt></b><tt>xipclogin InstanceName UserName</tt> </p>
+</blockquote>
+<hr>
+<h4><u>quit</u> - Logout And Quit</h4>
+<p><b>Syntax</b> </p>
+<blockquote>
+<p><b>q[uit]</b> </p>
+</blockquote>
+<p><b>Arguments</b> </p>
+<blockquote>
+<p><i>None.</i> </p>
+</blockquote>
+<h4><u>uid</u> - Display Current User Id</h4>
+<p><b>Syntax</b> </p>
+<blockquote>
+<p><b>uid</b> </p>
+</blockquote>
+<p><b>Arguments</b> </p>
+<blockquote>
+<p><i>None.</i> </p>
+</blockquote>
+<p><b>Examples</b> </p>
+<blockquote>
+<p><tt>jxipc&gt;</tt><b><tt> uid<br>
+</tt></b><tt>Uid = 11</tt> </p>
+</blockquote>
+<hr>
+<h3>XIPC Interactive Commands</h3>
+<hr>
+<h4><u>xipcabort</u> - Abort a User</h4>
+<p><b>Syntax</b> </p>
+<blockquote>
+<p><b>xipcabort </b><i><tt>UserId</tt></i> </p>
+</blockquote>
+<p><b>Arguments</b> </p>
+<blockquote>
+<p><i>UserId</i><b> </b>User id of user to be aborted </p>
+</blockquote>
+<p><b>Examples</b> </p>
+<blockquote>
+<p><tt>jxipc&gt;</tt><b><tt> xipcabort 11<br>
+</tt></b><tt>RetCode = 0</tt> </p>
+</blockquote>
+<hr>
+<h4><u>xipcerror</u> - Display Error Message</h4>
+<p><b>Syntax</b> </p>
+<blockquote>
+<p><b>xipcerror </b><i><tt>ErrorCode</tt></i> </p>
+</blockquote>
+<p><b>Arguments</b> </p>
+<blockquote>
+<p><i>ErrorCode</i><b> </b><i>XIPC</i> error code </p>
+</blockquote>
+<p><b>Examples</b> </p>
+<blockquote>
+<p><tt>jxipc&gt;</tt><b><tt> xipcerror -1003<br>
+</tt></b><tt>Configuration capacity limit exceeded</tt> </p>
+</blockquote>
+<hr>
+<h4><u>xipclogin</u> - Log Into An Instance</h4>
+<p><b>Syntax</b> </p>
+<blockquote>
+<p><b>xipclogin</b><i><tt> [InstanceName] [UserName]</tt></i> </p>
+</blockquote>
+<p><b>Arguments</b> </p>
+<blockquote>
+<p><i>InstanceName</i><b> </b>Name of a network instance to log into. Must be an instance network name of the form <tt>@hostname:instance</tt> . </p>
+</blockquote>
+<blockquote>
+<p><i>UserName</i><b> </b>Name to be assigned to the <i>XIPC</i> user. </p>
+</blockquote>
+<p><b>Examples</b> </p>
+<blockquote>
+<p><tt>jxipc&gt;</tt><b><tt> xipclogin @Server:Instance1 George<br>
+</tt></b><tt>Uid = 11</tt> </p>
+</blockquote>
+<hr>
+<h4><font size=3><u>xipclogout</u></font> - Log Out Of Instance</h4>
+<p><b>Syntax</b> </p>
+<blockquote>
+<p><b>xipclogout</b> </p>
+</blockquote>
+<p><b>Arguments</b> </p>
+<blockquote>
+<p><i>None.</i> </p>
+</blockquote>
+<p><b>Examples</b> </p>
+<blockquote>
+<p><tt>jxipc&gt;</tt><b><tt> xipclogout<br>
+</tt></b><tt>RetCode = 0</tt> </p>
+</blockquote>
+<hr>
+<h3>SemSys Interactive Commands</h3>
+<hr>
+<h4><u>semaccess</u> - Access An Existing Semaphore</h4>
+<p><b>Syntax</b> </p>
+<blockquote>
+<p><b>semaccess </b><i><tt>Name</tt></i> </p>
+</blockquote>
+<p><b>Arguments</b> </p>
+<blockquote>
+<p><i>Name</i><b> </b>Semaphore name </p>
+</blockquote>
+<p><b>Examples</b> </p>
+<blockquote>
+<p><tt>jxipc&gt;</tt><b><tt> semaccess InitSem<br>
+</tt></b><tt>Sid = 7</tt> </p>
+</blockquote>
+<hr>
+<h4><u>semacquire</u> - Acquire Resource Semaphore</h4>
+<p><b>Syntax</b> </p>
+<blockquote>
+<p><b>semacquire </b><i><tt>AcquireType SidList BlockingOpt</tt></i> </p>
+</blockquote>
+<p><b>Arguments</b> </p>
+<blockquote>
+<p><i>AcquireType</i><b> any</b>, <b>all</b> or <b>atomic</b>. </p>
+</blockquote>
+<blockquote>
+<p><i>SidList</i><b> </b>List of Semaphore Ids separated by commas. </p>
+</blockquote>
+<blockquote>
+<p><i>BlockingOpt</i> <B>wait</b> or <b>nowait</b> or <b>timeout(</b><i>&lt;int&gt;</i><b>)</b>. </p>
+</blockquote>
+<p><b>Examples</b> </p>
+<blockquote>
+<p><tt>jxipc&gt;</tt><b><tt> semacquire any 0,1,3 wait<br>
+</tt></b><tt>RetCode = 0 Sid = 1</tt> </p>
+</blockquote>
+<hr>
+<h4><u>semcancel</u> - Cancel Blocked Operations</h4>
+<p><b>Syntax</b> </p>
+<blockquote>
+<p><b>semcancel </b><i><tt>SidList</tt></i> </p>
+</blockquote>
+<p><b>Arguments</b> </p>
+<blockquote>
+<p><i>SidList</i><b> </b>List of Semaphore Ids separated by commas. </p>
+</blockquote>
+<p><b>Examples</b> </p>
+<blockquote>
+<p><tt>jxipc&gt;</tt><b><tt> semcancel 0<br>
+</tt></b><tt>RetCode = 1 Sid = 0</tt> </p>
+</blockquote>
+<hr>
+<h4><u>semclear</u> - Clear Event Semaphore</h4>
+<p><b>Syntax</b> </p>
+<blockquote>
+<p><b>semclear </b><i><tt>SidList</tt></i> </p>
+</blockquote>
+<p><b>Arguments</b> </p>
+<blockquote>
+<p><i>SidList</i><b> </b>List of Semaphore Ids separated by commas. </p>
+</blockquote>
+<p><b>Examples</b> </p>
+<blockquote>
+<p><tt>jxipc&gt;</tt><b><tt> semclear 0,1<br>
+</tt></b><tt>RetCode = 0</tt> </p>
+</blockquote>
+<hr>
+<h4><u>semcreate</u> - Create A New Semaphore</h4>
+<p><b>Syntax</b> </p>
+<blockquote>
+<p><b>semcreate </b><i><tt>Name CreateValue</tt></i> </p>
+</blockquote>
+<p><b>Arguments</b> </p>
+<blockquote>
+<p><i>Name</i><b> </b>Name of new semaphore. </p>
+</blockquote>
+<blockquote>
+<p><i>CreateValue</i><b> </b>For a resource semaphore: A maximum value; <br>
+For an event semaphore: Either <b>clear</b> or <b>set</b>. </p>
+</blockquote>
+<p><b>Examples</b> </p>
+<blockquote>
+<p><tt>jxipc&gt;</tt><b><tt> semcreate Resource 5<br>
+</tt></b><tt>Sid = 0</tt> </p>
+</blockquote>
+<blockquote>
+<p><tt>jxipc&gt;</tt><b><tt> semcreate InitSem clear<br>
+</tt></b><tt>Sid = 3</tt> </p>
+</blockquote>
+<hr>
+<h4><u>semdelete</u> - Delete A Semaphore</h4>
+<p><b>Syntax</b> </p>
+<blockquote>
+<p><b>semdelete </b><i><tt>Sid</tt></i> </p>
+</blockquote>
+<p><b>Arguments</b> </p>
+<blockquote>
+<p><i>Sid</i><b> </b>Semaphore Id. </p>
+</blockquote>
+<p><b>Examples</b> </p>
+<blockquote>
+<p><tt>jxipc&gt;</tt><b><tt> semdelete 5<br>
+</tt></b><tt>RetCode = 0</tt> </p>
+</blockquote>
+<hr>
+<h4><u>semdestroy</u> - Destroy A Semaphore</h4>
+<p><b>Syntax</b> </p>
+<blockquote>
+<p><b>semdestroy </b><i><tt>Sid</tt></i> </p>
+</blockquote>
+<p><b>Arguments</b> </p>
+<blockquote>
+<p><i>Sid</i><b> </b>Semaphore Id. </p>
+</blockquote>
+<p><b>Examples</b> </p>
+<blockquote>
+<p><tt>jxipc&gt;</tt><b><tt> semdestroy 5<br>
+</tt></b><tt>RetCode = 0</tt> </p>
+</blockquote>
+<hr>
+<h4><u>semrelease</u> - Release Resource Semaphore</h4>
+<p><b>Syntax</b> </p>
+<blockquote>
+<p><b>semrelease </b><i><tt>SidList</tt></i> </p>
+</blockquote>
+<p><b>Arguments</b> </p>
+<blockquote>
+<p><i>SidList</i><b> </b>List of Semaphore Ids separated by commas. </p>
+</blockquote>
+<p><b>Examples</b> </p>
+<blockquote>
+<p><tt>jxipc&gt;</tt><b><tt> semrelease 9,11<br>
+</tt></b><tt>RetCode = 0</tt> </p>
+</blockquote>
+<hr>
+<h4><u>semset</u> - Set Event Semaphore</h4>
+<p><b>Syntax</b> </p>
+<blockquote>
+<p><b>semset </b><i><tt>SidList</tt></i> </p>
+</blockquote>
+<p><b>Arguments</b> </p>
+<blockquote>
+<p><i>SidList</i><b> </b>List of Semaphore Ids separated by commas. </p>
+</blockquote>
+<p><b>Examples</b> </p>
+<blockquote>
+<p><tt>jxipc&gt;</tt><b><tt> semset 0,1,22<br>
+</tt></b><tt>RetCode = 0</tt> </p>
+</blockquote>
+<hr>
+<h4><u>semwait</u> - Wait On Event Semaphore</h4>
+<p><b>Syntax</b> </p>
+<blockquote>
+<p><b>semwait </b><i><tt>WaitType SidList [</tt></i><b><tt>Clear,</tt></b><i><tt>]BlockingOpt</tt></i> </p>
+</blockquote>
+<p><b>Arguments</b> </p>
+<blockquote>
+<p><i>WaitType</i><b> any</b>, <b>all</b> or <b>atomic</b>. </p>
+</blockquote>
+<blockquote>
+<p><i>SidList</i><b> </b>List of Semaphore Ids separated by commas. </p>
+</blockquote>
+<blockquote>
+<p><i>BlockingOpt</i> <B>wait</b> or <b>nowait</b> or <b>timeout(</b><i>&lt;int&gt;</i><b>)</b>. </p>
+</blockquote>
+<p><b>Examples</b> </p>
+<blockquote>
+<p><tt>jxipc&gt;</tt><b><tt> semwait any 0,1,3 clear,wait<br>
+</tt></b><tt>RetCode = 0 Sid = 1</tt> </p>
+</blockquote>
+<blockquote>
+<p><tt>jxipc&gt;</tt><b><tt> semwait all 0,1 nowait<br>
+</tt></b><tt>RetCode = -1034<br>
+XIPC NOWAIT<br>
+Sid = 0</tt> </p>
+</blockquote>
+<hr>
+<h3>QueSys Interactive Commands</h3>
+<hr>
+<h4><u>queaccess</u> - Access An Existing Queue</h4>
+<p><b>Syntax</b> </p>
+<blockquote>
+<p><b>queaccess </b><i><tt>Name</tt></i> </p>
+</blockquote>
+<p><b>Arguments</b> </p>
+<blockquote>
+<p><i>Name</i><b> </b>Queue name </p>
+</blockquote>
+<p><b>Examples</b> </p>
+<blockquote>
+<p><tt>jxipc&gt;</tt><b><tt> queaccess ServerQ<br>
+</tt></b><tt>Qid = 7</tt> </p>
+</blockquote>
+<hr>
+<h4><u>quecreate</u> - Create A New Queue</h4>
+<p><b>Syntax</b> </p>
+<blockquote>
+<p><b>quecreate </b><i><tt>Name LimitMsgs LimitBytes</tt></i> </p>
+</blockquote>
+<p><b>Arguments</b> </p>
+<blockquote>
+<p><i>Name</i><b> </b>Name of new queue. </p>
+</blockquote>
+<blockquote>
+<p><i>LimitMsgs</i><b> </b>Either maximum number of messages in queue or <b>nolimit</b>. </p>
+</blockquote>
+<blockquote>
+<p><i>LimitBytes</i><b> </b>Either maximum number of text bytes in queue or <b>nolimit</b>. </p>
+</blockquote>
+<p><b>Examples</b> </p>
+<blockquote>
+<p><tt>jxipc&gt;</tt><b><tt> quecreate ServerQueue nolimit 10000<br>
+</tt></b><tt>Qid = 0</tt> </p>
+</blockquote>
+<hr>
+<h4><u>quedelete</u> - Delete A Queue</h4>
+<p><b>Syntax</b> </p>
+<blockquote>
+<p><b>quedelete </b><i><tt>Qid</tt></i> </p>
+</blockquote>
+<p><b>Arguments</b> </p>
+<blockquote>
+<p><i>Qid</i><b> </b>Queue Id. </p>
+</blockquote>
+<p><b>Examples</b> </p>
+<blockquote>
+<p><tt>jxipc&gt;</tt><b><tt> quedelete 5<br>
+</tt></b><tt>RetCode = 0</tt> </p>
+</blockquote>
+<hr>
+<h4><u>quedestroy</u> - Destroy A Queue</h4>
+<p><b>Syntax</b> </p>
+<blockquote>
+<p><b>quedestroy </b><i><tt>Qid</tt></i> </p>
+</blockquote>
+<p><b>Arguments</b> </p>
+<blockquote>
+<p><i>Qid</i><b> </b>Queue Id. </p>
+</blockquote>
+<p><b>Examples</b> </p>
+<blockquote>
+<p><tt>jxipc&gt;</tt><b><tt> quedestroy 5<br>
+</tt></b><tt>RetCode = 0</tt> </p>
+</blockquote>
+<hr>
+<h4><u>quereceive</u> - Receive And Read A Message From A Queue</h4>
+<p><b>Syntax</b> </p>
+<blockquote>
+<p><b>quereceive</b><i><tt> QueSelectCode QidList BlockingOpt</tt></i> </p>
+</blockquote>
+<p><b>Arguments</b> </p>
+<blockquote>
+<p><i>QueSelectCode</i><b> </b>A message retrieval queue select code. (This is presented in the QueSys documentation.) The prefix &quot;QUE_Q_&quot; of the
+queue select code should be omitted, e.g., instead of QUE_Q_EA, use <b>ea</b>. </p>
+</blockquote>
+<blockquote>
+<p><i>QidList</i><b> </b>A list of queue Ids, possibly specified with message select codes. (This is presented in the QueSys documenation.) The prefix
+&quot;QUE_M_&quot; of the message select code should be omitted, e.g., instead of QUE_M_PRGT(2,100), use <b>prgt(2,100)</b>. </p>
+</blockquote>
+<blockquote>
+<p><i>BlockingOpt</i> <B>wait</b> or <b>nowait</b> or <b>timeout(</b><i>&lt;int&gt;</i><b>)</b>. </p>
+</blockquote>
+<p><b>Examples</b> </p>
+<blockquote>
+<p><tt>jxipc&gt;</tt><b><tt> quereceive ea 0 wait<br>
+</tt></b><tt>Qid = 0 Priority = 120 Length = 22<br>
+Text = &quot;Mary had a little lamb&quot;</tt> </p>
+</blockquote>
+<blockquote>
+<p><tt>jxipc&gt;</tt><b><tt> quereceive hpq prgt(0,1000),prgt(1,900) nowait<br>
+</tt></b><tt>Qid = 1 Priority = 950 Length = 13<br>
+Text = &quot;High Priority&quot;</tt> </p>
+</blockquote>
+<hr>
+<h4><u>quesend</u> - Write And Send A Message To A Queue</h4>
+<p><b>Syntax</b> </p>
+<blockquote>
+<p><b>quesend</b><i><tt> QueSelectCode QidList Priority MessageText BlockingOpt</tt></i> </p>
+</blockquote>
+<p><b>Arguments</b> </p>
+<blockquote>
+<p><i>QueSelectCode</i><b> </b>A message dispatch queue select code. (This is presented in the QueSys Functions documentation.) The prefix
+&quot;QUE_Q_&quot; of the queue select code should be omitted, e.g., instead of QUE_Q_SHQ, use <b>shq</b>. </p>
+</blockquote>
+<blockquote>
+<p><i>QidList</i><b> </b>A list of queue Ids </p>
+</blockquote>
+<blockquote>
+<p><i>Priority</i><b> </b>The priority to be assigned to the message. </p>
+</blockquote>
+<blockquote>
+<p><i>MessageText</i><b> </b>The text of the message enclosed in double quotes. </p>
+</blockquote>
+<blockquote>
+<p><i>BlockingOpt</i> <B>wait</b> or <b>nowait</b> or <b>timeout(</b><i>&lt;int&gt;</i><b>)</b>. </p>
+</blockquote>
+<p><b>Examples</b> </p>
+<blockquote>
+<p><tt>jxipc&gt;</tt><b><tt> quesend shq 0,1 100 &quot;Mary had a little lamb&quot; wait<br>
+</tt></b><tt>RetCode = 0 Qid = 0</tt> </p>
+</blockquote>
+<hr>
+<h3>MemSys Interactive Commands</h3>
+<hr>
+<h4><u>memaccess</u> - Access An Existing Segment</h4>
+<p><b>Syntax</b> </p>
+<blockquote>
+<p><b>memaccess </b><i><tt>Name</tt></i> </p>
+</blockquote>
+<p><b>Arguments</b> </p>
+<blockquote>
+<p><i>Name</i><b> </b>Segment name </p>
+</blockquote>
+<p><b>Examples</b> </p>
+<blockquote>
+<p><tt>jxipc&gt;</tt><b><tt> memaccess TrackTable<br>
+</tt></b><tt>Mid = 1</tt> </p>
+</blockquote>
+<hr>
+<h4><u>memcreate</u> - Create A New Memory Segment</h4>
+<p><b>Syntax</b> </p>
+<blockquote>
+<p><b>memcreate </b><i><tt>Name Size</tt></i> </p>
+</blockquote>
+<p><b>Arguments</b> </p>
+<blockquote>
+<p><i>Name</i><b> </b>Segment name </p>
+</blockquote>
+<blockquote>
+<p><i>Size</i><b> </b>Segment size </p>
+</blockquote>
+<p><b>Examples</b> </p>
+<blockquote>
+<p><tt>jxipc&gt;</tt><b><tt> memcreate TrackTable 10240<br>
+</tt></b><tt>Mid = 1</tt> </p>
+</blockquote>
+<hr>
+<h4><u>memdelete</u> - Delete A Memory Segment</h4>
+<p><b>Syntax</b> </p>
+<blockquote>
+<p><b>memdelete </b><i><tt>Mid</tt></i> </p>
+</blockquote>
+<p><b>Arguments</b> </p>
+<blockquote>
+<p><i>Mid</i><b> </b>Segment Id </p>
+</blockquote>
+<p><b>Examples</b> </p>
+<blockquote>
+<p><tt>jxipc&gt;</tt><b><tt> memdelete 1<br>
+</tt></b><tt>RetCode = 0</tt> </p>
+</blockquote>
+<hr>
+<h4><u>memdestroy</u> - Destroy A Memory Segment</h4>
+<p><b>Syntax</b> </p>
+<blockquote>
+<p><b>memdestroy </b><i><tt>Mid</tt></i> </p>
+</blockquote>
+<p><b>Arguments</b> </p>
+<blockquote>
+<p><i>Mid</i><b> </b>Segment Id </p>
+</blockquote>
+<p><b>Examples</b> </p>
+<blockquote>
+<p><tt>jxipc&gt;</tt><b><tt> memdestroy 1<br>
+</tt></b><tt>RetCode = 0</tt> </p>
+</blockquote>
+<hr>
+<h4><u>memlock</u> - Lock Memory Section(s)</h4>
+<p><b>Syntax</b> </p>
+<blockquote>
+<p><b>memlock </b><i><tt>LockType MidList BlockingOpt</tt></i> </p>
+</blockquote>
+<p><b>Arguments</b> </p>
+<blockquote>
+<p><i>LockType</i><b> any</b>, <b>all</b> or <b>atomic</b>. </p>
+</blockquote>
+<blockquote>
+<p><i>MidList</i><b> </b>List of section variables or memory section descriptors separated by commas. Each descriptor consists of Mid, Offset and Size
+enclosed in parenthesis. </p>
+</blockquote>
+<blockquote>
+<p><i>BlockingOpt</i> <B>wait</b> or <b>nowait</b> or <b>timeout(</b><i>&lt;int&gt;</i><b>)</b>. </p>
+</blockquote>
+<p><b>Examples</b> </p>
+<blockquote>
+<p><tt>jxipc&gt;</tt><b><tt> memsection s (1 0 20)<br>
+</tt></b><tt>Section = (1 0 20)<br>
+</tt></p>
+<p><tt>jxipc&gt;</tt><b><tt> memlock atomic (0 120 30),(0 4000 30),s wait<br>
+</tt></b><tt>RetCode = 0<br>
+Section = (1 0 20)</tt> </p>
+</blockquote>
+<hr>
+<h4><u>memread</u> - Read Data From A Memory Segment</h4>
+<p><b>Syntax</b> </p>
+<blockquote>
+<p><b>memread </b><i><tt>Mid Offset Length BlockingOpt</tt></i> </p>
+</blockquote>
+<p><b>Arguments</b> </p>
+<blockquote>
+<p><i>Mid</i><b> </b>Segment Id. </p>
+</blockquote>
+<blockquote>
+<p><i>Offset</i><b> </b>Number of bytes beyond the start of the segment. </p>
+</blockquote>
+<blockquote>
+<p><i>Length</i><b> </b>Number of bytes </p>
+</blockquote>
+<blockquote>
+<p><i>BlockingOpt</i><b><B>wait</b> or <b>nowait</b> or <b>timeout(</b><i>&lt;int&gt;</i><b>)</b>. </p>
+</blockquote>
+<p><b>Examples</b> </p>
+<blockquote>
+<p><tt>jxipc&gt;</tt><b><tt> memread 1 0 25 wait<br>
+</tt></b><tt>Text = &quot;Larry had a little mutton&quot;</tt> </p>
+</blockquote>
+<hr>
+<h4><u>memsection</u> - Set A Section Variable</h4>
+<p><b>Syntax</b> </p>
+<blockquote>
+<p><b>memsection </b><i><tt>SectionId [Section]</tt></i> </p>
+</blockquote>
+<p><b>Arguments</b> </p>
+<blockquote>
+<p><i>SectionId</i><b> </b>A section variable beginning with a letter a through z. </p>
+</blockquote>
+<blockquote>
+<p><i>Section</i><b> </b>Either a section variable or section descriptor: Mid, Offset and Size enclosed in parenthesis. </p>
+</blockquote>
+<p><b>Examples</b> </p>
+<blockquote>
+<p><tt>jxipc&gt;</tt><b><tt> memsection sec1 (0 0 100)<br>
+</tt></b><tt>Section = (0 0 100)</tt> </p>
+</blockquote>
+<blockquote>
+<p><tt>jxipc&gt;</tt><b><tt> section sec1<br>
+</tt></b><tt>Section = (0 0 100)<br>
+</tt></p>
+</blockquote>
+<hr>
+<h4><u>memunlock</u> - Unlock Memory Section(s)</h4>
+<p><b>Syntax</b> </p>
+<blockquote>
+<p><b>memunlock </b><i><tt>MidList</tt></i> </p>
+</blockquote>
+<p><b>Arguments</b> </p>
+<blockquote>
+<p><i>MidList</i><b> </b>List of section variables or memory section descriptors separated by commas. Each descriptor consists of Mid, Offset and Size
+enclosed in parenthesis. </p>
+</blockquote>
+<p><b>Examples</b> </p>
+<blockquote>
+<p><tt>jxipc&gt;</tt><b><tt> memunlock (0 120 30),(0 4000 30)<br>
+</tt></b><tt>RetCode = 0</tt> </p>
+</blockquote>
+<hr>
+<h4><u>memwrite</u> - Write Data Into A Memory Segment</h4>
+<p><b>Syntax</b> </p>
+<blockquote>
+<p><b>memwrite </b><i><tt>Mid Offset Length Text BlockingOpt</tt></i> </p>
+</blockquote>
+<p><b>Arguments</b> </p>
+<blockquote>
+<p><i>Mid</i><b> </b>Segment Id. </p>
+</blockquote>
+<blockquote>
+<p><i>Offset</i><b> </b>Number of bytes beyond the start of the segment. </p>
+</blockquote>
+<blockquote>
+<p><i>Length</i><b> </b>Number of bytes </p>
+</blockquote>
+<blockquote>
+<p><i>Text</i><b> </b>The text to be written enclosed in double quotes or a filler character enclosed in single quotes </p>
+</blockquote>
+<blockquote>
+<p><i>BlockingOpt</i> <B>wait</b> or <b>nowait</b> or <b>timeout(</b><i>&lt;int&gt;</i><b>)</b>. </p>
+</blockquote>
+<p><b>Examples</b> </p>
+<blockquote>
+<p><tt>jxipc&gt;</tt><b><tt> memwrite 1 0 22 &quot;Mary had a little lamb&quot; wait<br>
+</tt></b><tt>RetCode = 0</tt> </p>
+</blockquote>
+<blockquote>
+<p><tt>jxipc&gt;</tt><b><tt> memwrite 1 0 22 ' ' wait<br>
+</tt></b><tt>RetCode = 0</tt> </p>
+</blockquote>
+<hr>
+<h4><u>section</u> - Display A Section Variable</h4>
+<p><b>Syntax</b> </p>
+<blockquote>
+<p><b>section </b><i><tt>SectionId</tt></i> </p>
+</blockquote>
+<p><b>Arguments</b> </p>
+<blockquote>
+<p><i>SectionId</i><b> </b>A section variable. </p>
+</blockquote>
+<p><b>Examples</b> </p>
+<blockquote>
+<p><tt>jxipc&gt;</tt><b><tt> memsection s (0 0 100)<br>
+</tt></b><tt>Section = (0 0 100)</tt> </p>
+</blockquote>
+<blockquote>
+<p><tt>jxipc&gt;</tt><b><tt> section s<br>
+</tt></b><tt>Section = (0 0 100)</tt> </p>
+</blockquote>
+<hr>
+</body>
+
+</html>

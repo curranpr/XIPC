@@ -1,0 +1,17 @@
+public class programObj implements java.io.Serializable {
+	
+	private static final long serialVersionUID = 1L;
+	int qid;
+	String operator;
+	int op1;
+	int op2;
+	int res;
+	
+	public programObj(int qid, String operator, int op1, int op2, int res) {
+		this.qid = qid;
+		this.operator = operator;
+		this.op1 = op1;
+		this.op2 = op2;
+		this.res = res;
+	}
+}

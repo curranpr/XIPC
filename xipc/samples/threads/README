@@ -1,0 +1,87 @@
+- USING XIPC WITH REDHAT LINUX APPLICATIONS:
+-------------------------------------------
+
+This document contains miscellaneous hints on writing XIPC applications
+that employ REDHAT LINUX threads. These hints pertain to this release only 
+and are subject to updates in subsequent releases. 
+
+SEE the section on PROGRAMMING RESTRICTIONS below.
+
+
+1.0: REQUIREMENTS:
+------------------
+REDHAT LINUX VERSION 7.x or higher is required. 
+
+
+1.1 - COMPILING XIPC APPLICATION:
+---------------------------------
+No change, see PLATFORM NOTES of XIPC 3.4.0 for further information. A sample
+program and makefile are provided as an example.
+
+
+1.2 - LINKING XIPC APPLICATION:
+-------------------------------
+For non-threaded applications no change - see PLATFORM NOTES of XIPC 3.4.0 for 
+further information.
+
+For threaded applications, thread safe libraries have been added.
+
+The reentrant versions of the libraries are:
+		1. libxipc_r.a
+		2. libsxipc_r.a
+		3. libnxipc_r.a
+		4. libnxiptcp_r.a
+
+Applications that use threads with XIPC should link with these libraries.
+Refer to the sample makefile for an example of linking with the threaded
+libraries.
+
+
+1.3 - PROGRAMMING RESTRICTIONS:
+-------------------------------
+There are some restrictions on using XIPC with the thread libraries. 
+
+	A.  Threads cannot issue XIPC calls with the TIMEOUT option.
+		Any attempt by threads using these options will result in 
+		unspecified behavior. 
+
+	B.  The list functions SemList, MemList and QueList are not thread
+		safe. These functions use a internal static area which cannot be
+		relied upon with multiple threads.
+
+		Use the thread safe version - e.g. XXXListBuild or XXXListAdd
+		instead of XXXList, where XXX is Que, Sem or Mem.
+
+		MemSection is not thread safe - use MemSectionBuild instead.
+
+	C. Default number of threads/process currently in XIPC is 64. This
+	   can be changed by setting the variable XipcMaxThreads to some 
+	   positive number before the first thread does XipcLogin. 
+
+How to use ASYNC option with threads: 
+-------------------------------------
+Each thread logged into XIPC can issue multiple async calls. In the threaded
+version, notification of XIPC asynchronous events is not via signals.
+See the technical notes on "Using I/O descriptors for XIPC asynchronous 
+notification" and the section below. Async notification is ALWAYS sent through 
+I/O descriptor.
+
+Special Notes about threads with ASYNC option:
+----------------------------------------------
+Every thread logged into XIPC calling XipcAsyncIoDescriptor function gets a
+unique file descriptor. Each thread is owner of its own file descriptor.
+The file descriptor is maintained on a per-thread basis. All async 
+notifications are sent to the thread which started the asynchronous call.
+
+WARNING: 
+---------
+If a thread finds a file descriptor ready for reading, but is not the owner of
+the file descriptor, calling XipcAsyncEventHandler will block. The function 
+XipcAsyncEventHandler reads the notification from the calling thread's file 
+descriptor. 
+
+Each thread should only do a select/poll on it's own file descriptor. 
+You can have another thread do the select/poll but then it should notify the 
+owner of the fd that input is ready and let the owner thread run 
+XipcAsyncEventHandler(e.g.: Use condition variable for this).
+

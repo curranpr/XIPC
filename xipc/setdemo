@@ -1,0 +1,4 @@
+export XIPCROOT=/home/curran/xipc
+export PATH=$PATH:$XIPCROOT/bin
+export XIPCSERV=4001
+export XIPC=$XIPCROOT/samples/bin/demo

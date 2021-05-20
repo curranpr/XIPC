@@ -1,0 +1,8 @@
+if [ $# -lt 1 ] # no args specified
+then
+	echo "USAGE: ipcpurge LOGNAME"
+	exit 1
+fi
+USER_ID=$1
+set -x
+ipcrm `ipcs | grep $USER_ID |awk '{if (length($1) > 1) print "-" substr($1,1,1), substr($1,2); else print "-" $1, $2}'`

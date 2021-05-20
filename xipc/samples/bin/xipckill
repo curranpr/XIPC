@@ -1,0 +1,2 @@
+jobs=`ps -e | grep $1 | awk '{print $1}'`
+kill $jobs

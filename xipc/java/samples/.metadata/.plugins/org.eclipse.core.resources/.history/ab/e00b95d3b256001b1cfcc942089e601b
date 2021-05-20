@@ -1,0 +1,11 @@
+
+public class requestObject implements java.io.Serializable {
+
+	int qId;
+	int op1;
+	public int op2;
+	public int res;
+	
+	public requestObject(int )
+	
+}

@@ -1,0 +1,833 @@
+The Xipc Interactive Command Processor Help File
+------------------------------------------------
+[!.example]
+xipc> # Unix example of operating system command
+xipc> !date
+Thu May 21 10:58:20 EDT 1996
+xipc> # VMS example of operating system command
+xipc> !show time
+21-May-1996 10:58:20
+xipc> # OS/2 example of operating system command
+xipc> !date
+The current date is: Thu 5-21-1996
+Enter the new date: (mm-dd-yy)
+
+[acb.example]
+xipc> acb a
+	  AUid			  = 33
+	  AsyncStatus	  = XIPC_ASYNC_INPROGRESS
+	  UserData1 	  = 000000000
+	  ...
+
+[callback.example]
+xipc> # Start spooling when queue fills up
+xipc> callback cba "quespool 2 /usr/tmp/spl"
+	  Command saved
+
+[help.example]
+xipc> help xipclogin
+	  xipclogin
+		 InstanceName
+		 UserName
+
+[quit.example]
+xipc> q
+	  Logging out user 11 from: @Server
+	  Logging out user 31 from: @DBServer
+
+[uid.example]
+xipc> uid
+	  Uid = 11
+
+[xipcabort.example]
+xipc> xipcabort 11
+	  RetCode = 0
+
+[xipcconnect.example]
+xipc> # Log into stand-alone instance.
+xipc> # Disconnect from the login.
+xipc> # Then reconnect to the login.
+xipc> xipclogin /usr/xipc/test Joe
+	  Uid = 11
+xipc> xipcdisconnect
+	  RetCode = 0
+xipc> xipcconnect /usr/xipc/test 11
+	  RetCode = 0
+
+[xipcdisconnect.example]
+xipc> xipclogin /usr/xipc/test Joe
+	  Uid = 11
+xipc> xipcdisconnect
+	  RetCode = 0
+xipc> xipclogin /usr/xipc/test2 Joe
+	  Uid = 7
+
+[xipcerror.example]
+xipc> xipcerror -1003
+	  Configuration capacity limit exceeded
+
+[xipcfreeze.example]
+xipc> xipcfreeze
+	  RetCode = 0
+
+[xipcidlewatch.example]
+xipc> xipcidlewatch start
+	  RetCode = 0
+
+[xipcinfologin.example]
+xipc> xipcinfologin
+	  Lid	 Uid	Instance
+	  ---	 ---	--------
+	  1 	  11	/usr/xipc/test
+	* 3 	   7	@Server
+	  4 	  31	@DBServer
+
+[xipcinfouser.example]
+xipc> xipcinfouser 7
+	  Uid: 7  Name: 'LockManager'  Pid = 23795  Tid = 0
+	  Host: '*LOCAL*'  Login Time: Wed Sep 24 11:24:48 1997
+
+[xipcinfoversion.example]
+xipc> xipcinfoversion
+	  XIPC Version 3.1.0 (GA) ba - Windows NT 4.0 [Build 4321]
+
+[xipcinit.example]
+xipc> xipcinit
+xipcinit: XIPC Platform Environment Initialized
+		  Win32 - XIPC 3.0.2aa [Build 4100]
+	  RetCode = 0
+
+[xipcterm.example]
+xipc> xipcterm
+xipcterm: XIPC Platform Environment Terminated
+	  RetCode = 0
+
+[xipclist.example]
+xipc> xipclist
+	  Machine.................[grumpy]
+	  Instance Name...........[server]
+	  Instance File Name......[/xipc/server]
+	  Maximum Text Size.......[1024]
+
+[xipclogin.example]
+xipc> xipclogin  /tmp/config George
+	  Uid = 11
+xipc> # Log into instance "Server". "xipc" is default user name
+xipc> xipclogin  @Server
+	  Uid = 1
+xipc> # Log into network instance on node "dopey"
+xipc> xipclogin  @dopey:Server George
+	  Uid = 1
+
+[xipclogout.example]
+xipc> xipclogout
+	  RetCode = 0
+
+[xipcmasktraps.example]
+xipc> xipcmasktraps
+	  RetCode = 0
+
+[xipcstart.example]
+xipc> # Start a Network instance
+xipc> xipcstart  /tmp/config  Server
+	  XipcStart(SemSys):
+	  ...
+	  XipcReg: Network Instance [Server] Registered.
+	  RetCode = 0
+xipc> # Start a Stand-Alone Instance.
+xipc> # Use XIPC environment variable to specify instance name.
+xipc> # Do not output report.
+xipc> xipcstart  * * 0
+	  RetCode = 0
+
+[xipcstop.example]
+xipc> # Use XIPC environment variable to specify instance name.
+xipc> # Do not output report.
+xipc> xipcstop	* 0
+	  RetCode = 0
+
+[xipcunfreeze.example]
+xipc> xipcunfreeze
+	  RetCode = 0
+
+[xipcunmasktraps.example]
+xipc> xipcunmasktraps
+	  RetCode = 0
+
+[momabortasync.example]
+xipc> momreceive 1.0 first x callback(cb1,a)
+	  RetCode = -1097
+	  Operation continuing asynchronously
+
+xipc> acb a
+	  AUid = 17
+	  ...
+#	  MomAbortAsync issued by a different user
+xipc> momabortasync 17
+	  Callback function CB1 executing ...
+	  RetCode = -1098
+	  Asynchronous operation aborted
+
+[momaccess.example]
+xipc> # Access an app-queue within local instance.
+xipc> momaccess abc
+	  AQid = 1.4
+
+xipc> # Access an app-queue that is within some remote instance
+xipc> # and that has been registered with the XIPC namespace.
+xipc> momaccess @xyz
+	  AQid = 2.1
+
+xipc> # Access a remote registered app-queue with the noverify option.
+xipc> momaccess @abc noverify
+	  AQid = 2.5
+
+xipc> # Access app-queue by specifying its fully qualified name:
+xipc> # node, instance, name
+xipc> momaccess @remoteNode:someInstance:myAppQ
+	  AQid = 1.7
+
+[momdeaccess.example]
+xipc> momaccess @xyz
+	  AQid = 2.1
+	  .
+	  .
+xipc> momdeaccess 2.1
+	  RetCode = 0
+
+[momcreate.example]
+xipc> momcreate abc
+	  AQid = 1.0
+xipc> momcreate xyz autoregister
+	  AQid = 1.0
+
+[momdelete.example]
+xipc> momdelete 1.4
+	  RetCode = 0
+
+[momdestroy.example]
+xipc> momdestroy 1.2
+	  RetCode = 0
+
+[momevent.example]
+xipc> # Initiate a momevent operation that waits until MomSys message
+xipc> # MsgId 'a' achieves a status of 'delivered'
+xipc> momevent msg_status a delivered wait
+	  RetCode = 0
+
+[mominfoappqueue.example]
+xipc> mominfoappqueue 1.2
+	  AQid = 1.2		Name = xyz
+	  Location = 'LOCALNODE:someinstance'
+	  AppQueue is LOCAL DISK Queue
+	  Natural Sequence is TIME
+	  App-queue is not AUTO Registered
+	  CreateTime: Fri Oct 25 12:02:47 1996
+	  CreateUid = 3
+	  CountMsgIn: 204		 CountMsgOut: 200
+	  NumMsgs: 4			NumBytes: 10240
+	  NumMsgHWM: 380		NumBytesHWM: 90840
+	  Retire Time: 0		Expire Time: 30 minutes
+
+[mominfolink.example]
+xipc> mominfolink first
+	  LinkId: [1]
+	  Remote Node: 'helios'     Remote Instance: 'test'
+	  Network Protocol: TCPIP	Link Status: DOWN
+	  CountMsgSent: 29880  CountMsgReceived: 102 NumBacklogMsg: 24
+	  StartupTime: Wed Sep 30 19:05:10 1996
+
+xipc> mominfolink all
+	  Id   Instance 		 Protocol	 Status    Messages
+	  -----------------------------------------------------
+	  1    helios:test		 TCP/IP 	 DOWN	   24
+	  2    titan:test1		 TCP/IP 	 UP 	   14
+	  3    juno:product 	 TCP/IP 	 UP 	   0
+	  4    moon:test2		 TCP/IP 	 DOWN	   1040
+
+[mominfomessage.example]
+xipc> momsend 1.0 "This is another message" normal shipped c nowait
+xipc> mominfomessage c
+		MsgId: [849730340.512,849730340.512]
+		AQid: 1.0		ReplyAQid: NONE
+		SendTime: Wed Dec  4 15:15:34 1996
+		ExpirationTime: Wed Dec 31 19:00:00 1996
+		Trip Priority: NORMAL	Queue Priority: 32768
+		Tracking Level: SHIPPED
+		LatestStatus:	SenderUid: 1
+		Sender Node: 'LOCALNODE'    Sender Instance: 'test3'
+
+[mominfosys.example]
+xipc> mominfosys
+			[MOMSYS SYSTEM INFORMATION]
+			---------------------------
+Instance Name: 'CommIn'        Instance Cfg File '/home/xipc/commIn'
+Instance NameSpace: 'projectSnowball'
+Max Users: 20				   Current Users: 7
+...
+		 [MOMSYS MESSAGE REPOSITORY SERVERS INFORMATION]
+		 -----------------------------------------------
+Counter 			 MRI					  MRO
+==================================================================
+MR Path 			 /home/xipc/commIn		  /home/xipc/commIn
+Number of Reads 	 137					  4
+...
+
+			[MOMSYS COMM SERVERS INFORMATION]
+			---------------------------------
+Max Links: 31				   Active CSI, CSO:  10, 10
+Current Active Links: 12	   Current Inactive Links: 2
+
+[mominfouser.example]
+xipc> mominfouser 2
+	  User Id: 2			Name: 'tester'
+	  Pid: 21573			Tid: 0
+	  LoginTime: Wed Sep 30 12:05:10 1996
+	  CountMsgSent: 5021	CountMsgReceived: 1450
+
+[momreceive.example]
+xipc> momreceive 1.0 first a wait
+	  MsgId: [846266850.256.846266850.256]
+	  ReplyAQid: NONE
+	  Text = "hello world"
+xipc> momreceive 1.0 first a noremove,wait
+	  MsgId: [850146338.1536.850146282.1281]
+	  ReplyAQid: 1.1
+	  Text = "some other message text"
+
+[momsend.example]
+xipc> # Wait indefinitely until message reaches remote app-queue.
+xipc> momsend 1.3 "hello world" normal shipped a wait
+	  MsgId: [846266850.256.846266850.256]
+xipc> # If FastPath message isn't delivered within 1 hr, it expires.
+	  momsend 1.0 "hello world" normal delivered a expire(3600) fastpath, wait
+	  MsgId: [846266850.256.846266850.256]
+xipc> # Receive message, then send correlated response; note the use of the 'b'
+xipc> # msgid in momreceive and then in the replyto(b) option of momsend.
+xipc> momreceive 2.0 first b wait
+	  MsgId : [850146338.256,850146282.257]
+	  ReplyAQid = 2.3
+	  Text = "Sample inquiry text"
+xipc> momsend 1.0 "Sample response" normal delivered c replyto(b) wait
+	  MsgId: [846266850.256.846266850.256]
+
+[momstatus.example]
+xipc> momsend 1.0 "hello world" delivered a wait
+	  MsgId: [846266850.256.846266850.256]
+xipc> momstatus a
+	  MsgId: [846266850.256.846266850.256]
+	  Latest Status: SHIPPED
+xipc> momstatuswait a delivered wait
+	  . . .
+	  MsgId: [846266850.256.846266850.256]
+	  Latest Status: DELIVERED
+
+[momstatuswait.example]
+xipc> momsend 1.0 "hello world" delivered a wait
+	  MsgId: [846266850.256.846266850.256]
+xipc> momstatus a
+	  MsgId: [846266850.256.846266850.256]
+	  Latest Status: SHIPPED
+xipc> momstatuswait a delivered wait
+	  . . .
+	  MsgId: [846266850.256.846266850.256]
+	  Latest Status: DELIVERED
+
+[queabortasync.example]
+xipc> quereceive hp 0 callback(cb1,q)
+	  RetCode = -1097
+	  Operation continuing asynchronously
+xipc> acb q
+	  AUid			  = 35
+	  ...
+xipc> queabortasync 35
+......Callback function CB1 executing......
+	  RetCode = -1098
+	  Asynchronous operation aborted
+	  ...
+
+[queaccess.example]
+xipc> queaccess ServerQ
+	  Qid = 7
+
+[quebrowse.example]
+xipc> queget a hp 0 noremove,wait
+	  RetCode = 0, Qid = 0, Seq# = 1221, Prio = 100, HdrStatus = NOT-REMOVED
+xipc> quebrowse a time+
+	  RetCode = 0, Qid = 0, Seq# = 1233, Prio = 100, HdrStatus = NOT-REMOVED
+xipc> quebrowse a time+
+	  RetCode = -1625
+	  An end of the queue has been reached
+
+[queburstsend.example]
+xipc> queburstsend 3 hello 123
+	  SeqNo = 556
+xipc> qbs 1 "hello again" 456
+	  SeqNo = 557
+
+[qbs.example]
+xipc> queburstsend 3 hello 123
+	  SeqNo = 556
+xipc> qbs 1 "hello again" 456
+	  SeqNo = 557
+
+[queburstsendstart.example]
+xipc> queburstsendstart any 0 64 1024 wait callback(cb1, a)
+	  RetCode = 0
+xipc> qbsstart shq 0,1 64 default timeout(15) callback(cb1, a)
+	  RetCode = 0
+
+[qbsstart.example]
+xipc> queburstsendstart any 0 64 1024 wait callback(cb1, a)
+	  RetCode = 0
+xipc> qbsstart shq 0,1 64 default timeout(15) callback(cb1, a)
+	  RetCode = 0
+
+[queburstsendstop.example]
+xipc> qbsstop
+	  SeqNo = 104408
+
+[qbsstop.example]
+xipc> qbsstop
+	  SeqNo = 104408
+
+[queburstsendsync.example]
+xipc> queburstsendsync	wait
+	  SeqNo = 104408
+xipc> qbssync  callback(cb1, a)
+	  RetCode = -1097
+	  Operation has gone Async
+
+[qbssync.example]
+xipc> queburstsendsync	wait
+	  SeqNo = 104408
+xipc> qbssync  callback(cb1, a)
+	  RetCode = -1097
+	  Operation has gone Async
+
+[quecopy.example]
+xipc> queget a hp 0 wait
+	  RetCode = 0, Qid = 0, Seq# = 1221, Prio = 100, HdrStatus = REMOVED
+xipc> quecopy a 0 22
+	  Text = "Mary had a little lamb"
+
+[quecreate.example]
+xipc> quecreate ServerQueue nolimit 10000
+	  Qid = 0
+
+[quedelete.example]
+xipc> quedelete 5
+	  RetCode = 0
+
+[quedestroy.example]
+xipc> quedestroy 5
+	  RetCode = 0
+
+[quefreeze.example]
+xipc> quefreeze
+	  RetCode = 0
+
+[queget.example]
+xipc> queget a ea 0 wait
+	  RetCode = 0, Qid = 0, Seq# = 1221, Prio = 100, HdrStatus = REMOVED
+xipc> queget c lnq hp(0),hp(1) wait
+	  RetCode = 0, Qid = 1, Seq# = 21221, Prio = 1100, HdrStatus = REMOVED
+xipc> queget e hp 1,2,4,8 noremove,nowait
+	  RetCode = 0, Qid = 4, Seq# = 212, Prio = 1101, HdrStatus = NOT-REMOVED
+
+[queinfoque.example]
+xipc> queinfoque 5
+	  Name: 'ServerQue'
+	  Message limit: 100	 Bytes Limit: 10000
+	  ...
+
+[queinfosys.example]
+xipc> queinfosys
+	  Configuration:  '/usr/config'
+	  .......  Maximum	Current
+	  Users:		60		 11
+	  ...
+
+[queinfouser.example]
+xipc> queinfouser 9
+	  Name: 'QueueServer'  Pid: 241  Tid: 0
+	  Login Time:...
+	  ...
+
+[quemsghdrdup.example]
+xipc> quemsghdrdup a b
+	  Qid = 2, Seq# = 146, Prio = 100, Uid = 10, HdrStatus = DUPLICATED
+
+[quepointer.example]
+xipc> queget a ea 0 wait
+	  Qid = 0, Seq# = 1234, Prio = 1000, HdrStatus = REMOVED
+xipc> quepointer a
+	  Pointer = 0000A03C
+
+[quepurge.example]
+xipc> quepurge 2
+	  RetCode = 0
+
+[queput.example]
+xipc> quewrite a "Mary had a little lamb" wait
+	  RetCode = 0
+xipc> queput a shq 0,1 100 wait
+	  RetCode = 0  Qid = 1
+
+[queread.example]
+xipc> queget a ea 1 wait
+	  RetCode = 0, Qid = 1, Seq# = 1211, Prio = 100, HdrStatus = REMOVED
+xipc> queread a
+	  Text = "Mary had a little lamb"
+
+[quereceive.example]
+xipc> quereceive ea 0 timeout(10)
+	  Qid = 0, Priority = 120, Length = 22
+	  Text = "Mary had a little lamb"
+xipc> quereceive hpq prgt(0,1000),prgt(1,900) wait
+	  Qid = 1,	Priority = 950, Length = 13
+	  Text = "High Priority"
+xipc> quereceive ea 0 noremove,retseq,nowait
+	  Qid = 0, Sequence = 12, Length = 23
+	  Text = "System uptime: 12:33:02"
+
+[queremove.example]
+xipc> queget a ea 0 noremove,wait
+	  RetCode = 0, Qid = 1, Seq# = 1011, Prio = 100, HdrStatus = NOT-REMOVED
+xipc> quebrowse a time+
+	  RetCode = 0, Qid = 1, Seq# = 1211, Prio = 100, HdrStatus = NOT-REMOVED
+xipc> queremove a
+	  RetCode = 0
+
+[quesend.example]
+xipc> quesend shq 0,1 100 "Mary had a little lamb" wait
+	  RetCode = 0  Qid = 0
+
+[quesendreceive.example]
+xipc> quesend any 0 100 "sent to qid 0" nowait
+	  RetCode = 0, Qid = 0
+xipc> quesendreceive any 1 99 "sent to qid 1" nowait any ea(0) nowait
+	  RetCode = 13, SendQid = 1, RecvQid = 0
+	  RecvLength = 13, RecvPriority = 100
+	  Received text: "sent to qid 0"
+xipc> quereceive any ea(1) nowait
+	  Qid = 1, Priority = 99, Length = 13
+	  Text = "sent to qid 1"
+
+[qsr.example]
+xipc> quesend any 0 100 "sent to qid 0" nowait
+	  RetCode = 0, Qid = 0
+xipc> quesendreceive any 1 99 "sent to qid 1" nowait any ea(0) nowait
+	  RetCode = 13, SendQid = 1, RecvQid = 0
+	  RecvLength = 13, RecvPriority = 100
+	  Received text: "sent to qid 0"
+xipc> quereceive any ea(1) nowait
+	  Qid = 1, Priority = 99, Length = 13
+	  Text = "sent to qid 1"
+
+[quespool.example]
+xipc> quespool 0 /tmp/splq0
+	  RetCode = 0
+xipc> quespool 0 off
+	  RetCode = 0
+
+[quetrigger.example]
+xipc> quecreate MsgQueue nolimit 20000
+	  Qid = 7
+xipc> semcreate BytesHighSem clear
+	  Sid = 31
+xipc> # Set Semaphore 31 when size of text in Queue 7 exceeds 80 percent
+xipc> quetrigger 31 bytes_high 7 80
+	  RetCode = 0
+
+[queunfreeze.example]
+xipc> queunfreeze
+	  RetCode = 0
+
+[queunget.example]
+xipc> queget f ea 0 wait
+	  RetCode = 0, Qid = 0, Seq# = 1211, Prio = 100, HdrStatus = REMOVED
+xipc> quecopy f 0 *
+	  Text = "Mary had a little lamb"
+xipc> queunget f
+	  RetCode = 0
+
+[queuntrigger.example]
+xipc> quetrigger 31 bytes_high 7 80
+	  RetCode = 0
+	  ...
+xipc> queuntrigger 31 bytes_high 7 80
+	  RetCode = 0
+
+[quewrite.example]
+xipc> quewrite a "Mary had a little lamb" wait
+	  RetCode = 0
+xipc> queput a shq 0,1 100 wait
+	  RetCode = 0  Qid = 1
+
+[msghdr.example]
+xipc> msghdr a
+	  Qid = 1, Seq# = 1234, Prio = 1000, HdrStatus = REMOVED
+
+[memabortasync.example]
+xipc> memlock all (0 100 32) callback(cb1,m)
+	  RetCode = -1097
+	  Operation continuing asynchronously
+xipc> acb m
+	  AUid = 35
+	  ...
+xipc> memabortasync 35
+......Callback function CB1 executing......
+	  RetCode = -1098
+	  Asynchronous operation aborted
+	  ...
+
+[memaccess.example]
+xipc> memaccess TrackTable
+	  Mid = 1
+
+[memcreate.example]
+xipc> memcreate TrackTable 10240
+	  Mid = 1
+
+[memdelete.example]
+xipc> memdelete 1
+	  RetCode = 0
+
+[memdestroy.example]
+xipc> memdestroy 1
+	  RetCode = 0
+
+[memfreeze.example]
+xipc> memfreeze
+	  RetCode = 0
+
+[meminfomem.example]
+xipc> meminfomem first
+	  Mid: 1  Name: 'TrackTable'
+	  Sections Defined: 0		Bytes Allocated: 10240
+	  ...
+xipc> meminfomem next(1)
+	  Mid: 3  Name: 'NodeTable'
+	  Sections Defined: 4		Bytes Allocated: 1024
+	  ...
+xipc> meminfomem next(3)
+	  RetCode = -1038
+	  No more data in list
+
+[meminfosec.example]
+xipc> memsecdef (1 100 64)
+	  RetCode = 0
+xipc> memsection a (1 100 64)
+	  Section = (1 100 64)
+xipc> meminfosec a
+	  Mid: 1, Offset: 100, Size: 64
+	  Owner: 32
+	  ...
+xipc> meminfosec (1 100 64)
+	  Mid: 1, Offset: 100, Size: 64
+	  Owner: 32
+	  ...
+
+[meminfosys.example]
+xipc> meminfosys
+	  Configuration:  '/usr/config'
+	  .......  Maximum	Current
+	  Users:		60		 11
+	  ...
+
+[meminfouser.example]
+xipc> meminfouser 9
+	  Name: 'TableManager'  Pid: 241  Tid: 0
+	  Login Time:...
+	  ...
+
+[memlock.example]
+xipc> memsection s (1 0 20)
+	  Section = (1 0 20)
+xipc> memlock atomic (0 120 30),(0 4000 30),s wait
+	  RetCode = 0
+	  Section = (1 0 20)
+
+[mempointer.example]
+xipc> memcreate TrackTable 10240
+	  Mid = 1
+xipc> mempointer 1
+	  Pointer = 0001A000
+
+[memread.example]
+xipc> memread 1 0 22 wait
+	  Text = "Mary had a little lamb"
+
+[memsecdef.example]
+xipc> memsecdef (1 100 64)
+	  RetCode = 0
+
+[memsecown.example]
+xipc> memsecown all (0 120 30),(0 4000 30) post(35,b)
+	  RetCode = -1097
+	  Operation continuing asynchronously
+xipc> semwait all 35 timeout(30)
+	  RetCode = 0
+	  Sid = 35
+xipc> acb b
+	  AUid			  = 11
+	  ...
+	  MEMSECOWN
+	  - RetSec	= (0 4000 30)
+	  - RetCode = 0
+
+[memsecpriv.example]
+xipc> memsection s (1 100 64)
+	  Section = (1 100 64)
+xipc> memsecdef s
+	  RetCode = 0
+xipc> memsecown all s wait
+	  RetCode = 0
+xipc> memsecpriv s rw ro
+	  RetCode = 0
+	  ...
+xipc> memsecpriv s -w nc
+	  RetCode = 0
+
+[memsecrel.example]
+xipc> memsecown any (0 120 30),(0 4000 30) wait
+	  RetCode = 0
+	  Section = (0 120 30)
+	  ...
+xipc> memsecrel (0 120 30)
+	  RetCode = 0
+
+[memsection.example]
+xipc> memsection s (0 0 100)
+	  Section = (0 0 100)
+xipc> section s
+	  Section = (0 0 100)
+xipc> memsecdef s
+	  RetCode = 0
+
+[memsecundef.example]
+xipc> memsecundef (1 100 64)
+	  RetCode = 0
+
+[memtrigger.example]
+xipc> memcreate TrackTable 10240
+	  Mid = 1
+xipc> semcreate BytesHighSem clear
+	  Sid = 31
+xipc> # Set Semaphore 31 when any byte in the 10k Segment 1 is locked.
+xipc> memtrigger 31 lock 1 0 10240
+
+[memunfreeze.example]
+xipc> memunfreeze
+	  RetCode = 0
+
+[memunlock.example]
+xipc> memunlock (0 120 30),(0 4000 30)
+	  RetCode = 0
+
+[memuntrigger.example]
+xipc> memtrigger 31 lock 1 0 10240
+	  RetCode = 0
+	  ...
+xipc> memuntrigger 31 lock 1 0 10240
+	  RetCode = 0
+
+[memwrite.example]
+xipc> memwrite 1 0 22 "Mary had a little lamb" wait
+	  RetCode = 0
+xipc> # Fill first 22 bytes of segment 1 with spaces.
+xipc> memwrite 1 0 22 ' ' wait
+	  RetCode = 0
+
+[section.example]
+xipc> section a
+	  Section = (0	100  25)
+
+[semabortasync.example]
+xipc> semwait all 0 callback(cb1,s)
+	  RetCode = -1097
+	  Operation continuing asynchronously
+xipc> acb s
+	  AUid			  = 35
+	  ...
+xipc> semabortasync 35
+......Callback function CB1 executing......
+	  RetCode = -1098
+	  Asynchronous operation aborted
+	  RetSid = 0
+	  RetCode = 0
+
+[semaccess.example]
+xipc> semaccess InitSem
+	  Sid = 7
+
+[semacquire.example]
+xipc> semacquire any 0,1,3 timeout(10)
+	  RetCode = 0	Sid = 1
+
+[semcancel.example]
+xipc> semcancel 0
+	  RetCode = 1	Sid = 0
+
+[semclear.example]
+xipc> semclear 0,1
+	  RetCode = 0
+
+[semcreate.example]
+xipc> semcreate Resource 5
+	  Sid = 0
+xipc> semcreate InitSem clear
+	  Sid = 3
+
+[semdelete.example]
+xipc> semdelete 5
+	  RetCode = 0
+
+[semdestroy.example]
+xipc> semdestroy 5
+	  RetCode = 0
+
+[semfreeze.example]
+xipc> semfreeze
+	  RetCode = 0
+
+[seminfosem.example]
+xipc> seminfosem 5
+	  Name: 'InitSem'  Type: Event
+	  Created by Uid: 22  At:...
+	  ...
+
+[seminfosys.example]
+xipc> seminfosys
+	  Configuration:  '/usr/config'
+	  .......  Maximum	Current
+	  Users:		60		 11
+	  ...
+
+[seminfouser.example]
+xipc> seminfouser 9
+	  Name: 'MasterControl'  Pid: 214  Tid: 0
+	  Login Time:...
+	  ...
+
+[semrelease.example]
+xipc> semrelease 9,11
+	  RetCode = 0
+
+[semset.example]
+xipc> semset 0,1,22
+	  RetCode = 0
+
+[semunfreeze.example]
+xipc> semunfreeze
+	  RetCode = 0
+
+[semwait.example]
+xipc> semwait any 0,1,3 clear,wait
+	  RetCode = 0
+	  Sid = 1
+xipc> semwait all 0,1 nowait
+	  RetCode = -1034
+	  XIPC NOWAIT
+

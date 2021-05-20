@@ -1,0 +1,12 @@
+if [ $# -eq 0 ]
+then
+	CONFIG=$XIPC
+else
+	CONFIG=$1	
+fi
+##
+# $1 is either config file full path or network name preceeded by @ sign
+##
+demmsg P 2 10000 5 $CONFIG& 
+demmsg C 2 6000 5 $CONFIG&
+

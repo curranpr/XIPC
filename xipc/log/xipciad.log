@@ -1,0 +1,460 @@
+*********  Error reported by process: 0x00001AC2  *********
+11/11/2020  11:33:20  Module: xadrecvr   Function: XifNetMsgReceiver
+XifNetDeclareServer failed; RetCode = -1101
+
+*********  Error reported by process: 0x00001AC2  *********
+11/11/2020  11:33:20  Module: xadmrecv   Function: XifNetCloseUDPSock
+XifNetDgmSockDestroy failed; RetCode = -1, Errno = 9
+
+*********  Error reported by process: 0x00000A96  *********
+12/28/2020  10:51:15  Module: xadrecvr   Function: XifNetMsgReceiver
+XifNetDeclareServer failed; RetCode = -1101
+
+*********  Error reported by process: 0x00000A96  *********
+12/28/2020  10:51:15  Module: xadmrecv   Function: XifNetCloseUDPSock
+XifNetDgmSockDestroy failed; RetCode = -1, Errno = 9
+
+*********  Error reported by process: 0x00000B02  *********
+12/28/2020  10:59:07  Module: xadrecvr   Function: XifNetMsgReceiver
+XifNetDeclareServer failed; RetCode = -1101
+
+*********  Error reported by process: 0x00000B02  *********
+12/28/2020  10:59:07  Module: xadmrecv   Function: XifNetCloseUDPSock
+XifNetDgmSockDestroy failed; RetCode = -1, Errno = 9
+
+*********  Error reported by process: 0x00003C43  *********
+12/31/2020  11:00:59  Module: xadrecvr   Function: XifNetMsgReceiver
+XifNetDeclareServer failed; RetCode = -1101
+
+*********  Error reported by process: 0x00003C43  *********
+12/31/2020  11:00:59  Module: xadmrecv   Function: XifNetCloseUDPSock
+XifNetDgmSockDestroy failed; RetCode = -1, Errno = 9
+
+*********  Error reported by process: 0x00004509  *********
+01/11/2021  11:46:19  Module: xadrecvr   Function: XifNetMsgReceiver
+XifNetDeclareServer failed; RetCode = -1101
+
+*********  Error reported by process: 0x00004509  *********
+01/11/2021  11:46:19  Module: xadmrecv   Function: XifNetCloseUDPSock
+XifNetDgmSockDestroy failed; RetCode = -1, Errno = 9
+
+*********  Error reported by process: 0x00001321  *********
+01/11/2021  15:28:34  Module: xadrecvr   Function: XifNetMsgReceiver
+XifNetDeclareServer failed; RetCode = -1101
+
+*********  Error reported by process: 0x00001321  *********
+01/11/2021  15:28:34  Module: xadmrecv   Function: XifNetCloseUDPSock
+XifNetDgmSockDestroy failed; RetCode = -1, Errno = 9
+
+*********  Error reported by process: 0x00000A15  *********
+01/13/2021  10:59:48  Module: xadrecvr   Function: XifNetMsgReceiver
+XifNetDeclareServer failed; RetCode = -1101
+
+*********  Error reported by process: 0x00000A15  *********
+01/13/2021  10:59:48  Module: xadmrecv   Function: XifNetCloseUDPSock
+XifNetDgmSockDestroy failed; RetCode = -1, Errno = 9
+
+*********  Error reported by process: 0x0000165F  *********
+03/05/2021  11:12:21  Module: xadrecvr   Function: XifNetMsgReceiver
+XifNetDeclareServer failed; RetCode = -1101
+
+*********  Error reported by process: 0x0000165F  *********
+03/05/2021  11:12:21  Module: xadmrecv   Function: XifNetCloseUDPSock
+XifNetDgmSockDestroy failed; RetCode = -1, Errno = 9
+
+*********  Error reported by process: 0x000012C6  *********
+03/26/2021  11:08:23  Module: xadrecvr   Function: XifNetMsgReceiver
+XifNetDeclareServer failed; RetCode = -1101
+
+*********  Error reported by process: 0x000012C6  *********
+03/26/2021  11:08:23  Module: xadmrecv   Function: XifNetCloseUDPSock
+XifNetDgmSockDestroy failed; RetCode = -1, Errno = 9
+
+*********  Error reported by process: 0x00001EE8  *********
+03/29/2021  11:48:26  Module: xadrecvr   Function: XifNetMsgReceiver
+XifNetDeclareServer failed; RetCode = -1101
+
+*********  Error reported by process: 0x00001EE8  *********
+03/29/2021  11:48:26  Module: xadmrecv   Function: XifNetCloseUDPSock
+XifNetDgmSockDestroy failed; RetCode = -1, Errno = 9
+
+*********  Error reported by process: 0x00000DC6  *********
+04/02/2021  10:47:32  Module: xadrecvr   Function: XifNetMsgReceiver
+XifNetDeclareServer failed; RetCode = -1101
+
+*********  Error reported by process: 0x00000DC6  *********
+04/02/2021  10:47:32  Module: xadmrecv   Function: XifNetCloseUDPSock
+XifNetDgmSockDestroy failed; RetCode = -1, Errno = 9
+
+*********  Error reported by process: 0x00000B27  *********
+04/08/2021  14:59:26  Module: xadrecvr   Function: XifNetMsgReceiver
+XifNetDeclareServer failed; RetCode = -1101
+
+*********  Error reported by process: 0x00000B27  *********
+04/08/2021  14:59:26  Module: xadmrecv   Function: XifNetCloseUDPSock
+XifNetDgmSockDestroy failed; RetCode = -1, Errno = 9
+
+*********  Error reported by process: 0x000012DE  *********
+04/12/2021  10:52:50  Module: xadrecvr   Function: XifNetMsgReceiver
+XifNetDeclareServer failed; RetCode = -1101
+
+*********  Error reported by process: 0x000012DE  *********
+04/12/2021  10:52:50  Module: xadmrecv   Function: XifNetCloseUDPSock
+XifNetDgmSockDestroy failed; RetCode = -1, Errno = 9
+
+*********  Error reported by process: 0x00002958  *********
+04/27/2021  15:01:56  Module: xadrecvr   Function: XifNetMsgReceiver
+XifNetDeclareServer failed; RetCode = -1101
+
+*********  Error reported by process: 0x00002958  *********
+04/27/2021  15:01:56  Module: xadmrecv   Function: XifNetCloseUDPSock
+XifNetDgmSockDestroy failed; RetCode = -1, Errno = 9
+
+*********  Error reported by process: 0x000037AC  *********
+04/27/2021  15:20:00  Module: xadrecvr   Function: XifNetMsgReceiver
+XifNetDeclareServer failed; RetCode = -1101
+
+*********  Error reported by process: 0x000037AC  *********
+04/27/2021  15:20:00  Module: xadmrecv   Function: XifNetCloseUDPSock
+XifNetDgmSockDestroy failed; RetCode = -1, Errno = 9
+
+*********  Error reported by process: 0x00001695  *********
+04/27/2021  20:41:42  Module: xadmain   Function: main
+Stop failed; RetCode = 0
+
+*********  Error reported by process: 0x000016CF  *********
+04/27/2021  20:42:16  Module: xadmrecv   Function: XifNetRecvMultiple
+XifNetDeclareDgramService error; RetCode = -1101
+	Network error reported by 
+	Operating System: UNIX,  FailingService: getservbyname
+	Status1: 0,  Status2: 0
+	Message: Success
+	XIPC Call Stack:
+		XifNetGetServByName
+		XifNetDeclareDgmService
+
+
+*********  Error reported by process: 0x000016CF  *********
+04/27/2021  20:42:16  Module: xadmrecv   Function: XifNetCloseUDPSock
+XifNetDgmSockDestroy failed; RetCode = -1, Errno = 9
+
+*********  Error reported by process: 0x00001718  *********
+04/27/2021  20:42:27  Module: xadmrecv   Function: XifNetRecvMultiple
+XifNetDeclareDgramService error; RetCode = -1101
+	Network error reported by 
+	Operating System: UNIX,  FailingService: getservbyname
+	Status1: 0,  Status2: 0
+	Message: Success
+	XIPC Call Stack:
+		XifNetGetServByName
+		XifNetDeclareDgmService
+
+
+*********  Error reported by process: 0x00001718  *********
+04/27/2021  20:42:27  Module: xadmrecv   Function: XifNetCloseUDPSock
+XifNetDgmSockDestroy failed; RetCode = -1, Errno = 9
+
+*********  Error reported by process: 0x0000174B  *********
+04/27/2021  20:42:42  Module: xadmrecv   Function: XifNetRecvMultiple
+XifNetDeclareDgramService error; RetCode = -1101
+	Network error reported by 
+	Operating System: UNIX,  FailingService: getservbyname
+	Status1: 0,  Status2: 0
+	Message: Success
+	XIPC Call Stack:
+		XifNetGetServByName
+		XifNetDeclareDgmService
+
+
+*********  Error reported by process: 0x0000174B  *********
+04/27/2021  20:42:42  Module: xadmrecv   Function: XifNetCloseUDPSock
+XifNetDgmSockDestroy failed; RetCode = -1, Errno = 9
+
+*********  Error reported by process: 0x00003552  *********
+04/28/2021  11:10:10  Module: xadmrecv   Function: XifNetRecvMultiple
+XifNetDeclareDgramService error; RetCode = -1101
+	Network error reported by 
+	Operating System: UNIX,  FailingService: getservbyname
+	Status1: 0,  Status2: 0
+	Message: Success
+	XIPC Call Stack:
+		XifNetGetServByName
+		XifNetDeclareDgmService
+
+
+*********  Error reported by process: 0x00003552  *********
+04/28/2021  11:10:10  Module: xadmrecv   Function: XifNetCloseUDPSock
+XifNetDgmSockDestroy failed; RetCode = -1, Errno = 9
+
+*********  Error reported by process: 0x0001046F  *********
+04/29/2021  10:16:59  Module: xadmrecv   Function: XifNetRecvMultiple
+XifNetDeclareDgramService error; RetCode = -1101
+	Network error reported by 
+	Operating System: UNIX,  FailingService: getservbyname
+	Status1: 0,  Status2: 0
+	Message: Success
+	XIPC Call Stack:
+		XifNetGetServByName
+		XifNetDeclareDgmService
+
+
+*********  Error reported by process: 0x0001046F  *********
+04/29/2021  10:16:59  Module: xadmrecv   Function: XifNetCloseUDPSock
+XifNetDgmSockDestroy failed; RetCode = -1, Errno = 9
+
+*********  Error reported by process: 0x000122DC  *********
+04/30/2021  11:17:47  Module: xadmrecv   Function: XifNetRecvMultiple
+XifNetDeclareDgramService error; RetCode = -1101
+	Network error reported by 
+	Operating System: UNIX,  FailingService: getservbyname
+	Status1: 0,  Status2: 0
+	Message: Success
+	XIPC Call Stack:
+		XifNetGetServByName
+		XifNetDeclareDgmService
+
+
+*********  Error reported by process: 0x000122DC  *********
+04/30/2021  11:17:47  Module: xadmrecv   Function: XifNetCloseUDPSock
+XifNetDgmSockDestroy failed; RetCode = -1, Errno = 9
+
+*********  Error reported by process: 0x0005ED7A  *********
+05/03/2021  16:51:39  Module: xadmrecv   Function: XifNetRecvMultiple
+XifNetDeclareDgramService error; RetCode = -1101
+	Network error reported by 
+	Operating System: UNIX,  FailingService: getservbyname
+	Status1: 0,  Status2: 0
+	Message: Success
+	XIPC Call Stack:
+		XifNetGetServByName
+		XifNetDeclareDgmService
+
+
+*********  Error reported by process: 0x0005ED7A  *********
+05/03/2021  16:51:39  Module: xadmrecv   Function: XifNetCloseUDPSock
+XifNetDgmSockDestroy failed; RetCode = -1, Errno = 9
+
+*********  Error reported by process: 0x0009F6A7  *********
+05/04/2021  12:58:02  Module: xadmrecv   Function: XifNetRecvMultiple
+XifNetDeclareDgramService error; RetCode = -1101
+	Network error reported by 
+	Operating System: UNIX,  FailingService: getservbyname
+	Status1: 0,  Status2: 0
+	Message: Success
+	XIPC Call Stack:
+		XifNetGetServByName
+		XifNetDeclareDgmService
+
+
+*********  Error reported by process: 0x0009F6A7  *********
+05/04/2021  12:58:02  Module: xadmrecv   Function: XifNetCloseUDPSock
+XifNetDgmSockDestroy failed; RetCode = -1, Errno = 9
+
+*********  Error reported by process: 0x00007FCD  *********
+05/06/2021  12:17:50  Module: xadmrecv   Function: XifNetRecvMultiple
+XifNetDeclareDgramService error; RetCode = -1101
+	Network error reported by 
+	Operating System: UNIX,  FailingService: getservbyname
+	Status1: 0,  Status2: 0
+	Message: Success
+	XIPC Call Stack:
+		XifNetGetServByName
+		XifNetDeclareDgmService
+
+
+*********  Error reported by process: 0x00007FCD  *********
+05/06/2021  12:17:50  Module: xadmrecv   Function: XifNetCloseUDPSock
+XifNetDgmSockDestroy failed; RetCode = -1, Errno = 9
+
+*********  Error reported by process: 0x00008068  *********
+05/06/2021  12:19:11  Module: xadmrecv   Function: XifNetRecvMultiple
+XifNetDeclareDgramService error; RetCode = -1101
+	Network error reported by 
+	Operating System: UNIX,  FailingService: getservbyname
+	Status1: 0,  Status2: 0
+	Message: Success
+	XIPC Call Stack:
+		XifNetGetServByName
+		XifNetDeclareDgmService
+
+
+*********  Error reported by process: 0x00008068  *********
+05/06/2021  12:19:11  Module: xadmrecv   Function: XifNetCloseUDPSock
+XifNetDgmSockDestroy failed; RetCode = -1, Errno = 9
+
+*********  Error reported by process: 0x000080C1  *********
+05/06/2021  12:20:42  Module: xadmrecv   Function: XifNetRecvMultiple
+XifNetDeclareDgramService error; RetCode = -1101
+	Network error reported by 
+	Operating System: UNIX,  FailingService: getservbyname
+	Status1: 0,  Status2: 0
+	Message: Success
+	XIPC Call Stack:
+		XifNetGetServByName
+		XifNetDeclareDgmService
+
+
+*********  Error reported by process: 0x000080C1  *********
+05/06/2021  12:20:42  Module: xadmrecv   Function: XifNetCloseUDPSock
+XifNetDgmSockDestroy failed; RetCode = -1, Errno = 9
+
+*********  Error reported by process: 0x0001D05E  *********
+05/10/2021  10:35:36  Module: xadmrecv   Function: XifNetRecvMultiple
+XifNetDeclareDgramService error; RetCode = -1101
+	Network error reported by 
+	Operating System: UNIX,  FailingService: getservbyname
+	Status1: 0,  Status2: 0
+	Message: Success
+	XIPC Call Stack:
+		XifNetGetServByName
+		XifNetDeclareDgmService
+
+
+*********  Error reported by process: 0x0001D05E  *********
+05/10/2021  10:35:36  Module: xadmrecv   Function: XifNetCloseUDPSock
+XifNetDgmSockDestroy failed; RetCode = -1, Errno = 9
+
+*********  Error reported by process: 0x00025B51  *********
+05/11/2021  10:30:53  Module: xadmrecv   Function: XifNetRecvMultiple
+XifNetDeclareDgramService error; RetCode = -1101
+	Network error reported by 
+	Operating System: UNIX,  FailingService: getservbyname
+	Status1: 0,  Status2: 0
+	Message: Success
+	XIPC Call Stack:
+		XifNetGetServByName
+		XifNetDeclareDgmService
+
+
+*********  Error reported by process: 0x00025B51  *********
+05/11/2021  10:30:53  Module: xadmrecv   Function: XifNetCloseUDPSock
+XifNetDgmSockDestroy failed; RetCode = -1, Errno = 9
+
+*********  Error reported by process: 0x0002726E  *********
+05/11/2021  13:23:51  Module: xadmrecv   Function: XifNetRecvMultiple
+XifNetDeclareDgramService error; RetCode = -1101
+	Network error reported by 
+	Operating System: UNIX,  FailingService: getservbyname
+	Status1: 0,  Status2: 0
+	Message: Success
+	XIPC Call Stack:
+		XifNetGetServByName
+		XifNetDeclareDgmService
+
+
+*********  Error reported by process: 0x0002726E  *********
+05/11/2021  13:23:51  Module: xadmrecv   Function: XifNetCloseUDPSock
+XifNetDgmSockDestroy failed; RetCode = -1, Errno = 9
+
+*********  Error reported by process: 0x00027CF2  *********
+05/11/2021  14:57:44  Module: xadmrecv   Function: XifNetRecvMultiple
+XifNetDeclareDgramService error; RetCode = -1101
+	Network error reported by 
+	Operating System: UNIX,  FailingService: getservbyname
+	Status1: 0,  Status2: 0
+	Message: Success
+	XIPC Call Stack:
+		XifNetGetServByName
+		XifNetDeclareDgmService
+
+
+*********  Error reported by process: 0x00027CF2  *********
+05/11/2021  14:57:44  Module: xadmrecv   Function: XifNetCloseUDPSock
+XifNetDgmSockDestroy failed; RetCode = -1, Errno = 9
+
+*********  Error reported by process: 0x0002D7A2  *********
+05/12/2021  10:29:37  Module: xadmrecv   Function: XifNetRecvMultiple
+XifNetDeclareDgramService error; RetCode = -1101
+	Network error reported by 
+	Operating System: UNIX,  FailingService: getservbyname
+	Status1: 0,  Status2: 0
+	Message: Success
+	XIPC Call Stack:
+		XifNetGetServByName
+		XifNetDeclareDgmService
+
+
+*********  Error reported by process: 0x0002D7A2  *********
+05/12/2021  10:29:37  Module: xadmrecv   Function: XifNetCloseUDPSock
+XifNetDgmSockDestroy failed; RetCode = -1, Errno = 9
+
+*********  Error reported by process: 0x0002F45D  *********
+05/12/2021  16:35:02  Module: xadmrecv   Function: XifNetRecvMultiple
+XifNetDeclareDgramService error; RetCode = -1101
+	Network error reported by 
+	Operating System: UNIX,  FailingService: getservbyname
+	Status1: 0,  Status2: 0
+	Message: Success
+	XIPC Call Stack:
+		XifNetGetServByName
+		XifNetDeclareDgmService
+
+
+*********  Error reported by process: 0x0002F45D  *********
+05/12/2021  16:35:02  Module: xadmrecv   Function: XifNetCloseUDPSock
+XifNetDgmSockDestroy failed; RetCode = -1, Errno = 9
+
+*********  Error reported by process: 0x000322B7  *********
+05/13/2021  10:37:42  Module: xadmrecv   Function: XifNetRecvMultiple
+XifNetDeclareDgramService error; RetCode = -1101
+	Network error reported by 
+	Operating System: UNIX,  FailingService: getservbyname
+	Status1: 0,  Status2: 0
+	Message: Success
+	XIPC Call Stack:
+		XifNetGetServByName
+		XifNetDeclareDgmService
+
+
+*********  Error reported by process: 0x000322B7  *********
+05/13/2021  10:37:42  Module: xadmrecv   Function: XifNetCloseUDPSock
+XifNetDgmSockDestroy failed; RetCode = -1, Errno = 9
+
+*********  Error reported by process: 0x00039111  *********
+05/13/2021  14:34:07  Module: xadmrecv   Function: XifNetRecvMultiple
+XifNetDeclareDgramService error; RetCode = -1101
+	Network error reported by 
+	Operating System: UNIX,  FailingService: getservbyname
+	Status1: 0,  Status2: 0
+	Message: Success
+	XIPC Call Stack:
+		XifNetGetServByName
+		XifNetDeclareDgmService
+
+
+*********  Error reported by process: 0x00039111  *********
+05/13/2021  14:34:07  Module: xadmrecv   Function: XifNetCloseUDPSock
+XifNetDgmSockDestroy failed; RetCode = -1, Errno = 9
+
+*********  Error reported by process: 0x00039386  *********
+05/13/2021  15:03:16  Module: xadmrecv   Function: XifNetRecvMultiple
+XifNetDeclareDgramService error; RetCode = -1101
+	Network error reported by 
+	Operating System: UNIX,  FailingService: getservbyname
+	Status1: 0,  Status2: 0
+	Message: Success
+	XIPC Call Stack:
+		XifNetGetServByName
+		XifNetDeclareDgmService
+
+
+*********  Error reported by process: 0x00039386  *********
+05/13/2021  15:03:16  Module: xadmrecv   Function: XifNetCloseUDPSock
+XifNetDgmSockDestroy failed; RetCode = -1, Errno = 9
+
+*********  Error reported by process: 0x000393C4  *********
+05/13/2021  15:03:39  Module: xadmrecv   Function: XifNetRecvMultiple
+XifNetDeclareDgramService error; RetCode = -1101
+	Network error reported by 
+	Operating System: UNIX,  FailingService: getservbyname
+	Status1: 0,  Status2: 0
+	Message: Success
+	XIPC Call Stack:
+		XifNetGetServByName
+		XifNetDeclareDgmService
+
+
+*********  Error reported by process: 0x000393C4  *********
+05/13/2021  15:03:39  Module: xadmrecv   Function: XifNetCloseUDPSock
+XifNetDgmSockDestroy failed; RetCode = -1, Errno = 9
+

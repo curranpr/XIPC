@@ -1,0 +1,38 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+
+<head>
+<title>blocking options</title>
+</head>
+
+<body>
+<h2>Using Blocking XIPC Methods</h2>
+<h3>Blocking options</h3>
+<p>All <i>XIPC</i> methods that have the potential to block have a <i>BlockOpt</i> parameter that 
+is used to specify the appropriate option for the method call.
+<p>The blocking option parameter accepts one of the 
+following values, as listed below. The characters
+&quot;<I>XXX</I>_&quot; should be replaced by &quot;SEM_&quot;, &quot;QUE_&quot; or &quot;MEM_&quot;
+depending on the subsystem being operated on.
+	<DL>
+		<DT><I>XXX</I>_NOWAIT
+		<DD>When the blocking option is <I>XXX</I>_NOWAIT, if the request specified by the method
+			cannot be immediately satisfied, the method returns immediately with return code
+			equal to XipcErr.<I>XXX</I>_ER_NOWAIT.</LI>
+		<DT><I>XXX</I>_WAIT
+		<DD>When the blocking option is <I>XXX</I>_WAIT, if the request specified by the method
+			cannot be immediately satisfied, the thread invoking the method is blocked until
+			the request is completed.</LI>
+		<DT><I>XXX</I>_TIMEOUT(<I>t</I>)
+		<DD>When the blocking option is <I>XXX</I>_TIMEOUT(<I>t</I>), </LI> if the request specified by 
+			the method cannot be immediately satisfied, the thread invoking the method is blocked until
+			the request is completed, or until <I>t</I> seconds have elapsed after which the function 
+			returns with return code equal to XipcErr.<I>XXX</I>_ER_TIMEOUT.
+	</DL>
+</body>
+
+</html>
+
+
+
